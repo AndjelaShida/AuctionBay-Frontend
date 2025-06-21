@@ -17,13 +17,31 @@ export const Content = styled.div`
   text-align: center;
 `;
 
-export const Title = styled.h1`
+export const Header = styled.header`
+ display: flex ;
+ justify-content: space-between;
+ algin-items: center ;
+ height: 104px ;
+ padding: 20px 32px;
+ width: 100% ;
+ box-sizing: border-box ;
+
+`;
+
+export const AuthButtons = styled.div`
+display: flex ;
+algin-items: center ;
+gap: 16px ;
+`;
+
+export const H1 = styled.h1`
   font-size: 'Inter', sans-serif ;
   font-weight: 700;
   font-size: 64px;
   color: #071015 
   width: 715px;
   height: 77px;
+  margin: 0 auto 16px auto ;
 
 `;
 
@@ -31,6 +49,7 @@ export const Subtitle = styled.div`
 font: 'Inter' sans-serif ;
 font-weight: 300;
 font-size: 16px;
+margin-bottom: 24px ;
 
 `;
 
@@ -44,25 +63,13 @@ font-family: 'Inter', sans-serif ;
 border-radius: 16px;
 border: none;
 color: #000000 ;
-background-color: #F4FF47 ;
+background-color: #272D2D;
 cursor: pointer;
 display: inline-block;
 margin: 24px auto 0 auto ;
 
-&:hover {
-background-color: #e2eb00 ;
-}
 `;
 
-export const ButtonGroup = styled.div`
-  margin-top: 30px;
-  display: flex;
-  gap: 16px;
-  algin-items: center ;
-  justify-content: center ;
-  gap: 8px ; /*razmak izmedju elemenata */ 
-  
-`;
 
 export const OrText = styled.span  `
 padding: 12px 24px;
@@ -92,3 +99,4 @@ right: 40px ;
 display: flex ;
 gap 16px ;
 `;
+
