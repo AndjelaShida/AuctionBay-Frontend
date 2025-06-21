@@ -18,9 +18,40 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 48px;
-  color: #333;ž
+  font-size: 'Inter', sans-serif ;
+  font-weight: 700;
+  font-size: 64px;
+  color: #071015 
+  width: 715px;
+  height: 77px;
 
+`;
+
+export const Subtitle = styled.div`
+font: 'Inter' sans-serif ;
+font-weight: 300;
+font-size: 16px;
+
+`;
+
+export const StartButton = styled.button`
+padding: 8px 16px;
+min-height: 40px;
+font-weight:500 ;
+font-size: 16px;
+line-height: 24px;
+font-family: 'Inter', sans-serif ;
+border-radius: 16px;
+border: none;
+color: #000000 ;
+background-color: #F4FF47 ;
+cursor: pointer;
+display: inline-block;
+margin: 24px auto 0 auto ;
+
+&:hover {
+background-color: #e2eb00 ;
+}
 `;
 
 export const ButtonGroup = styled.div`
