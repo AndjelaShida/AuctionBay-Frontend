@@ -3,12 +3,14 @@
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LandingPage from "../pages/LandingPage/LandingPage";
+import RegisterPage from "../pages/LandingPage/RegisterPage";
 
 const AppRouter: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />  
+        <Route path="/registerpage" element={<RegisterPage/>} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,13 +1,12 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const PageWrapper = styled.div`
   width: 100%;
   min-height: 100vh;
-  background-color: #F6F6F4;
+  background-color: #f6f6f4;
   display: flex;
   align-items: center;
   justify-content: center;
-
 `;
 
 export const Content = styled.div`
@@ -18,20 +17,19 @@ export const Content = styled.div`
 `;
 
 export const Header = styled.header`
- display: flex ;
- justify-content: space-between;
- algin-items: center ;
- height: 104px ;
- padding: 20px 32px;
- width: 100% ;
- box-sizing: border-box ;
-
+  display: flex;
+  justify-content: space-between;
+  algin-items: center;
+  height: 104px;
+  padding: 20px 32px;
+  width: 100%;
+  box-sizing: border-box;
 `;
 
 export const AuthButtons = styled.div`
-display: flex ;
-algin-items: center ;
-gap: 16px ;
+  display: flex;
+  algin-items: center;
+  gap: 16px;
 `;
 
 export const H1 = styled.h1`
@@ -46,37 +44,34 @@ export const H1 = styled.h1`
 `;
 
 export const Subtitle = styled.div`
-font: 'Inter' sans-serif ;
-font-weight: 300;
-font-size: 16px;
-margin-bottom: 24px ;
-
+  font: "Inter" sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 24px;
 `;
 
 export const StartButton = styled.button`
-padding: 8px 16px;
-min-height: 40px;
-font-weight:500 ;
-font-size: 16px;
-line-height: 24px;
-font-family: 'Inter', sans-serif ;
-border-radius: 16px;
-border: none;
-color: #000000 ;
-background-color: #272D2D;
-cursor: pointer;
-display: inline-block;
-margin: 24px auto 0 auto ;
-
+  padding: 8px 16px;
+  min-height: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Inter", sans-serif;
+  border-radius: 16px;
+  border: none;
+  color: #000000;
+  background-color: #272d2d;
+  cursor: pointer;
+  display: inline-block;
+  margin: 24px auto 0 auto;
 `;
 
-
-export const OrText = styled.span  `
-padding: 12px 24px;
-color: #666 ;
-user-select: none ;
-font-weight: 500 ;
-`
+export const OrText = styled.span`
+  padding: 12px 24px;
+  color: #666;
+  user-select: none;
+  font-weight: 500;
+`;
 
 export const Button = styled.button`
   padding: 12px 24px;
@@ -88,8 +83,7 @@ export const Button = styled.button`
 
   &:hover {
     background-color: #000000;
-    color: #F6F6F4 ;
-  
+    color: #f6f6f4;
   }
 `;
 export const HeaderButton = styled.div`
@@ -99,4 +93,3 @@ right: 40px ;
 display: flex ;
 gap 16px ;
 `;
-
