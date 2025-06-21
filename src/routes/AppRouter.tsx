@@ -2,16 +2,13 @@
 //ili pogleda unutar aplikacije.
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LandingPage from "../pages/LandingPage/LandingPage";
 
 const AppRouter: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/auctions" element={<Auctions />} />
-        <Route path="/auctions/:id" element={<AuctionDetails />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/" element={<LandingPage />} />  
       </Routes>
     </BrowserRouter>
   );
