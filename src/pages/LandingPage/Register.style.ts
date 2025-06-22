@@ -2,124 +2,101 @@ import styled from "styled-components";
 
 export const RegisterWrapper = styled.div`
   display: flex;
-  flex-direction: row ;
+  height: 100vh;
   width: 100vw;
-  height: 1024px;
-  margin: 0 auto ;
   overflow: hidden;
-  
 `;
 
 export const RegisterLeft = styled.div`
-  width: 968px;
-  height: 1024px;
-  background-color: #F6F6F4;
+  flex: 2; /* 2/3 širine */
+  background-color: #f6f6f4;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  
   img {
-  height: 80%;   
-  width: auto;
-  object-fit: contain;
- 
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
   }
 `;
+
 export const RegisterRight = styled.div`
-  width: 472px;
-  height: 1024px;
+  flex: 1; /* 1/3 širine */
   display: flex;
   flex-direction: column;
-  justify-content: center ;
-  align-items: center; 
-  padding: 20px 50px;
-  gap: 8px ;
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+  justify-content: center; /* vertikalno centriranje */
+  align-items: center;     /* horizontalno centriranje */
+  padding: 40px 50px;
+  gap: 8px;
 `;
 
-export const H2 = styled.div`
-  display: flex;
-  justify-content: center;
+export const H2 = styled.h2`
   font-size: 40px;
-  font-weight: bold;
-  color: #000000;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+  text-align: center;
 `;
 
 export const Subtitle = styled.div`
-  text-align: center;
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 300;
   font-size: 16px;
-  margin-bottom: 24px;
   width: 100%;
+  text-align: center;
+  margin-bottom: 24px;
 
   strong {
-  font-weight: 900;
-  cursor: pointer;
+    font-weight: 900;
+    cursor: pointer;
   }
 `;
 
 export const FormContainer = styled.form`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
   margin-top: 24px;
 `;
 
-export const Input = styled.input`
-  padding: 12px 16px;
+export const Row = styled.div`
+  display: flex;
+  gap: 40px;
   margin-bottom: 10px;
-  border-radius: 8px;
+`;
+
+export const InputGroup = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+    &:first-child {
+    margin-right: 20px;
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #333;
+  }
+`;
+
+export const Input = styled.input`
+  padding: 12px 24px;
+  border-radius: 12px;
   border: 1px solid #ccc;
   font-size: 16px;
   width: 100%;
-
-  &::placeholder {
-    color: #999;
-  }
 
   &:focus {
     border-color: #333;
     outline: none;
   }
-`;
-export const SubmitButton = styled.button`
-  padding: 12px 20px;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  border-radius: 10px;
-  border: none;
-  margin-top: 16px;
-  color: #000000;
-  background-color: #f4ff47;
-  text-align: center;
-`;
 
-export const Row = styled.div`
-  display: flex;
-  gap: 80px;
-  margin-bottom: 10px;
-
-  input {
-    flex: 1;
-  }
-`;
-
-export const InputGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex: 1; /* svaki zauzima polovinu prostora */
-
-  label {
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 4px;
-    color: #333;
+  &::placeholder {
+    color: #999;
   }
 `;
 
@@ -140,6 +117,24 @@ export const PasswordWrapper = styled.div`
     border: none;
     cursor: pointer;
     font-size: 18px;
+  }
+`;
+
+export const SubmitButton = styled.button`
+  width: 100%;
+  padding: 14px 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  border-radius: 20px;
+  border: none;
+  background-color: #f4ff47;
+  color: #000;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #dbdb18;
   }
 `;
 

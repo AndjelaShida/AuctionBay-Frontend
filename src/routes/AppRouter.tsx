@@ -4,6 +4,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LandingPage from "../pages/LandingPage/LandingPage";
 import RegisterPage from "../pages/LandingPage/RegisterPage";
+import LoginPage from "../pages/LandingPage/LoginPage";
 
 const AppRouter: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const AppRouter: React.FC = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />  
         <Route path="/registerpage" element={<RegisterPage/>} />
+        <Route path="/loginpage" element={<LoginPage/>} />
       </Routes>
     </BrowserRouter>
   );
