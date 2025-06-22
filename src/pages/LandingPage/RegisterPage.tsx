@@ -3,7 +3,6 @@ import {
   RegisterWrapper,
   RegisterLeft,
   RegisterRight,
-  H2,
   Subtitle,
   FormContainer,
   Row,
@@ -11,7 +10,12 @@ import {
   Input,
   PasswordWrapper,
   SubmitButton,
+  Title,
+  MutedLink,
+  
 } from "./Register.style";
+
+
 
 const RegisterPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -25,7 +29,7 @@ const RegisterPage: React.FC = () => {
 
       <RegisterRight>
         <img src="/images/Left navigation.png" alt="left navigation" />
-        <H2>Hello!</H2>
+        <Title>Hello!</Title>
         <Subtitle>Please enter your details</Subtitle>
 
         <FormContainer>
@@ -77,11 +81,14 @@ const RegisterPage: React.FC = () => {
             </button>
           </PasswordWrapper>
 
-          <SubmitButton type="submit">Sign up</SubmitButton>
+          <SubmitButton type="submit">Log in</SubmitButton>
 
-          <Subtitle style={{ marginTop: 35 }}>
-            Already have an account? <strong>Log in</strong>
-          </Subtitle>
+<Subtitle style={{ marginTop: 35 }}>
+  Already have an account?
+   <MutedLink to="/loginpage">Log in
+   </MutedLink>
+</Subtitle>
+
         </FormContainer>
       </RegisterRight>
     </RegisterWrapper>

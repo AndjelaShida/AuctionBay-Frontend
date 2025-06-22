@@ -1,3 +1,5 @@
+
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const RegisterWrapper = styled.div`
@@ -15,7 +17,7 @@ export const RegisterLeft = styled.div`
   align-items: center;
 
   img {
-    max-height: 100%;
+    max-height: 150%;
     width: auto;
     object-fit: contain;
   }
@@ -27,11 +29,11 @@ export const RegisterRight = styled.div`
   flex-direction: column;
   justify-content: center; /* vertikalno centriranje */
   align-items: center;     /* horizontalno centriranje */
-  padding: 40px 50px;
+  padding: 20px 80px;
   gap: 8px;
 `;
 
-export const H2 = styled.h2`
+export const Title = styled.h2`
   font-size: 40px;
   font-weight: 700;
   color: #000;
@@ -137,4 +139,17 @@ export const SubmitButton = styled.button`
     background-color: #dbdb18;
   }
 `;
+export const MutedLink = styled(Link)`
+  color: rgb(33, 53, 71) ;     
+  font-weight: 900;  
+  font-size: 16px;   
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: #333;     
+  }
+`;
+
+
 
