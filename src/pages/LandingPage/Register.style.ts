@@ -2,34 +2,41 @@ import styled from "styled-components";
 
 export const RegisterWrapper = styled.div`
   display: flex;
+  flex-direction: row ;
   width: 100vw;
-  height: 100vh;
+  height: 1024px;
+  margin: 0 auto ;
   overflow: hidden;
+  
 `;
 
 export const RegisterLeft = styled.div`
   width: 968px;
-  height: 100vh;
+  height: 1024px;
+  background-color: #F6F6F4;
   display: flex;
   justify-content: center;
   align-items: center;
 
+  
   img {
-    max-height: 100vh;
-    width: auto;
-    object-fit: contain;
+  height: 80%;   
+  width: auto;
+  object-fit: contain;
+ 
   }
 `;
 export const RegisterRight = styled.div`
-    width: 472px;
+  width: 472px;
   height: 1024px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* centriraj sve horizontalno */
-padding: 30px 20px ;
+  justify-content: center ;
+  align-items: center; 
+  padding: 20px 50px;
+  gap: 8px ;
 
   img {
-    margin-bottom: 20px;
     max-width: 100%;
     height: auto;
   }
@@ -50,6 +57,11 @@ export const Subtitle = styled.div`
   font-size: 16px;
   margin-bottom: 24px;
   width: 100%;
+
+  strong {
+  font-weight: 900;
+  cursor: pointer;
+  }
 `;
 
 export const FormContainer = styled.form`
@@ -77,10 +89,10 @@ export const Input = styled.input`
   }
 `;
 export const SubmitButton = styled.button`
-  padding: 12px 16px;
+  padding: 12px 20px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 10px;
   border: none;
   margin-top: 16px;
   color: #000000;
@@ -129,5 +141,5 @@ export const PasswordWrapper = styled.div`
     cursor: pointer;
     font-size: 18px;
   }
-    `;
+`;
 

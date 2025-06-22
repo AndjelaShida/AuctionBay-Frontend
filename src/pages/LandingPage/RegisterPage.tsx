@@ -23,7 +23,7 @@ const RegisterPage = () => {
       </RegisterLeft>
 
       <RegisterRight>
-        <img src="./images/Left navigation.png" alt="Left navigation"></img>
+        <img src="/images/Left navigation.png" alt="Left navigation"></img>
         <H2>Hello!</H2>
         <Subtitle>Please enter your detalis</Subtitle>
 
@@ -66,6 +66,8 @@ const RegisterPage = () => {
             </button>
           </PasswordWrapper>
           <SubmitButton typeof="submit">Sign up</SubmitButton>
+          <Subtitle style={{ marginTop:"35px"}}>
+            Already have an account? <strong>Log in</strong></Subtitle>
         </FormContainer>
       </RegisterRight>
     </RegisterWrapper>
