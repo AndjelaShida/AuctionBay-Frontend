@@ -6,6 +6,7 @@ import LandingPage from "../pages/LandingPage/LandingPage";
 import RegisterPage from "../pages/LandingPage/RegisterPage";
 import LoginPage from "../pages/LandingPage/LoginPage";
 import ForgotPasswordPage from "../pages/LandingPage/ForgotPasswordPage";
+import MyAuction from "../pages/profile/myAuction";
 
 const AppRouter: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const AppRouter: React.FC = () => {
         <Route path="/registerpage" element={<RegisterPage />} />
         <Route path="/loginpage" element={<LoginPage />} />
         <Route path="/forgotpasswordpage" element={<ForgotPasswordPage />} />
+        <Route path="/myauction" element={<MyAuction />} />
       </Routes>
     </BrowserRouter>
   );

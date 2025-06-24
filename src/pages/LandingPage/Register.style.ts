@@ -140,7 +140,7 @@ export const SubmitButton = styled.button`
   }
 `;
 export const MutedLink = styled(Link)`
-  color: rgb(33, 53, 71) ;     
+  color: #213547 ;     
   font-weight: 900;  
   font-size: 16px;   
   text-decoration: none;

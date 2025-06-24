@@ -15,11 +15,17 @@ import {
   Subtitle,
   Title,
 } from "./Login.style";
+import { useNavigate } from "react-router-dom";
 
 
 
 const LoginPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate("/myAuction");
+  }
   return (
     <LoginWrapper>
       <LoginLeft>
@@ -59,7 +65,7 @@ const LoginPage: React.FC = () => {
             </MutedLink>
          </ForgotPasswordWrapper>
 
-          <SubmitButton>Login</SubmitButton>
+          <SubmitButton onClick={handleLogin}>Login</SubmitButton>
 
           <Subtitle style={{ marginTop: 35 }}>
             Don't have an account? 
