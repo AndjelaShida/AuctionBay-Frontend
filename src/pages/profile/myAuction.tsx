@@ -37,29 +37,42 @@ const doneCards = auctionCard.filter(card => card.tag.toLowerCase() === "done");
         </LeftGroup>
 
         <RightGroup>
-          <IconButton to="/create">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="black"
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="12" y1="5" x2="12" y2="19" />
-              <line x1="5" y1="12" x2="19" y2="12" />
-            </svg>
-          </IconButton>
+
+         <IconButton to="/create">
+  <div
+    style={{
+      backgroundColor: "#f4ff47", 
+      width: "100%",
+      height: "100%",
+      borderRadius: "50%",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    }}
+  >
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="white" 
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="12" y1="5" x2="12" y2="19" />
+      <line x1="5" y1="12" x2="19" y2="12" />
+    </svg>
+  </div>
+</IconButton>
 
           <IconButton to="/profile">
             <img
               src="/images/profile.png"
               alt="profile"
               style={{
-                width: 32,
-                height: 32,
+                width: 50,
+                height: 50,
                 borderRadius: "50%",
                 objectFit: "cover",
               }}
