@@ -7,14 +7,13 @@ min-width: 216px;
 height: 250px ;
 min-height: 250px ;
 border-radius: 16px;
-background-color; #ffffff ;
-display; flex;
+background-color: #ffffff ;
+display: flex;
 flex-direction: column;
 padding: 8px;
 gap: 8px;
 position: relative;
  background-color: white;
-
 
 `;
 
@@ -85,3 +84,41 @@ export const Price = styled.p`
   margin: 0;
   color: #071015;
 `;
+export const Actions = styled.div`
+  display: flex;
+justify-content:space-between;
+padding: 0 12px 12px 12px ;
+gap: 8px;
+`;
+
+
+export const DeleteButton = styled.div ` 
+width:36px;
+height: 36px;
+border: 1px solid black;
+border-radius: 12px;
+color: black;
+background-color:white;
+display:flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+`;
+export const EditButton = styled.div` 
+flex: 1;
+height:36px;
+background-color: #1d1d1d;
+color:white;
+border: none;
+border-radius: 12px;
+padding: 0 12px;
+font-size: 14px;
+font-weight: 500cursor: pointer;
+display:flex;
+align-items: center;
+justify-content: center;
+gap:6px;
+
+`;
+
+
