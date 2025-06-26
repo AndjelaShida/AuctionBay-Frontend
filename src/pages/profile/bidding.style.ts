@@ -55,28 +55,6 @@ export const NavButton = styled(Link)`
   }
 `;
 
-export const NavButton2 = styled(Link)`
-  padding: 14px 20px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  border-radius: 20px;
-  border: none;
-  background-color:#F0F8FF;
-  color: #000;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
- color: black;
-  display: flex;
-  align-items: center;
-  border-radius: 50px;
-  gap: 10px;
-
-  &:hover {
-      color:white ;
-    background-color:#202020 ;
-  }
-`;
-
 export const IconButton = styled(Link)`
   width: 48px;
   height: 48px;
@@ -104,24 +82,4 @@ export const Title = styled.h2`
   text-align: left;
 
 `;
-
-export const Content = styled.div`
-flex-direction: column;
-display: flex ;
-align-items: center ;
-text-align: center;
-justify-content: center;
-gap: 32px;
-padding: 24px ;
-`;
-export const ButtonGroup = styled.div`
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  justify-content: center;
-`;
-
-
-
-
 

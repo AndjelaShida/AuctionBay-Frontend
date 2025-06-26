@@ -6,15 +6,8 @@ import {
   NavButton,
   IconButton,
   Title,
-  Content,
-  NavButton2,
-  ButtonGroup,
 } from "./myAuction.style";
 import { HomeIcon, UserIcon } from "../../icons/homeIcon";
-import AuctionCard from "../../cards/auctionCard";
-import { auctionCard } from "../../cards/auctionCardData";
-
-
 
 const MyAuction: React.FC = () => {
   return (
@@ -67,38 +60,6 @@ const MyAuction: React.FC = () => {
       </Navbar>
 
       <Title>Hello Jamal Reces !</Title>
-
-      <Content>
-        
-        <ButtonGroup>
-          <NavButton2 to="/myauction">My auction</NavButton2>
-
-          <NavButton2 to="/bidding">Bidding</NavButton2>
-
-          <NavButton2 to="/Won ">Won</NavButton2>
-        </ButtonGroup>
-
-        <div
-          style={{
-            display: "flex",
-            gap: "16px",
-            flexWrap: "wrap",
-            padding: "32px",
-          }}
-        >
-     {auctionCard.map((card, index) => (
-  <AuctionCard
-    key={index}
-    image={card.image}
-    tag={card.tag}
-    tagColor={card.tagColor}
-    timeLeft={card.timeLeft}
-    title={card.title}
-    price={card.price}
-  />
-))}
-        </div>
-      </Content>
     </Wrapper>
   );
 };
