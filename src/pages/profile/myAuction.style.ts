@@ -1,19 +1,43 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
+import { NavLink } from "react-router-dom";
 
-export const Wrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #f0f0f0; 
-  
+export const CardsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  padding: 32px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #F6F6F4 ; 
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr); // prilagodljivo za tablete
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // mobilni
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 
-export const Navbar = styled.div`
-  height: 100px;
-  background-color: #f0f0f0;
+export const Wrapper = styled.div`
+  max-width: 100vw; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F6F4 ; 
+  overflow-x: hidden;
+  
+`;
+
+export const Navbar = styled.div` 
+  height: 104px;
+  background-color: #F6F6F4 ;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,7 +57,7 @@ export const RightGroup = styled.div`
 `;
 
 
-export const NavButton = styled(Link)`
+export const NavButton = styled(NavLink)`
   padding: 14px 20px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -46,13 +70,16 @@ export const NavButton = styled(Link)`
  color: black;
   display: flex;
   align-items: center;
-  border-radius: 50px;
   gap: 10px;
 
   &:hover {
       color:white ;
     background-color:#202020 ;
   }
+    &.active {
+    background-color: #202020;
+    color: white;
+    }
 `;
 
 export const NavButton2 = styled(Link)`
@@ -90,11 +117,12 @@ export const IconButton = styled(Link)`
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-
-  
+ 
 `;
 
 export const Title = styled.h2`
+width: 1440px;
+height: 38px;
   font-size: 40px;
   font-weight: 700;
   color: #000;
@@ -104,7 +132,7 @@ export const Title = styled.h2`
 
 `;
 
-export const Content = styled.div`
+export const TabBar = styled.div`
 flex-direction: column;
 display: flex ;
 align-items: center ;

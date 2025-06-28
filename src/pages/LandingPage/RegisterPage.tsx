@@ -12,6 +12,7 @@ import {
   SubmitButton,
   Title,
   MutedLink,
+  IconButton,
   
 } from "./Register.style";
 
@@ -28,7 +29,18 @@ const RegisterPage: React.FC = () => {
       </RegisterLeft>
 
       <RegisterRight>
-        <img src="/images/Left navigation.png" alt="left navigation" />
+       <IconButton to="a">
+                   <img
+                   src="images/Left navigation.png"
+                   alt="left navigation"
+                   style={{
+                     width: 70,
+                       height: 70,
+                       borderRadius: "50%",
+                       objectFit: "cover",
+                   }}
+                   />
+                 </IconButton>
         <Title>Hello!</Title>
         <Subtitle>Please enter your details</Subtitle>
 

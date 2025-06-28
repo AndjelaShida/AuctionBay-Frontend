@@ -162,3 +162,18 @@ export const MutedLink2 = styled(Link)`
     color: #333;     
   }
 `;
+export const IconButton = styled(Link)`
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;      
+  background-color: white; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+`;
+

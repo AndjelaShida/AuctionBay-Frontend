@@ -14,7 +14,7 @@ export const auctionCard = [
     timeLeft: "30h",
     title: "Old chair",
     price: "65 €",
-    tag: "In progress",
+    tag: "in progress",
     tagColor: "	#FFFF8F",
     },
     {
@@ -22,7 +22,7 @@ export const auctionCard = [
     timeLeft: "",
     title: "Old chair",
     price: "65 €",
-    tag: "Done",
+    tag: "done",
     tagColor: "	#686868",
     },
        {

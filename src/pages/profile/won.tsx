@@ -1,20 +1,35 @@
-import {
-  Wrapper,
-  Navbar,
-  LeftGroup,
-  RightGroup,
-  NavButton,
-  IconButton,
-  Title,
-} from "./myAuction.style";
 import { HomeIcon, UserIcon } from "../../icons/homeIcon";
+import {
+  ButtonGroup,
+  IconButton,
+  LeftGroup,
+  Navbar,
+  NavButton,
+  NavButton2,
+  RightGroup,
+  TabBar,
+  Title,
+  Wrapper,
+} from "./won.style";
+
 
 const MyAuction: React.FC = () => {
   return (
     <Wrapper>
       <Navbar>
         <LeftGroup>
-          <img src="/images/Left navigation.png" alt="navbar" />
+          <IconButton to="#">
+            <img
+              src="images/Left navigation.png"
+              alt="left navigation"
+              style={{
+                width: 70,
+                height: 70,
+                borderRadius: "50%",
+                objectFit: "cover",
+              }}
+            />
+          </IconButton>
 
           <NavButton to="/auctions">
             <HomeIcon color="#000" />
@@ -29,19 +44,31 @@ const MyAuction: React.FC = () => {
 
         <RightGroup>
           <IconButton to="/create">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="black"
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+            <div
+              style={{
+                backgroundColor: "#f4ff47",
+                width: "100%",
+                height: "100%",
+                borderRadius: "50%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
             >
-              <line x1="12" y1="5" x2="12" y2="19" />
-              <line x1="5" y1="12" x2="19" y2="12" />
-            </svg>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </div>
           </IconButton>
 
           <IconButton to="/profile">
@@ -49,8 +76,8 @@ const MyAuction: React.FC = () => {
               src="/images/profile.png"
               alt="profile"
               style={{
-                width: 32,
-                height: 32,
+                width: 50,
+                height: 50,
                 borderRadius: "50%",
                 objectFit: "cover",
               }}
@@ -59,7 +86,14 @@ const MyAuction: React.FC = () => {
         </RightGroup>
       </Navbar>
 
-      <Title>Hello Jamal Reces !</Title>
+      <Title>Hello Jamal Reces! </Title>
+      <TabBar>
+        <ButtonGroup>
+          <NavButton2 to="/myauction">My auction</NavButton2>
+          <NavButton2 to="/bidding">Bidding</NavButton2>
+          <NavButton2 to="/Won ">Won</NavButton2>
+        </ButtonGroup>
+      </TabBar>
     </Wrapper>
   );
 };

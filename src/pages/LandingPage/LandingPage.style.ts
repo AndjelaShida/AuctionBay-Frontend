@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const PageWrapper = styled.div`
@@ -32,6 +33,21 @@ export const AuthButtons = styled.div`
   gap: 16px;
 `;
 
+export const IconButton = styled(Link)`
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;      
+  background-color: white; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+`;
+
 export const H1 = styled.h1`
   font-size: 'Inter', sans-serif ;
   font-weight: 700;
@@ -58,12 +74,15 @@ export const StartButton = styled.button`
   line-height: 24px;
   font-family: "Inter", sans-serif;
   border-radius: 16px;
-  border: none;
   color: #000000;
-  background-color: #272d2d;
+  background-color: #F4FF47;
   cursor: pointer;
   display: inline-block;
   margin: 24px auto 0 auto;
+
+  &:hover {
+  background-color:#cad43b 
+  }
 `;
 
 export const OrText = styled.span`

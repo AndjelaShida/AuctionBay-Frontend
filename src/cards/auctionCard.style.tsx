@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"; //card background-color: #ffffff ;
 // ``;
 
 export const Card = styled.div`
@@ -23,6 +23,7 @@ export const ImageContainer = styled.div`
   border-radius: 12px;
   overflow: hidden;
   position: relative;
+
 `;
 
 export const AuctionImage = styled.img`
@@ -38,12 +39,15 @@ export const CardContent = styled.div`
   justify-content: space-between;
   gap: 8px;
   flex: 1;
+  
+  
 `;
 
 export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
+   
 `;
 
 export const Tag = styled.span`
@@ -103,6 +107,10 @@ display:flex;
 align-items: center;
 justify-content: center;
 cursor: pointer;
+&:hover {
+background-color:#1d1d1d; 
+color: white;
+ }
 `;
 export const EditButton = styled.div` 
 flex: 1;
@@ -113,11 +121,18 @@ border: none;
 border-radius: 12px;
 padding: 0 12px;
 font-size: 14px;
-font-weight: 500cursor: pointer;
+font-weight: 500;
+cursor: pointer;
 display:flex;
 align-items: center;
 justify-content: center;
 gap:6px;
+
+&:hover {
+background-color: #000000 ;
+}
+
+
 
 `;
 

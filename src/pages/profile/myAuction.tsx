@@ -6,24 +6,35 @@ import {
   NavButton,
   IconButton,
   Title,
-  Content,
   NavButton2,
   ButtonGroup,
+  CardsGrid,
+  TabBar,
 } from "./myAuction.style";
 import { HomeIcon, UserIcon } from "../../icons/homeIcon";
 import AuctionCard from "../../cards/auctionCard";
 import { auctionCard } from "../../cards/auctionCardData";
 
-
-
 const MyAuction: React.FC = () => {
-const inProgressCards = auctionCard.filter(card => card.tag.toLowerCase() === "in progress");
-const doneCards = auctionCard.filter(card => card.tag.toLowerCase() === "done");
+const inProgressCards = auctionCard.filter(card => card.tag.trim().toLowerCase() === "in progress");
+const doneCards = auctionCard.filter(card => card.tag.trim().toLowerCase() === "done");
+
   return (
     <Wrapper>
       <Navbar>
         <LeftGroup>
-          <img src="/images/Left navigation.png" alt="navbar" />
+        <IconButton to="#">
+                    <img
+                    src="images/Left navigation.png"
+                    alt="left navigation"
+                    style={{
+                      width: 70,
+                        height: 70,
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                    }}
+                    />
+                  </IconButton>
 
           <NavButton to="/auctions">
             <HomeIcon color="#000" />
@@ -34,6 +45,7 @@ const doneCards = auctionCard.filter(card => card.tag.toLowerCase() === "done");
             <UserIcon color="#000" />
             Profile
           </NavButton>
+
         </LeftGroup>
 
         <RightGroup>
@@ -81,23 +93,17 @@ const doneCards = auctionCard.filter(card => card.tag.toLowerCase() === "done");
         </RightGroup>
       </Navbar>
 
-      <Title>Hello Jamal Reces !</Title>
-<Content>
+      <Title>Hello Jamal Reces! </Title>
+<TabBar>
         <ButtonGroup>
           <NavButton2 to="/myauction">My auction</NavButton2>
           <NavButton2 to="/bidding">Bidding</NavButton2>
           <NavButton2 to="/Won ">Won</NavButton2>
         </ButtonGroup>
 
-        {/* outbid kartice */}
-        <div
-          style={{
-            display: "flex",
-            gap: "16px",
-            flexWrap: "wrap",
-            padding: "32px 32px 0px 32px",
-          }}
-        >
+        {/* in progress kartice */}
+       <CardsGrid>
+     
           {inProgressCards.map((card, index) => (
             <AuctionCard
               key={index}
@@ -111,19 +117,11 @@ const doneCards = auctionCard.filter(card => card.tag.toLowerCase() === "done");
               
             />
           ))}
-        </div>
-        
-
-       
+</CardsGrid>
+               
 {/* Done kartice */}
-<div
-  style={{
-    display: "flex",
-    flexWrap: "wrap",
-    gap: "16px",
-    padding: "0 32px 32px 32px",
-  }}
->
+<CardsGrid>
+
   {doneCards.map((card, index) => (
     <AuctionCard
       key={index}
@@ -135,8 +133,8 @@ const doneCards = auctionCard.filter(card => card.tag.toLowerCase() === "done");
       price={card.price}
     />
   ))}
-</div>
-      </Content>
+</CardsGrid>
+      </TabBar>
     </Wrapper>
   );
 };

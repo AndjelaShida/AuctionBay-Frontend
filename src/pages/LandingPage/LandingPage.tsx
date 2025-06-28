@@ -8,6 +8,7 @@ import {
   Header,
   H1,
   AuthButtons,
+  IconButton,
 } from "./LandingPage.style";
 import { Link } from "react-router-dom";
 
@@ -16,7 +17,19 @@ const LandingPage = () => {
     <PageWrapper>
       <Content>
         <Header>
-          <img src="./images/Left navigation.png" alt="Left navigation"></img>
+          <IconButton to="a">
+            <img
+            src="images/Left navigation.png"
+            alt="left navigation"
+            style={{
+              width: 70,
+                height: 70,
+                borderRadius: "50%",
+                objectFit: "cover",
+            }}
+            />
+          </IconButton>
+        
           <AuthButtons>
             <Link to="LoginPage">
             <Button>Log in</Button>
@@ -36,9 +49,9 @@ const LandingPage = () => {
           or getting a deal on product you want!
         </Subtitle>
         <StartButton>
-          {" "}
-          <img src="./images/landingPic.png" alt="Landing Picture" />
+         Start Bidding
         </StartButton>
+        <img src="./images/landingPic.png" alt="Landing Picture" />
       </Content>
     </PageWrapper>
   );

@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   ForgotPasswordWrapper,
   FormContainer,
+  IconButton,
   Input,
   InputGroup,
   LoginLeft,
@@ -33,7 +34,18 @@ const LoginPage: React.FC = () => {
       </LoginLeft>
 
       <LoginRight>
-        <img src="/images/Left navigation.png" alt="left navigation" />
+       <IconButton to="a">
+                   <img
+                   src="images/Left navigation.png"
+                   alt="left navigation"
+                   style={{
+                     width: 70,
+                       height: 70,
+                       borderRadius: "50%",
+                       objectFit: "cover",
+                   }}
+                   />
+                 </IconButton>
         <Title>Welcome back!</Title>
         <Subtitle>Please enter your details</Subtitle>
         <FormContainer>
