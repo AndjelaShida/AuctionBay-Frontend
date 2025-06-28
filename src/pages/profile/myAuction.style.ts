@@ -6,7 +6,7 @@ export const CardsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 16px;
-  padding: 32px;
+  padding: 20px;
   width: 100%;
   box-sizing: border-box;
   background-color: #F6F6F4 ; 
@@ -29,9 +29,9 @@ export const Wrapper = styled.div`
   max-width: 100vw; 
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  background-color: #F6F6F4 ; 
-  overflow-x: hidden;
+  flex-direction: column;  
+    background-color: #F6F6F4 ;
+  
   
 `;
 

@@ -1,20 +1,18 @@
-import styled from "styled-components"; //card background-color: #ffffff ;
+import styled from "styled-components";
+
 // ``;
 
-export const Card = styled.div`
-width: 216px; 
-min-width: 216px;
-height: 250px ;
-min-height: 250px ;
-border-radius: 16px;
-background-color: #ffffff ;
-display: flex;
-flex-direction: column;
-padding: 8px;
-gap: 8px;
-position: relative;
- background-color: white;
-
+export const Card = styled.div<{ tag: string }>`
+  width: 216px;
+  min-width: 216px;
+  height: 250px;
+  border-radius: 16px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  gap: 8px;
+  position: relative;
 `;
 
 export const ImageContainer = styled.div`
@@ -23,7 +21,6 @@ export const ImageContainer = styled.div`
   border-radius: 12px;
   overflow: hidden;
   position: relative;
-
 `;
 
 export const AuctionImage = styled.img`
@@ -39,27 +36,33 @@ export const CardContent = styled.div`
   justify-content: space-between;
   gap: 8px;
   flex: 1;
-  
-  
 `;
 
 export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
-   
 `;
 
-export const Tag = styled.span`
+export const Tag = styled.span<{ tag: string; tagColor: string }>`
   font-size: 12px;
   background-color: #ffaa98;
   padding: 3px 6px;
   border-radius: 30px;
   display: inline-block;
   width: fit-content;
+  background-color: ${({ tag, tagColor }) => {
+    if (tag.toLowerCase() === "Done") return "#272D2D ";
+    if (tag.toLowerCase() === "In progress") return "#F9FF90";
+    if (tag.toLowerCase() === "Outbid") return "#FFAA98";
+    if (tag.toLowerCase() === "Winning") return "#ADFF90";
+    return tagColor;
+  }};
+  color: ${({ tag }) =>
+    tag.toLocaleLowerCase() === "done" ? "white" : "#272D2D"};
 `;
 
-export const Time = styled.span`
+export const Time = styled.span<{ tag: string }>`
   font-size: 12px;
   background-color: #ffaa98;
   padding: 3px 6px;
@@ -70,6 +73,26 @@ export const Time = styled.span`
   position: absolute;
   top: 8px;
   right: 8px;
+
+
+  background-color: ${({ tag }) => {
+    switch (tag.toLowerCase()) {
+      case "in progress":
+        return "transparent"; 
+      case "winning":
+        return "#FFAA98"; 
+      case "outbid":
+        return "#FFAA98";
+      default:
+        return "transparent"; 
+    }
+  }};
+
+  color: ${({ tag }) =>
+    tag.toLowerCase() === "in progress" ? "#000" : "#fff"};
+
+  border: ${({ tag }) =>
+    tag.toLowerCase() === "in progress" ? "none" : "1px solid transparent"};
 `;
 
 export const Title = styled.h3`
@@ -90,50 +113,44 @@ export const Price = styled.p`
 `;
 export const Actions = styled.div`
   display: flex;
-justify-content:space-between;
-padding: 0 12px 12px 12px ;
-gap: 8px;
+  justify-content: space-between;
+  padding: 0 12px 12px 12px;
+  gap: 8px;
 `;
 
-
-export const DeleteButton = styled.div ` 
-width:36px;
-height: 36px;
-border: 1px solid black;
-border-radius: 12px;
-color: black;
-background-color:white;
-display:flex;
-align-items: center;
-justify-content: center;
-cursor: pointer;
-&:hover {
-background-color:#1d1d1d; 
-color: white;
- }
+export const DeleteButton = styled.div`
+  width: 36px;
+  height: 36px;
+  border: 1px solid black;
+  border-radius: 12px;
+  color: black;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    background-color: #1d1d1d;
+    color: white;
+  }
 `;
-export const EditButton = styled.div` 
-flex: 1;
-height:36px;
-background-color: #1d1d1d;
-color:white;
-border: none;
-border-radius: 12px;
-padding: 0 12px;
-font-size: 14px;
-font-weight: 500;
-cursor: pointer;
-display:flex;
-align-items: center;
-justify-content: center;
-gap:6px;
+export const EditButton = styled.div`
+  flex: 1;
+  height: 36px;
+  background-color: #1d1d1d;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 
-&:hover {
-background-color: #000000 ;
-}
-
-
-
+  &:hover {
+    background-color: #000000;
+  }
 `;
-
-

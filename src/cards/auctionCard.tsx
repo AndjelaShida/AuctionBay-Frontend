@@ -32,38 +32,45 @@ const AuctionCard: React.FC<Props> = ({
   title,
   price,
 }) => {
+  const tagLower = tag.toLowerCase();
+
   return (
-    <Card>
+    <Card tag={tagLower}>
       <CardContent>
         <Header>
-          <Time>
-            {timeLeft}
-            <FiClock size={14}></FiClock>
-          </Time>
+          {tagLower !== "done" && timeLeft && (
+            <Time tag={tagLower}>
+              {timeLeft}
+              <FiClock size={14} />
+            </Time>
+          )}
         </Header>
 
-        <Tag style={{ backgroundColor: tagColor }}>{tag}</Tag>
+        <Tag tag={tagLower} tagColor={tagColor}>
+          {tag}
+        </Tag>
         <Title>{title}</Title>
         <Price>{price}</Price>
       </CardContent>
 
       <ImageContainer>
-        <AuctionImage src={image} alt={title}></AuctionImage>
+        <AuctionImage src={image} alt={title} />
       </ImageContainer>
 
-      {tag.toLowerCase() === "in progress" && (
+      {/* Prikazivanje akcija samo za "in progress" */}
+      {tagLower === "in progress" && (
         <Actions>
           <DeleteButton>
-            <FiTrash size={16}></FiTrash>
+            <FiTrash size={16} />
           </DeleteButton>
           <EditButton>
-              <FiEdit size={16}></FiEdit>
+            <FiEdit size={16} />
             Edit
-          
           </EditButton>
         </Actions>
       )}
     </Card>
   );
 };
+
 export default AuctionCard;
