@@ -25,6 +25,7 @@ interface Props {
 }
 
 const AuctionCard: React.FC<Props> = ({
+  //6 u prvom redu, 5 u drugom
   image,
   timeLeft,
   tag,

@@ -14,6 +14,29 @@ export const Wrapper = styled.div`
 `;
 
 
+export const CardsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #F6F6F4 ; 
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr); // prilagodljivo za tablete
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // mobilni
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+
 export const Navbar = styled.div`
   height: 100px;
   background-color: #F6F6F4;

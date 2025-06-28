@@ -1,6 +1,9 @@
+import AuctionCard from "../../cards/auctionCard";
+import { auctionCardDone } from "../../cards/auctionCardData";
 import { HomeIcon, UserIcon } from "../../icons/homeIcon";
 import {
   ButtonGroup,
+  CardsGrid,
   IconButton,
   LeftGroup,
   Navbar,
@@ -14,6 +17,15 @@ import {
 
 
 const MyAuction: React.FC = () => {
+
+const doneCards = Array.from({ length: 11 }).map((_,index) => ({
+  ...auctionCardDone[0],
+    key: `done-${index}`,
+}));
+
+const firstRow = doneCards.slice(0, 6);
+const secondRow = doneCards.slice(6, 11); 
+
   return (
     <Wrapper>
       <Navbar>
@@ -93,6 +105,35 @@ const MyAuction: React.FC = () => {
           <NavButton2 to="/bidding">Bidding</NavButton2>
           <NavButton2 to="/Won ">Won</NavButton2>
         </ButtonGroup>
+
+        <CardsGrid>
+  {firstRow.map((card) => (
+    <AuctionCard
+      key={card.key}
+      image={card.image}
+      tag={card.tag}
+      tagColor={card.tagColor}
+      timeLeft={card.timeLeft}
+      title={card.title}
+      price={card.price}
+    />
+  ))}
+</CardsGrid>
+
+<CardsGrid>
+  {secondRow.map((card) => (
+    <AuctionCard
+      key={card.key}
+      image={card.image}
+      tag={card.tag}
+      tagColor={card.tagColor}
+      timeLeft={card.timeLeft}
+      title={card.title}
+      price={card.price}
+    />
+  ))}
+</CardsGrid>
+
       </TabBar>
     </Wrapper>
   );
