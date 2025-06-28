@@ -64,7 +64,6 @@ export const Tag = styled.span<{ tag: string; tagColor: string }>`
 
 export const Time = styled.span<{ tag: string }>`
   font-size: 12px;
-  background-color: #ffaa98;
   padding: 3px 6px;
   border-radius: 30px;
   display: flex;
@@ -74,27 +73,32 @@ export const Time = styled.span<{ tag: string }>`
   top: 8px;
   right: 8px;
 
-
   background-color: ${({ tag }) => {
     switch (tag.toLowerCase()) {
       case "in progress":
-        return "transparent"; 
+        return "transparent";
       case "winning":
-        return "#FFAA98"; 
       case "outbid":
         return "#FFAA98";
       default:
-        return "transparent"; 
+        return "transparent";
     }
   }};
 
-  color: ${({ tag }) =>
-    tag.toLowerCase() === "in progress" ? "#000" : "#fff"};
+  color: ${({ tag }) => {
+    switch (tag.toLowerCase()) {
+      case "outbid":
+      case "winning":
+      case "in progress":
+        return "#000"; // crna boja za outbid, winning i in progress
+      default:
+        return "#fff"; // bela boja za ostalo
+    }
+  }};
 
   border: ${({ tag }) =>
     tag.toLowerCase() === "in progress" ? "none" : "1px solid transparent"};
 `;
-
 export const Title = styled.h3`
   font-size: 14px;
   color: #071015;

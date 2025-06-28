@@ -34,7 +34,7 @@ export const auctionCardOutbid = [
       export const auctionCardWinning = [
        {
     image: "/images/chair1.jpg",
-    timeLeft: "",
+    timeLeft: "24h",
     title: "Old chair",
     price: "65 €",
     tag: "Winning",
