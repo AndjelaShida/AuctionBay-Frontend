@@ -61,10 +61,11 @@ export const NavButton = styled(NavLink)`
   padding: 14px 20px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  font-size: 16px;
   border-radius: 20px;
   border: none;
   background-color:white;
-  color: #000;
+  color: #FFFFFF;
   cursor: pointer;
   transition: background-color 0.3s ease;
  color: black;
@@ -86,7 +87,7 @@ export const NavButton2 = styled(Link)`
   padding: 14px 20px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  border-radius: 20px;
+  border-radius: 32px;
   border: none;
   background-color:#F0F8FF;
   color: #000;

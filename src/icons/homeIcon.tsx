@@ -1,14 +1,9 @@
-import React from "react";
-
-export const HomeIcon: React.FC<{ size?: number; color?: string }> = ({
-  size = 16,
-  color = "black",
-}) => (
+export const HomeIcon: React.FC<{ size?: number }> = ({ size = 24 }) => (
   <svg
     width={size}
     height={size}
     viewBox="0 0 24 24"
-    fill={color}
+    fill="currentColor" // ← ključna izmena
     xmlns="http://www.w3.org/2000/svg"
     style={{ marginRight: 8 }}
   >
@@ -16,15 +11,12 @@ export const HomeIcon: React.FC<{ size?: number; color?: string }> = ({
   </svg>
 );
 
-export const UserIcon: React.FC<{ size?: number; color?: string }> = ({
-  size = 16,
-  color = "black",
-}) => (
+export const UserIcon: React.FC<{ size?: number }> = ({ size = 24 }) => (
   <svg
     width={size}
     height={size}
     viewBox="0 0 24 24"
-    fill={color}
+    fill="currentColor" // ← ovde takođe
     xmlns="http://www.w3.org/2000/svg"
     style={{ marginRight: 8 }}
   >

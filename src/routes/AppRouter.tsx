@@ -9,6 +9,7 @@ import ForgotPasswordPage from "../pages/LandingPage/ForgotPasswordPage";
 import MyAuction from "../pages/profile/myAuction";
 import Bidding from "../pages/profile/bidding";
 import Won from "../pages/profile/won";
+import Auctions from "../pages/auction/auctions";
 
 const AppRouter: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const AppRouter: React.FC = () => {
         <Route path="/myauction" element={<MyAuction />} />
          <Route path="/bidding" element={<Bidding />} />
           <Route path="/won" element={<Won />} />
+           <Route path="/auctions" element={<Auctions />} />
       </Routes>
     </BrowserRouter>
   );

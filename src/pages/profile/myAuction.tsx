@@ -64,12 +64,12 @@ const MyAuction: React.FC = () => {
           </IconButton>
 
           <NavButton to="/auctions">
-            <HomeIcon color="#000" />
+            <HomeIcon  />
             Auction
           </NavButton>
 
           <NavButton to="/profile">
-            <UserIcon color="#000" />
+            <UserIcon  />
             Profile
           </NavButton>
         </LeftGroup>
