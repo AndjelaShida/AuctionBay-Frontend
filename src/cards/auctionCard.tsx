@@ -22,6 +22,7 @@ interface Props {
   timeLeft: string;
   title: string;
   price: string;
+  showAuctions?: boolean;
 }
 
 const AuctionCard: React.FC<Props> = ({
@@ -32,6 +33,7 @@ const AuctionCard: React.FC<Props> = ({
   tagColor,
   title,
   price,
+  showAuctions = false,
 }) => {
   const tagLower = tag.toLowerCase();
 
@@ -59,7 +61,7 @@ const AuctionCard: React.FC<Props> = ({
       </ImageContainer>
 
       {/* Prikazivanje akcija samo za "in progress" */}
-      {tagLower === "in progress" && (
+      {showAuctions && tagLower === "in progress" && (
         <Actions>
           <DeleteButton>
             <FiTrash size={16} />

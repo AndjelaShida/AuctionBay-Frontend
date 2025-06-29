@@ -13,8 +13,10 @@ import {
   Title,
   Wrapper,
 } from "../../Base/Base.style";
+import AuctionCard from "../../cards/auctionCard";
+import { auctionCardItems } from "../../cards/auctionCardData";
 import { HomeIcon, UserIcon } from "../../icons/homeIcon";
-import { Body, Content } from "./auctions.style";
+import { Body, CardsGrid} from "./auctions.style";
 
 const Auction: React.FC = () => {
   return (
@@ -66,7 +68,19 @@ const Auction: React.FC = () => {
       <Body>
         <Title>Auctions</Title>
 
-        <Content></Content>
+        <CardsGrid>
+          {auctionCardItems.map((item, index) => (
+            <AuctionCard
+              key={index}
+              image={item.image}
+              timeLeft={item.timeLeft}
+              title={item.title}
+              price={item.price}
+              tag={item.tag}
+              tagColor={item.tagColor}
+            />
+          ))}
+        </CardsGrid>
       </Body>
     </Wrapper>
   );
