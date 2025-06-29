@@ -12,7 +12,7 @@ export const Body = styled.div`
   width: 1440px;
   width: 100%;
   margin: 0 auto;
-  background-color: red;
+  background-color:#F6F6F4 ;
 `;
 
 export const Content = styled.div`
@@ -20,7 +20,7 @@ export const Content = styled.div`
   display: flex;
   gap: 16px;
   padding: 0 32px;
-   background-color: blue;
+   background-color: #F6F6F4 ;
 
 `;
 
