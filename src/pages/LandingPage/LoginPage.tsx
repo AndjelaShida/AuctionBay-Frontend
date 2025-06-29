@@ -18,15 +18,13 @@ import {
 } from "./Login.style";
 import { useNavigate } from "react-router-dom";
 
-
-
 const LoginPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = () => {
     navigate("/myAuction");
-  }
+  };
   return (
     <LoginWrapper>
       <LoginLeft>
@@ -34,18 +32,9 @@ const LoginPage: React.FC = () => {
       </LoginLeft>
 
       <LoginRight>
-       <IconButton to="a">
-                   <img
-                   src="images/Left navigation.png"
-                   alt="left navigation"
-                   style={{
-                     width: 70,
-                       height: 70,
-                       borderRadius: "50%",
-                       objectFit: "cover",
-                   }}
-                   />
-                 </IconButton>
+        <IconButton to="#">
+          <img src="images/Left navigation.png" alt="left navigation" />
+        </IconButton>
         <Title>Welcome back!</Title>
         <Subtitle>Please enter your details</Subtitle>
         <FormContainer>
@@ -73,18 +62,15 @@ const LoginPage: React.FC = () => {
           </PasswordWrapper>
 
           <ForgotPasswordWrapper>
-            <MutedLink to="/forgotpasswordpage">Forgot password?
-            </MutedLink>
-         </ForgotPasswordWrapper>
+            <MutedLink to="/forgotpasswordpage">Forgot password?</MutedLink>
+          </ForgotPasswordWrapper>
 
           <SubmitButton onClick={handleLogin}>Login</SubmitButton>
 
           <Subtitle style={{ marginTop: 35 }}>
-            Don't have an account? 
-            <MutedLink2 to="/registerpage">Sign up
-            </MutedLink2>
+            Don't have an account?
+            <MutedLink2 to="/registerpage">Sign up</MutedLink2>
           </Subtitle>
-
         </FormContainer>
       </LoginRight>
     </LoginWrapper>

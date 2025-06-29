@@ -1,9 +1,7 @@
 //THE MAIN PAIGE FOR ALL AUCTIONS
-import { HomeIcon, UserIcon } from "../../icons/homeIcon";
+
 import {
-  Body,
   CircleButton,
-  Content,
   IconButton,
   LeftNavigation,
   Navbar,
@@ -14,7 +12,9 @@ import {
   RightNavigation,
   Title,
   Wrapper,
-} from "./auctions.style";
+} from "../../Base/Base.style";
+import { HomeIcon, UserIcon } from "../../icons/homeIcon";
+import { Body, Content } from "./auctions.style";
 
 const Auction: React.FC = () => {
   return (
@@ -66,9 +66,7 @@ const Auction: React.FC = () => {
       <Body>
         <Title>Auctions</Title>
 
-        <Content>
-            
-        </Content>
+        <Content></Content>
       </Body>
     </Wrapper>
   );

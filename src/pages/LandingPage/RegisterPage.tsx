@@ -13,10 +13,7 @@ import {
   Title,
   MutedLink,
   IconButton,
-  
 } from "./Register.style";
-
-
 
 const RegisterPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -29,18 +26,9 @@ const RegisterPage: React.FC = () => {
       </RegisterLeft>
 
       <RegisterRight>
-       <IconButton to="a">
-                   <img
-                   src="images/Left navigation.png"
-                   alt="left navigation"
-                   style={{
-                     width: 70,
-                       height: 70,
-                       borderRadius: "50%",
-                       objectFit: "cover",
-                   }}
-                   />
-                 </IconButton>
+        <IconButton to="#">
+          <img src="images/Left navigation.png" alt="left navigation" />
+        </IconButton>
         <Title>Hello!</Title>
         <Subtitle>Please enter your details</Subtitle>
 
@@ -86,7 +74,9 @@ const RegisterPage: React.FC = () => {
               type="button"
               onClick={() => setShowResetPassword((prev) => !prev)}
               aria-label={
-                showResetPassword ? "Hide reset password" : "Show reset password"
+                showResetPassword
+                  ? "Hide reset password"
+                  : "Show reset password"
               }
             >
               {showResetPassword ? "🙈" : "👁️"}
@@ -95,12 +85,10 @@ const RegisterPage: React.FC = () => {
 
           <SubmitButton type="submit">Log in</SubmitButton>
 
-<Subtitle style={{ marginTop: 35 }}>
-  Already have an account?
-   <MutedLink to="/loginpage">Log in
-   </MutedLink>
-</Subtitle>
-
+          <Subtitle style={{ marginTop: 35 }}>
+            Already have an account?
+            <MutedLink to="/loginpage">Log in</MutedLink>
+          </Subtitle>
         </FormContainer>
       </RegisterRight>
     </RegisterWrapper>

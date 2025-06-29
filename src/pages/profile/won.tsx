@@ -1,72 +1,53 @@
+import {
+  CircleButton,
+  IconButton,
+  LeftNavigation,
+  Navbar,
+  NavbarContent,
+  NavButton,
+  NavigationTab,
+  ProfileImage,
+  RightNavigation,
+  Wrapper,
+} from "../../Base/Base.style";
 import AuctionCard from "../../cards/auctionCard";
 import { auctionCardDone } from "../../cards/auctionCardData";
 import { HomeIcon, UserIcon } from "../../icons/homeIcon";
-import {
-  ButtonGroup,
-  CardsGrid,
-  IconButton,
-  LeftGroup,
-  Navbar,
-  NavButton,
-  NavButton2,
-  RightGroup,
-  TabBar,
-  Title,
-  Wrapper,
-} from "./won.style";
-
+import { ButtonGroup, CardsGrid, NavButton2, TabBar, Title } from "./won.style";
 
 const MyAuction: React.FC = () => {
-
-const doneCards = Array.from({ length: 11 }).map((_,index) => ({
-  ...auctionCardDone[0],
+  const doneCards = Array.from({ length: 11 }).map((_, index) => ({
+    ...auctionCardDone[0],
     key: `done-${index}`,
-}));
+  }));
 
-const firstRow = doneCards.slice(0, 6);
-const secondRow = doneCards.slice(6, 11); 
+  const firstRow = doneCards.slice(0, 6);
+  const secondRow = doneCards.slice(6, 11);
 
   return (
     <Wrapper>
       <Navbar>
-        <LeftGroup>
-          <IconButton to="#">
-            <img
-              src="images/Left navigation.png"
-              alt="left navigation"
-              style={{
-                width: 70,
-                height: 70,
-                borderRadius: "50%",
-                objectFit: "cover",
-              }}
-            />
-          </IconButton>
+        <NavbarContent>
+          <LeftNavigation>
+            <IconButton to="#">
+              <img src="images/Left navigation.png" alt="left navigation" />
+            </IconButton>
 
-          <NavButton to="/auctions">
-            <HomeIcon color="#000" />
-            Auction
-          </NavButton>
+            <NavigationTab>
+              <NavButton to="/auction">
+                <HomeIcon />
+                Auction
+              </NavButton>
 
-          <NavButton to="/profile">
-            <UserIcon color="#000" />
-            Profile
-          </NavButton>
-        </LeftGroup>
+              <NavButton to="/profile">
+                <UserIcon />
+                Profil
+              </NavButton>
+            </NavigationTab>
+          </LeftNavigation>
 
-        <RightGroup>
-          <IconButton to="/create">
-            <div
-              style={{
-                backgroundColor: "#f4ff47",
-                width: "100%",
-                height: "100%",
-                borderRadius: "50%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+          <RightNavigation>
+            <CircleButton to="/create">
               <svg
                 width="20"
                 height="20"
@@ -80,25 +61,17 @@ const secondRow = doneCards.slice(6, 11);
                 <line x1="12" y1="5" x2="12" y2="19" />
                 <line x1="5" y1="12" x2="19" y2="12" />
               </svg>
-            </div>
-          </IconButton>
+            </CircleButton>
 
-          <IconButton to="/profile">
-            <img
-              src="/images/profile.png"
-              alt="profile"
-              style={{
-                width: 50,
-                height: 50,
-                borderRadius: "50%",
-                objectFit: "cover",
-              }}
-            />
-          </IconButton>
-        </RightGroup>
+            <ProfileImage to="/profile">
+              <img src="/images/profile.png" alt="Profile"></img>
+            </ProfileImage>
+          </RightNavigation>
+        </NavbarContent>
       </Navbar>
 
       <Title>Hello Jamal Reces! </Title>
+
       <TabBar>
         <ButtonGroup>
           <NavButton2 to="/myauction">My auction</NavButton2>
@@ -107,33 +80,32 @@ const secondRow = doneCards.slice(6, 11);
         </ButtonGroup>
 
         <CardsGrid>
-  {firstRow.map((card) => (
-    <AuctionCard
-      key={card.key}
-      image={card.image}
-      tag={card.tag}
-      tagColor={card.tagColor}
-      timeLeft={card.timeLeft}
-      title={card.title}
-      price={card.price}
-    />
-  ))}
-</CardsGrid>
+          {firstRow.map((card) => (
+            <AuctionCard
+              key={card.key}
+              image={card.image}
+              tag={card.tag}
+              tagColor={card.tagColor}
+              timeLeft={card.timeLeft}
+              title={card.title}
+              price={card.price}
+            />
+          ))}
+        </CardsGrid>
 
-<CardsGrid>
-  {secondRow.map((card) => (
-    <AuctionCard
-      key={card.key}
-      image={card.image}
-      tag={card.tag}
-      tagColor={card.tagColor}
-      timeLeft={card.timeLeft}
-      title={card.title}
-      price={card.price}
-    />
-  ))}
-</CardsGrid>
-
+        <CardsGrid>
+          {secondRow.map((card) => (
+            <AuctionCard
+              key={card.key}
+              image={card.image}
+              tag={card.tag}
+              tagColor={card.tagColor}
+              timeLeft={card.timeLeft}
+              title={card.title}
+              price={card.price}
+            />
+          ))}
+        </CardsGrid>
       </TabBar>
     </Wrapper>
   );

@@ -23,17 +23,8 @@ const ForgotPasswordPage: React.FC = () => {
       </LeftWrapper>
 
       <RightWrapper>
-        <IconButton to="a">
-                    <img
-                    src="images/Left navigation.png"
-                    alt="left navigation"
-                    style={{
-                      width: 70,
-                        height: 70,
-                        borderRadius: "50%",
-                        objectFit: "cover",
-                    }}
-                    />
+         <IconButton to="#">
+                    <img src="images/Left navigation.png" alt="left navigation" />
                   </IconButton>
         <Title>Forgot password?</Title>
         <Subtitle>No worries, we will send you reset instruction</Subtitle>

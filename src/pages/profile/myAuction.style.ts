@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom"; 
-import { NavLink } from "react-router-dom";
+
 
 export const CardsGrid = styled.div`
   display: grid;
@@ -25,64 +25,6 @@ export const CardsGrid = styled.div`
 `;
 
 
-export const Wrapper = styled.div`
-  max-width: 100vw; 
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;  
-    background-color: #F6F6F4 ;
-  
-  
-`;
-
-export const Navbar = styled.div` 
-  height: 104px;
-  background-color: #F6F6F4 ;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-`;
-
-export const LeftGroup = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 20px;
-`;
-
-export const RightGroup = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 20px;
-`;
-
-
-export const NavButton = styled(NavLink)`
-  padding: 14px 20px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  border-radius: 20px;
-  border: none;
-  background-color:white;
-  color: #FFFFFF;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
- color: black;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  &:hover {
-      color:white ;
-    background-color:#202020 ;
-  }
-    &.active {
-    background-color: #202020;
-    color: white;
-    }
-`;
-
 export const NavButton2 = styled(Link)`
   padding: 14px 20px;
   font-family: "Inter", sans-serif;
@@ -105,21 +47,6 @@ export const NavButton2 = styled(Link)`
   }
 `;
 
-export const IconButton = styled(Link)`
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;      
-  background-color: white; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4px;
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
- 
-`;
 
 export const Title = styled.h2`
 width: 1440px;
@@ -149,6 +76,17 @@ export const ButtonGroup = styled.div`
   justify-content: center;
 `;
 
+
+
+export const NavbarContent = styled.div`
+  width: 100%;
+  max-width: 1440px;
+  height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+`;
 
 
 

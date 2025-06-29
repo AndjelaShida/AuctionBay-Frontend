@@ -143,14 +143,16 @@ export const MutedLink = styled(Link)`
 `;
 
 export const IconButton = styled(Link)`
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;      
-  background-color: white; 
+ width: 64;
+  height: 64;
+  border-radius: 50%;    
+  objectFit: "cover"  
+  background-color: #F4FF47; 
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4px;
+  padding: 16px;
+  gap: 16px;
   color: black;
   text-decoration: none;
   cursor: pointer;

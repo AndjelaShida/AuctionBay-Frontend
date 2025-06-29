@@ -1,3 +1,4 @@
+import { IconButton } from "../../Base/Base.style";
 import {
   PageWrapper,
   Content,
@@ -8,7 +9,6 @@ import {
   Header,
   H1,
   AuthButtons,
-  IconButton,
 } from "./LandingPage.style";
 import { Link } from "react-router-dom";
 
@@ -17,28 +17,19 @@ const LandingPage = () => {
     <PageWrapper>
       <Content>
         <Header>
-          <IconButton to="a">
-            <img
-            src="images/Left navigation.png"
-            alt="left navigation"
-            style={{
-              width: 70,
-                height: 70,
-                borderRadius: "50%",
-                objectFit: "cover",
-            }}
-            />
+          <IconButton to="#">
+            <img src="images/Left navigation.png" alt="left navigation" />
           </IconButton>
-        
+
           <AuthButtons>
             <Link to="LoginPage">
-            <Button>Log in</Button>
+              <Button>Log in</Button>
             </Link>
 
             <OrText>Or</OrText>
 
             <Link to="/RegisterPage">
-            <Button>Sing Up</Button>
+              <Button>Sing Up</Button>
             </Link>
           </AuthButtons>
         </Header>
@@ -48,9 +39,7 @@ const LandingPage = () => {
           Simple way to selling your unused products, <br />
           or getting a deal on product you want!
         </Subtitle>
-        <StartButton>
-         Start Bidding
-        </StartButton>
+        <StartButton>Start Bidding</StartButton>
         <img src="./images/landingPic.png" alt="Landing Picture" />
       </Content>
     </PageWrapper>
