@@ -56,7 +56,7 @@ const MyAuction: React.FC = () => {
             </IconButton>
 
             <NavigationTab>
-              <NavButton to="/auction">
+              <NavButton to="/auctions">
                 <HomeIcon />
                 Auction
               </NavButton>

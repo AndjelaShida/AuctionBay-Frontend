@@ -79,7 +79,7 @@ export const auctionCardOutbid = [
     },
 
           {
-    image: "/images/nouse.jpg",
+    image: "/images/mouse.jpg",
     timeLeft: "24h",
     title: "Magic mouse",
     price: "40 €",
@@ -129,9 +129,9 @@ export const auctionCardOutbid = [
     tagColor: "#F9FF90",
     },
             {
-    image: "/images/polariod.jpg",
+    image: "/images/polaroid.jpg",
     timeLeft: "3 days",
-    title: "Polariod  - for parts ",
+    title: "Polaroid  - for parts ",
     price: "22 €",
     tag: " In progress",
     tagColor: "#F9FF90",
@@ -144,30 +144,7 @@ export const auctionCardOutbid = [
     tag: "In progress",
     tagColor: "#F9FF90",
     },
-             {
-    image: "/images/googlenest.jpg",
-    timeLeft: "3 days",
-    title: "Google Nest Red edition",
-    price: "32 €",
-    tag: "In progress",
-    tagColor: "#F9FF90",
-    },
-             {
-    image: "/images/googlenest.jpg",
-    timeLeft: "3 days",
-    title: "Google Nest Red edition",
-    price: "32 €",
-    tag: "In progress",
-    tagColor: "#F9FF90",
-    },
-             {
-    image: "/images/googlenest.jpg",
-    timeLeft: "3 days",
-    title: "Google Nest Red edition",
-    price: "32 €",
-    tag: "In progress",
-    tagColor: "#F9FF90",
-    },
+
              {
     image: "/images/redmote.jpg",
     timeLeft: "3 days",

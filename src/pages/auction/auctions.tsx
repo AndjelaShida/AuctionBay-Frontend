@@ -18,7 +18,7 @@ import { auctionCardItems } from "../../cards/auctionCardData";
 import { HomeIcon, UserIcon } from "../../icons/homeIcon";
 import { Body, CardsGrid} from "./auctions.style";
 
-const Auction: React.FC = () => {
+const Auctions: React.FC = () => {
   return (
     <Wrapper>
       <Navbar>
@@ -86,4 +86,4 @@ const Auction: React.FC = () => {
   );
 };
 
-export default Auction;
+export default Auctions;
