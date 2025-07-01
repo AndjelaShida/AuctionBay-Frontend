@@ -12,6 +12,9 @@ import Won from "../pages/profile/won";
 import Auctions from "../pages/auction/auctions";
 import Auction from "../pages/auction/auction";
 import AuctionAddedBid from "../pages/auction/auctionAddedBid";
+import ProfilEmptyState from "../emptyState/profilEmptyState";
+import BiddingEmpty from "../emptyState/biddingEmpty";
+import WonEmptyState from "../emptyState/wonEmptyState";
 
 const AppRouter: React.FC = () => {
   return (
@@ -27,6 +30,9 @@ const AppRouter: React.FC = () => {
         <Route path="/auctions" element={<Auctions />} />
         <Route path="/auction" element={<Auction />} />
         <Route path="/auctionAddedBid" element={<AuctionAddedBid />} />
+        <Route path="/profilemptystate" element={<ProfilEmptyState />} />
+        <Route path="/biddingEmpty" element={<BiddingEmpty />} />
+        <Route path="/wonemptystate" element={<WonEmptyState />} />
       </Routes>
     </BrowserRouter>
   );
