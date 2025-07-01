@@ -24,6 +24,7 @@ import {
   DetalisCard,
   ImageContainer,
   Inner,
+  InputBidPrice,
   MetaCard,
   Name,
   Price,
@@ -119,39 +120,36 @@ const Auction: React.FC = () => {
               </TextDescription>
 
               <ActionBar>
-                <BidText> Bid:40 </BidText>
+                <BidText> Bid:</BidText>
+                <InputBidPrice>40</InputBidPrice>
                 <Button>Place bid</Button>
               </ActionBar>
             </DetalisCard>
 
             <BiddingHistory>
-
               <Title2>Bidding History(2)</Title2>
 
               <Table>
+            
                 <TableRow>
-                
-                    <Avatar src="/images/profile2.jpg" alt="profilepic">
-                         </Avatar>
-                     <Name>Joanes Boyl</Name>
-                   
+                  <Avatar src="/images/profile2.jpg" alt="profilepic"></Avatar>
+                  <Name>Joanes Boyl</Name>
 
-                    <RightSideData>
-                <TextDate>14:31 22.6.2023</TextDate>
-                <Price>32€</Price>
-                </RightSideData>
+                  <RightSideData>
+                    <TextDate>14:31 22.6.2023</TextDate>
+                    <Price>32€</Price>
+                  </RightSideData>
                 </TableRow>
 
-                 <TableRow>
-                    <Avatar src="/images/profile3.jpg" alt="profilepic">
-                         </Avatar>
-                     <Name>Bigi Smols</Name>
-                    
-                    <RightSideData>
-                <TextDate>14:31 22.6.2023</TextDate>
-                <Price>29€</Price>
-                </RightSideData>
-                </TableRow> 
+                <TableRow>
+                  <Avatar src="/images/profile3.jpg" alt="profilepic"></Avatar>
+                  <Name>Bigi Smols</Name>
+
+                  <RightSideData>
+                    <TextDate>14:31 22.6.2023</TextDate>
+                    <Price>29€</Price>
+                  </RightSideData>
+                </TableRow>
               </Table>
             </BiddingHistory>
           </RightSide>

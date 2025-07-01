@@ -117,9 +117,8 @@ export const ActionBar = styled.div`
 `;
 
 export const BidText = styled.div`
-  width: 50px;
+  width: 29px;
   height: 24px;
-  gap: 8px;
   font-family: Inter, sans-serif;
   font-weight: 300px;
   font-size: 16px;
@@ -176,6 +175,7 @@ export const Price = styled.div`
   paddingg: 6px 16px 6px 16px;
   gap: 4px;
   background-color: #f4ff47;
+  text-align: center;
 `;
 
 export const TableRow = styled.div`
@@ -205,4 +205,14 @@ export const Avatar = styled.img`
   border-radius: 50%;
   obejct-fit: cover;
   overflow: hidden;
+`;
+export const InputBidPrice = styled.div`
+  width:83px;
+  height:40px;
+  min-height:40px;
+  gap:8px;
+  border-radius: 16px;
+  border: 1px ;
+  padding: 8px 16px 8px 16px;
+  background-color: #DDE9E6 ;
 `;

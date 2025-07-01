@@ -11,6 +11,7 @@ import Bidding from "../pages/profile/bidding";
 import Won from "../pages/profile/won";
 import Auctions from "../pages/auction/auctions";
 import Auction from "../pages/auction/auction";
+import AuctionAddedBid from "../pages/auction/auctionAddedBid";
 
 const AppRouter: React.FC = () => {
   return (
@@ -21,10 +22,11 @@ const AppRouter: React.FC = () => {
         <Route path="/loginpage" element={<LoginPage />} />
         <Route path="/forgotpasswordpage" element={<ForgotPasswordPage />} />
         <Route path="/myauction" element={<MyAuction />} />
-         <Route path="/bidding" element={<Bidding />} />
-          <Route path="/won" element={<Won />} />
-           <Route path="/auctions" element={<Auctions />} />
-           <Route path="/auction" element={<Auction />} />
+        <Route path="/bidding" element={<Bidding />} />
+        <Route path="/won" element={<Won />} />
+        <Route path="/auctions" element={<Auctions />} />
+        <Route path="/auction" element={<Auction />} />
+        <Route path="/auctionAddedBid" element={<AuctionAddedBid />} />
       </Routes>
     </BrowserRouter>
   );
