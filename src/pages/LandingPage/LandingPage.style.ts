@@ -1,19 +1,9 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const PageWrapper = styled.div`
-  width: 100%;
-  min-height: 100vh;
-  background-color: #f6f6f4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
 export const Content = styled.div`
-  max-width: 1440px;
-  width: 100%;
-  padding: 40px;
+  width: 1440px;
+  padding: 40px 20px;
   text-align: center;
 `;
 
@@ -112,3 +102,20 @@ right: 40px ;
 display: flex ;
 gap 16px ;
 `;
+
+export const Auctions = styled.div`
+  width: 1144px;
+  height: auto;
+  border-radius: 32px;
+  border: 8px solid #272D2D;
+  overflow: hidden;
+  margin: 40px auto 0 auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+`;
+

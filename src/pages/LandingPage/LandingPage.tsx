@@ -1,6 +1,5 @@
-import { IconButton } from "../../Base/Base.style";
+import { IconButton, Wrapper } from "../../Base/Base.style";
 import {
-  PageWrapper,
   Content,
   Button,
   OrText,
@@ -9,12 +8,13 @@ import {
   Header,
   H1,
   AuthButtons,
+  Auctions,
 } from "./LandingPage.style";
 import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
-    <PageWrapper>
+    <Wrapper>
       <Content>
         <Header>
           <IconButton to="#">
@@ -39,10 +39,14 @@ const LandingPage = () => {
           Simple way to selling your unused products, <br />
           or getting a deal on product you want!
         </Subtitle>
+
         <StartButton>Start Bidding</StartButton>
-        <img src="./images/landingPic.png" alt="Landing Picture" />
+
+        <Auctions>
+          <img src="./images/landingPic.png" alt="Landing Picture" />
+        </Auctions>
       </Content>
-    </PageWrapper>
+    </Wrapper>
   );
 };
 
