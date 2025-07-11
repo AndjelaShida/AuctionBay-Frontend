@@ -1,10 +1,18 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { devices } from "../../styles/media";
+
 
 export const Content = styled.div`
   width: 1440px;
   padding: 40px 20px;
   text-align: center;
+
+    @media ${devices.mobile} {
+    width: 100%;
+    padding: 24px 12px;
+  }
+
 `;
 
 export const Header = styled.header`
@@ -15,12 +23,23 @@ export const Header = styled.header`
   padding: 20px 32px;
   width: 100%;
   box-sizing: border-box;
+
+    @media ${devices.mobile} {
+     height: 72px;
+    padding: 12px 16px;
+  }
 `;
 
 export const AuthButtons = styled.div`
   display: flex;
   algin-items: center;
   gap: 16px;
+
+    @media ${devices.mobile} {
+    top: 12px;
+    right: 16px;
+    z-index: 2 ;
+  }
 `;
 
 export const IconButton = styled(Link)`
@@ -36,6 +55,13 @@ export const IconButton = styled(Link)`
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+
+    @media ${devices.mobile} {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    z-index: 1 ;
+  }
 `;
 
 export const H1 = styled.h1`
@@ -47,6 +73,11 @@ export const H1 = styled.h1`
   height: 77px;
   margin: 0 auto 16px auto ;
 
+    @media ${devices.mobile} {
+    font-size: 32px;
+    width: 100%;
+  }
+
 `;
 
 export const Subtitle = styled.div`
@@ -54,6 +85,10 @@ export const Subtitle = styled.div`
   font-weight: 300;
   font-size: 16px;
   margin-bottom: 24px;
+
+   @media ${devices.mobile} {
+    font-size: 14px;
+  }
 `;
 
 export const StartButton = styled.button`
@@ -72,6 +107,11 @@ export const StartButton = styled.button`
 
   &:hover {
   background-color:#cad43b 
+  }
+
+    @media ${devices.mobile} {
+    width: 100%;
+    font-size: 14px;
   }
 `;
 
@@ -116,6 +156,15 @@ export const Auctions = styled.div`
     height: auto;
     display: block;
     object-fit: cover;
+  }
+
+  
+  @media ${devices.mobile} {
+    width: 100%;
+    border-width: 4px;
+    padding: 0 8px;
+    box-sizing: border-box;
+
   }
 `;
 

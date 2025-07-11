@@ -12,6 +12,7 @@ import {
 } from "./LandingPage.style";
 import { Link } from "react-router-dom";
 
+
 const LandingPage = () => {
   return (
     <Wrapper>

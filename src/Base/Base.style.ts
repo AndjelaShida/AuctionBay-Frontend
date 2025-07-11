@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { devices } from "../styles/media";
+
 ``;
 
 //WRAPPER
@@ -11,6 +13,10 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #f6f6f4;
+
+    @media ${devices.mobile} {
+    padding: 0px;
+  }
 `;
 
 //NAVBAR
@@ -19,6 +25,7 @@ export const LeftNavigation = styled.div`
   display: flex;
   align-items: center;
   gap: 32px;
+
 `;
 
 export const RightNavigation = styled.div`
@@ -30,6 +37,10 @@ export const RightNavigation = styled.div`
   gap: 8px;
   border-radius: 32px;
   background-color: #ffffff;
+
+    @media ${devices.mobile} {
+  background-color:#F6F6F4 ;
+  }
 `;
 
 export const CircleButton = styled(NavLink)`
@@ -74,6 +85,13 @@ export const NavbarContent = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 32px;
+
+    @media ${devices.mobile} {
+    padding: 0 16px;
+    height: auto;
+    flex-direction: column;
+    gap: 12px;
+  }
 `;
 
 export const IconButton = styled(Link)`
@@ -123,6 +141,11 @@ export const NavButton = styled(NavLink)`
     background-color: #202020;
     color: white;
     }
+
+      @media ${devices.mobile} {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
 `;
 
 export const Title = styled.div`
