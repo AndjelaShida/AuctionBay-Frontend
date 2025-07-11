@@ -4,14 +4,15 @@ import { devices } from "../../styles/media";
 
 
 export const Content = styled.div`
-  width: 1440px;
+  max-width: 1440px;
+  width: 100% ;
   padding: 40px 20px;
   text-align: center;
-   background-color: #F6F6F4 ;
 
     @media ${devices.mobile} {
     width: 100%;
     padding: 24px 12px;
+   
   }
 
 `;
@@ -19,7 +20,7 @@ export const Content = styled.div`
 export const Header = styled.header`
   display: flex;
   justify-content: space-between;
-  algin-items: center;
+  align-items: center;
   height: 104px;
   padding: 20px 32px;
   width: 100%;
@@ -141,17 +142,18 @@ position: absolute ;
 top: 20px ;
 right: 40px ;
 display: flex ;
-gap 16px ;
+gap: 16px ;
 `;
 
 export const Auctions = styled.div`
-  width: 1144px;
+  max-width: 1144px;
+  width: 100%;
   height: auto;
   border-radius: 32px;
   border: 8px solid #272D2D;
   overflow: hidden;
   margin: 40px auto 0 auto;
- 
+  background-color: #F6F6F4 ;
 
   img {
     width: 100%;

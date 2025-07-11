@@ -16,6 +16,9 @@ export const Wrapper = styled.div`
 
     @media ${devices.mobile} {
     padding: 0px;
+    overflow: hidden;
+  
+  
   }
 `;
 

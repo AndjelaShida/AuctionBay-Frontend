@@ -5,14 +5,17 @@ import {
   RegisterRight,
   Subtitle,
   FormContainer,
-  Row,
   InputGroup,
   Input,
   PasswordWrapper,
   SubmitButton,
-  Title,
   MutedLink,
   IconButton,
+  RightContainer,
+  TitleHello,
+  TitlePlease,
+  Inputs,
+  InputSmall,
 } from "./Register.style";
 
 const RegisterPage: React.FC = () => {
@@ -26,23 +29,30 @@ const RegisterPage: React.FC = () => {
       </RegisterLeft>
 
       <RegisterRight>
+        <RightContainer>
+          
         <IconButton to="#">
           <img src="images/Left navigation.png" alt="left navigation" />
         </IconButton>
-        <Title>Hello!</Title>
-        <Subtitle>Please enter your details</Subtitle>
+
+        <TitleHello>Hello!</TitleHello>
+
+        <TitlePlease>Please enter your details</TitlePlease>
 
         <FormContainer>
-          <Row>
+          <Inputs>
+
             <InputGroup>
               <label htmlFor="name">Name</label>
-              <Input id="name" type="text" placeholder="Name" />
+              <InputSmall id="name" type="text" placeholder="Name" />
             </InputGroup>
+
             <InputGroup>
               <label htmlFor="surname">Surname</label>
-              <Input id="surname" type="text" placeholder="Surname" />
+              <InputSmall id="surname" type="text" placeholder="Surname" />
             </InputGroup>
-          </Row>
+
+          </Inputs>
 
           <label htmlFor="email">E-mail</label>
           <Input id="email" type="email" placeholder="email@example.com" />
@@ -83,14 +93,19 @@ const RegisterPage: React.FC = () => {
             </button>
           </PasswordWrapper>
 
-          <SubmitButton type="submit">Log in</SubmitButton>
 
-          <Subtitle style={{ marginTop: 35 }}>
+          <SubmitButton type="submit">
+            Sign up
+            </SubmitButton>
+
+          <Subtitle>
             Already have an account?
             <MutedLink to="/loginpage">Log in</MutedLink>
           </Subtitle>
         </FormContainer>
+        </RightContainer>
       </RegisterRight>
+      
     </RegisterWrapper>
   );
 };
