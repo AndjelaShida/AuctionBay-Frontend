@@ -7,6 +7,7 @@ export const Content = styled.div`
   width: 1440px;
   padding: 40px 20px;
   text-align: center;
+   background-color: #F6F6F4 ;
 
     @media ${devices.mobile} {
     width: 100%;
@@ -150,6 +151,7 @@ export const Auctions = styled.div`
   border: 8px solid #272D2D;
   overflow: hidden;
   margin: 40px auto 0 auto;
+ 
 
   img {
     width: 100%;

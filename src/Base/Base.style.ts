@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f6f6f4;
+  background-color: #F6F6F4 
 
     @media ${devices.mobile} {
     padding: 0px;

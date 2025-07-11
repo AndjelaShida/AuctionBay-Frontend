@@ -1,12 +1,18 @@
 
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { devices } from "../../styles/media";
+
 
 export const RegisterWrapper = styled.div`
   display: flex;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  
+  @media ${devices.mobile} {
+  flex-direction: column; 
+  }
 `;
 
 export const RegisterLeft = styled.div`
@@ -21,16 +27,26 @@ export const RegisterLeft = styled.div`
     width: auto;
     object-fit: contain;
   }
+
+  @media ${devices.mobile} {
+  display: none;
+  }
 `;
 
 export const RegisterRight = styled.div`
   flex: 1; /* 1/3 širine */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertikalno centriranje */
-  align-items: center;     /* horizontalno centriranje */
+  justify-content: center; 
+  align-items: center;     
   padding: 20px 80px;
   gap: 8px;
+
+  @media ${devices.mobile} {
+  flex: none;
+  width: 70%;
+  padding: 50px;
+  }
 `;
 
 export const Title = styled.h2`
