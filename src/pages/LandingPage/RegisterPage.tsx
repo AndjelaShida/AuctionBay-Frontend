@@ -24,6 +24,7 @@ const RegisterPage: React.FC = () => {
 
   return (
     <RegisterWrapper>
+      
       <RegisterLeft>
         <img src="/images/registerLeft.png" alt="register illustration" />
       </RegisterLeft>
@@ -102,6 +103,7 @@ const RegisterPage: React.FC = () => {
             Already have an account?
             <MutedLink to="/loginpage">Log in</MutedLink>
           </Subtitle>
+
         </FormContainer>
         </RightContainer>
       </RegisterRight>

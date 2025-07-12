@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { devices } from "../../styles/media";
 
 export const RegisterWrapper = styled.div`
   display: flex;
@@ -8,34 +7,27 @@ export const RegisterWrapper = styled.div`
   width: 1440px;
   height: 1024px;
   background-color: #f6f6f4;
-
-  @media ${devices.mobile} {
-    flex-direction: column;
-  }
 `;
 
 export const RegisterLeft = styled.div`
+  max-width: 968px;
   width: 968px;
   height: 1024px;
   background-color: #f6f6f4;
   display: flex;
   justify-content: center;
   align-items: center;
-
+   
   img {
-    max-height: 150%;
-    width: auto;
+    max-height: 100%;
+    max-width: 100%;
     object-fit: contain;
-  }
-
-  @media ${devices.mobile} {
-    display: none;
   }
 `;
 
 export const RegisterRight = styled.div`
   max-width: 472px;
-  width: 464px;
+  width: 472px;
   height: 1024px;
   display: flex;
   flex-direction: row;
@@ -44,8 +36,6 @@ export const RegisterRight = styled.div`
   flex-direction: column;
   gap: 8px;
   padding: 8px;
-  
-
 `;
 
 export const RightContainer = styled.div`
@@ -59,7 +49,6 @@ export const RightContainer = styled.div`
   border-radius: 32px;
   padding: 64px 32px ;
   background-color: #ffffff;
-  
 `;
 
 export const TitleHello = styled.h2`
@@ -140,7 +129,6 @@ flex: 1;
 display: flex;
 flex-direction: column;
 
-  
   label {
     font-family: "Inter", sans-serif;
     font-size: 16px;
@@ -148,7 +136,6 @@ flex-direction: column;
     line-height: 24px ;
     color: #071015;
   }
-
 `;
 
 export const InputSmall = styled.input`
@@ -208,8 +195,6 @@ export const PasswordWrapper = styled.div`
  gap: 8px;
  position: relative;
 
-
- 
   button {
     position: absolute;
     right: 12px;
@@ -232,8 +217,7 @@ export const SubmitButton = styled.button`
   background-color: #f4ff47;
   cursor: pointer;
   transition: background-color 0.3s ease;
-
-
+  
   &:hover {
     background-color: #dbdb18;
   }
@@ -245,9 +229,6 @@ export const MutedLink = styled(Link)`
   font-size: 16px;
   text-decoration: none;
   cursor: pointer;
-
-  
-
 
   &:hover {
     color: #333;
@@ -268,6 +249,4 @@ export const IconButton = styled(Link)`
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-
-
 `;

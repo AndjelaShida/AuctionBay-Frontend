@@ -5,18 +5,21 @@ import {
   IconButton,
   Input,
   InputGroup,
+  Inputs,
+  LeftContainer,
   LoginLeft,
   LoginRight,
   LoginWrapper,
   MutedLink,
   MutedLink2,
   PasswordWrapper,
-  Row,
   SubmitButton,
   Subtitle,
-  Title,
+  TitlePlease,
+  TitleWelcome,
 } from "./Login.style";
 import { useNavigate } from "react-router-dom";
+
 
 const LoginPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -27,23 +30,30 @@ const LoginPage: React.FC = () => {
   };
   return (
     <LoginWrapper>
+
       <LoginLeft>
         <img src="/images/registerLeft.png" alt="register illustration" />
       </LoginLeft>
 
       <LoginRight>
+        <LeftContainer>
+
         <IconButton to="#">
           <img src="images/Left navigation.png" alt="left navigation" />
         </IconButton>
-        <Title>Welcome back!</Title>
-        <Subtitle>Please enter your details</Subtitle>
+
+        <TitleWelcome>Welcome back!</TitleWelcome>
+
+        <TitlePlease>Please enter your details</TitlePlease>
+
         <FormContainer>
-          <Row>
+
+          <Inputs>
             <InputGroup>
               <label htmlFor="email">E-mail</label>
               <Input id="email" type="text" placeholder="E-mail"></Input>
             </InputGroup>
-          </Row>
+          </Inputs>
 
           <label htmlFor="password">Password</label>
           <PasswordWrapper>
@@ -63,15 +73,17 @@ const LoginPage: React.FC = () => {
 
           <ForgotPasswordWrapper>
             <MutedLink to="/forgotpasswordpage">Forgot password?</MutedLink>
-          </ForgotPasswordWrapper>
+         </ForgotPasswordWrapper>
 
           <SubmitButton onClick={handleLogin}>Login</SubmitButton>
 
-          <Subtitle style={{ marginTop: 35 }}>
+          <Subtitle>
             Don't have an account?
-            <MutedLink2 to="/registerpage">Sign up</MutedLink2>
+            <MutedLink2 to="/registerpage"> Sign up</MutedLink2>
           </Subtitle>
+
         </FormContainer>
+        </LeftContainer>
       </LoginRight>
     </LoginWrapper>
   );
