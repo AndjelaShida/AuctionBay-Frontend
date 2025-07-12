@@ -48,6 +48,22 @@ display: flex;
 flex-direction: row;
 `;
 
+export const InputGroup = styled.div`
+width: 184px;
+height: 72px;
+gap: 8px;
+flex: 1;
+display: flex;
+flex-direction: column;
+
+  label {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px ;
+    color: #071015;
+  }`;
+
 export const Inputs = styled.div`
 width: 501px;
 height: 72px;
@@ -67,22 +83,6 @@ padding: 8px 16px;
 `;
 
 
-
-export const InputGroup = styled.div`
-width 184px;
-height: 72px;
-gap: 8px;
-flex: 1;
-display: flex;
-flex-direction: column;
-
-  label {
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px ;
-    color: #071015;
-  }` ;
 
   export const MutedLink = styled(Link)`
   width 139px;

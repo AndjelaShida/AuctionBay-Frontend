@@ -30,7 +30,7 @@ const ProfileSettings: React.FC = () => {
     console.log("Changes discarded");
   };
 
-  if (!isOverlayOpen) return null; // Sakriva komponentu kad je overlay zatvoren
+  if (!isOverlayOpen) return null; 
 
   return (
     <Wrapper>
