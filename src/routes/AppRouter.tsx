@@ -16,6 +16,9 @@ import ProfilEmptyState from "../emptyState/profilEmptyState";
 import BiddingEmpty from "../emptyState/biddingEmpty";
 import WonEmptyState from "../emptyState/wonEmptyState";
 import AuctionEmptyState from "../emptyState/auctionEmptyState";
+import ProfileSettings from "../profileSetting/profileSettings";
+import ChangePassword from "../profileSetting/changePassword";
+
 
 
 const AppRouter: React.FC = () => {
@@ -36,6 +39,8 @@ const AppRouter: React.FC = () => {
         <Route path="/biddingEmpty" element={<BiddingEmpty />} />
         <Route path="/wonemptystate" element={<WonEmptyState />} />
         <Route path="/auctionemptystate" element={<AuctionEmptyState />} />
+        <Route path="/profilesetting" element={<ProfileSettings />} />
+        <Route path="/changepassword" element={<ChangePassword />} />
       </Routes>
     </BrowserRouter>
   );

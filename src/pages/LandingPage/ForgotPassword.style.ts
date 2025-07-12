@@ -62,14 +62,13 @@ export const TitleForgot = styled.h2`
 `;
 
 export const Subtitle = styled.div`
-width: 347px;
-height: 24px;
+  width: 347px;
+  height: 24px;
   font-family: "Inter", sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-
 `;
 export const Input = styled.input`
   padding: 12px 24px;
@@ -145,27 +144,34 @@ export const SubmitButton = styled.button`
   }
 `;
 export const BackToLogin = styled.div`
-    width: 97px
+    width: 97px;
     height: 16px;
   display: flex;
+  flex-direction: column;
   gap: 8px;
   justify-content: center;
-
   }
 `;
 
 export const MutedLink = styled(Link)`
-  color: #999;
-  font-size: 14px;
+  width: 73px;
+  height: 16px;
+  color: #74817f;
+  gap: 4px;
+  font-size: 12px;
   text-decoration: none;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   cursor: pointer;
 
   &::before {
     content: "←";
-    margin-right: 8px;
+    width:4.94px;
+    height: 8px;
+    margin-top: 4px;
+    margin-left: 5.33px;
     font-weight: 900;
+    color: #74817F ;
   }
 
   &:hover {

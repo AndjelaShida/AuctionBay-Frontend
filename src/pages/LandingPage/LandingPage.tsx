@@ -13,7 +13,7 @@ import {
 import { Link } from "react-router-dom";
 
 
-const LandingPage = () => {
+const LandingPage: React.FC = () => {
   return (
     <Wrapper>
       <Content>
