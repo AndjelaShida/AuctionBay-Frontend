@@ -10,6 +10,11 @@ border-radius: 16px;
 padding: 16px;
 gap: 32px;
 background-color: #FFFFFF ;
+
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 export const Header = styled.div`
@@ -43,7 +48,7 @@ flex-direction: column;
 export const NameAndSurnameContainer = styled.div`
 width: 501px;
 height: 240px;
-gap: 16px;
+gap: 100px;
 display: flex;
 flex-direction: row;
 `;
