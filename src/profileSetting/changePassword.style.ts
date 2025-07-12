@@ -9,6 +9,7 @@ border-radius: 16px;
 padding: 16px;
 gap: 32px;
 background-color: #FFFFFF ;
+
 `;
 
 export const Header = styled.div`
