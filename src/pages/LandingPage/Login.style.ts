@@ -38,7 +38,7 @@ export const LoginRight = styled.div`
   padding: 8px;
 `;
 
-export const LeftContainer = styled.div`
+export const RightContainer = styled.div`
   max-width: 448px;
   width: 448px;
   height: 1008px;

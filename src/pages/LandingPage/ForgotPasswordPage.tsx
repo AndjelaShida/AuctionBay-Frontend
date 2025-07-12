@@ -5,14 +5,15 @@ import {
   IconButton,
   Input,
   InputGroup,
+  Inputs,
   LeftWrapper,
   MainWrapper,
   MutedLink,
+  RightContainer,
   RightWrapper,
-  Row,
   SubmitButton,
   Subtitle,
-  Title,
+  TitleForgot,
 } from "./ForgotPassword.style";
 
 const ForgotPasswordPage: React.FC = () => {
@@ -23,23 +24,29 @@ const ForgotPasswordPage: React.FC = () => {
       </LeftWrapper>
 
       <RightWrapper>
+        <RightContainer>
          <IconButton to="#">
                     <img src="images/Left navigation.png" alt="left navigation" />
                   </IconButton>
-        <Title>Forgot password?</Title>
+        <TitleForgot>Forgot password?</TitleForgot>
+
         <Subtitle>No worries, we will send you reset instruction</Subtitle>
 
         <FormContainer>
-          <Row>
+
+          <Inputs>
             <InputGroup>
+
               <label htmlFor="email">E-mail</label>
               <Input
                 id="email"
                 type="text"
                 placeholder="Enter your email"
               ></Input>
+
             </InputGroup>
-          </Row>
+          </Inputs>
+          
         </FormContainer>
 
         <SubmitButton>Resset Password</SubmitButton>
@@ -47,6 +54,7 @@ const ForgotPasswordPage: React.FC = () => {
         <BackToLogin>
           <MutedLink to="/loginpage">Back to login</MutedLink>
         </BackToLogin>
+        </RightContainer>
       </RightWrapper>
     </MainWrapper>
   );

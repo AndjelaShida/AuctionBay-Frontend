@@ -6,7 +6,6 @@ import {
   Input,
   InputGroup,
   Inputs,
-  LeftContainer,
   LoginLeft,
   LoginRight,
   LoginWrapper,
@@ -19,6 +18,8 @@ import {
   TitleWelcome,
 } from "./Login.style";
 import { useNavigate } from "react-router-dom";
+import { RightContainer } from "./Register.style";
+
 
 
 const LoginPage: React.FC = () => {
@@ -36,7 +37,7 @@ const LoginPage: React.FC = () => {
       </LoginLeft>
 
       <LoginRight>
-        <LeftContainer>
+        <RightContainer>
 
         <IconButton to="#">
           <img src="images/Left navigation.png" alt="left navigation" />
@@ -83,7 +84,7 @@ const LoginPage: React.FC = () => {
           </Subtitle>
 
         </FormContainer>
-        </LeftContainer>
+        </RightContainer>
       </LoginRight>
     </LoginWrapper>
   );

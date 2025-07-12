@@ -3,54 +3,73 @@ import styled from "styled-components"; // ``;
 
 export const MainWrapper = styled.div`
   display: flex;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+  flex-direction: row;
+  width: 1440px;
+  height: 1024px;
+  background-color: #f6f6f4;
 `;
 
 export const LeftWrapper = styled.div`
-flex: 2;
- background-color: #f6f6f4;
- display: flex;
- justify-content: center ;
- align-items: center ;
+  max-width: 968px;
+  width: 968px;
+  height: 1024px;
+  background-color: #f6f6f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
- img {
- max-height: 100%
- width: auto;
- object-fit: contain;
- }
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
 `;
 
 export const RightWrapper = styled.div`
-  flex: 1;
+  max-width: 472px;
+  width: 472px;
+  height: 1024px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+`;
+
+export const RightContainer = styled.div`
+  max-width: 448px;
+  width: 448px;
+  height: 1008px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertikalno centriranje */
-  align-items: center; /* horizontalno centriranje */
-  padding: 40px 80px;
-  gap: 8px;
+  align-items: center;
+  gap: 16px;
+  border-radius: 32px;
+  padding: 64px 32px;
+  background-color: #ffffff;
 `;
-export const Title = styled.h2`
-  font-size: 40px;
+
+export const TitleForgot = styled.h2`
+  width: 281px;
+  height: 38px;
+  font-size: 32px;
   font-weight: 700;
-  color: #000;
-  margin: 0;
+  color: #071015;
+  line-height: 120%;
   text-align: center;
 `;
 
 export const Subtitle = styled.div`
+width: 347px;
+height: 24px;
   font-family: "Inter", sans-serif;
   font-weight: 300;
   font-size: 16px;
-  width: 100%;
+  line-height: 24px;
   text-align: center;
-  margin-bottom: 24px;
 
-  strong {
-    font-weight: 900;
-    cursor: pointer;
-  }
 `;
 export const Input = styled.input`
   padding: 12px 24px;
@@ -69,44 +88,55 @@ export const Input = styled.input`
   }
 `;
 export const FormContainer = styled.div`
-  width: 100%;
+  width: 384px;
+  height: 144px;
   display: flex;
   flex-direction: column;
-  margin-top: 24px;
+  gap: 32px;
 `;
-export const Row = styled.div`
+export const Inputs = styled.div`
+  width: 384px;
+  height: 72px;
   display: flex;
-  gap: 40px;
-  margin-bottom: 10px;
+  gap: 16px;
+
+  &::placeholder {
+    color: #ffffff;
+    width: 384px;
+    height: 40px;
+    min-height: 40px;
+    border-radius: 16px;
+    border: 1px solid #dde9e6;
+    padding: 8px 16px;
+    gap: 8px;
+  }
 `;
 
 export const InputGroup = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-
-  &:first-child {
-    margin-right: 20px;
-  }
+width 184px;
+height: 72px;
+gap: 8px;
+flex: 1;
+display: flex;
+flex-direction: column;
 
   label {
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 6px;
-    color: #333;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px ;
+    color: #071015;
   }
 `;
 
 export const SubmitButton = styled.button`
-  width: 100%;
-  padding: 14px 20px;
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  border-radius: 20px;
-  border: none;
+  width: 384px;
+  height: 40px;
+  min-height: 40px;
+  padding: 8px 16px 8px 16px;
+  gap: 8px;
+  border-radius: 16px;
   background-color: #f4ff47;
-  color: #000;
-  margin-top: 25px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 
@@ -115,11 +145,12 @@ export const SubmitButton = styled.button`
   }
 `;
 export const BackToLogin = styled.div`
-    width: 100%;
+    width: 97px
+    height: 16px;
   display: flex;
-  justify-content: flex-end;
-  margin-top: 4px;
-  margin-bottom: 16px;
+  gap: 8px;
+  justify-content: center;
+
   }
 `;
 
@@ -132,9 +163,9 @@ export const MutedLink = styled(Link)`
   cursor: pointer;
 
   &::before {
-    content: "←"; 
-    margin-right: 8px; 
-    font-weight: 900; 
+    content: "←";
+    margin-right: 8px;
+    font-weight: 900;
   }
 
   &:hover {
@@ -158,4 +189,3 @@ export const IconButton = styled(Link)`
   cursor: pointer;
   transition: background-color 0.3s ease;
 `;
-
