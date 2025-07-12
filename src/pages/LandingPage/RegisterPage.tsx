@@ -17,10 +17,15 @@ import {
   Inputs,
   InputSmall,
 } from "./Register.style";
+import { PasswordToggleIcon } from "../../profileSetting/changePassword.style";
+import { FiEye, FiEyeOff } from "react-icons/fi";
 
 const RegisterPage: React.FC = () => {
+
   const [showPassword, setShowPassword] = useState(false);
-  const [showResetPassword, setShowResetPassword] = useState(false);
+  const togglePassword = () => {
+    setShowPassword((prev) => !prev);
+  };
 
   return (
     <RegisterWrapper>
@@ -65,33 +70,21 @@ const RegisterPage: React.FC = () => {
               type={showPassword ? "text" : "password"}
               placeholder="Password"
             />
-            <button
-              type="button"
-              onClick={() => setShowPassword((prev) => !prev)}
-              aria-label={showPassword ? "Hide password" : "Show password"}
-            >
-              {showPassword ? "🙈" : "👁️"}
-            </button>
+           <PasswordToggleIcon onClick={togglePassword}>
+            {showPassword ? <FiEyeOff /> : <FiEye /> }
+            </PasswordToggleIcon>
           </PasswordWrapper>
 
           <label htmlFor="resetPassword">Reset Password</label>
           <PasswordWrapper>
             <Input
               id="resetPassword"
-              type={showResetPassword ? "text" : "password"}
+              type={showPassword ? "text" : "password"}
               placeholder="Reset password"
             />
-            <button
-              type="button"
-              onClick={() => setShowResetPassword((prev) => !prev)}
-              aria-label={
-                showResetPassword
-                  ? "Hide reset password"
-                  : "Show reset password"
-              }
-            >
-              {showResetPassword ? "🙈" : "👁️"}
-            </button>
+              <PasswordToggleIcon onClick={togglePassword}>
+            {showPassword ? <FiEyeOff /> : <FiEye /> }
+            </PasswordToggleIcon>
           </PasswordWrapper>
 
 

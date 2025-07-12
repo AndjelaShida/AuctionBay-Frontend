@@ -19,11 +19,16 @@ import {
 } from "./Login.style";
 import { useNavigate } from "react-router-dom";
 import { RightContainer } from "./Register.style";
+import { PasswordToggleIcon } from "../../profileSetting/changePassword.style";
+import { FiEye, FiEyeOff } from "react-icons/fi";
 
 
 
 const LoginPage: React.FC = () => {
-  const [showPassword, setShowPassword] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
+  const togglePassword = () => {
+    setShowPassword((prev) => !prev);
+  };
   const navigate = useNavigate();
 
   const handleLogin = () => {
@@ -63,13 +68,11 @@ const LoginPage: React.FC = () => {
               type={showPassword ? "text" : "password"}
               placeholder="Password"
             />
-            <button
-              type="button"
-              onClick={() => setShowPassword((prev) => !prev)}
-              aria-label={showPassword ? "Hide password" : "Show password"}
-            >
-              {showPassword ? "🙈" : "👁️"}
-            </button>
+          
+           <PasswordToggleIcon onClick={togglePassword}>
+        {showPassword ? <FiEyeOff /> : <FiEye />}
+           </PasswordToggleIcon>
+            
           </PasswordWrapper>
 
           <ForgotPasswordWrapper>
