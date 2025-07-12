@@ -70,7 +70,7 @@ const RegisterPage: React.FC = () => {
               type={showPassword ? "text" : "password"}
               placeholder="Password"
             />
-           <PasswordToggleIcon onClick={togglePassword}>
+           <PasswordToggleIcon type="button" onClick={togglePassword}>
             {showPassword ? <FiEyeOff /> : <FiEye /> }
             </PasswordToggleIcon>
           </PasswordWrapper>
@@ -82,7 +82,7 @@ const RegisterPage: React.FC = () => {
               type={showPassword ? "text" : "password"}
               placeholder="Reset password"
             />
-              <PasswordToggleIcon onClick={togglePassword}>
+              <PasswordToggleIcon type="button" onClick={togglePassword}>
             {showPassword ? <FiEyeOff /> : <FiEye /> }
             </PasswordToggleIcon>
           </PasswordWrapper>

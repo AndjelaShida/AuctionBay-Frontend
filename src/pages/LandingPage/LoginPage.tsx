@@ -69,7 +69,7 @@ const LoginPage: React.FC = () => {
               placeholder="Password"
             />
           
-           <PasswordToggleIcon onClick={togglePassword}>
+           <PasswordToggleIcon type="button" onClick={togglePassword}>
         {showPassword ? <FiEyeOff /> : <FiEye />}
            </PasswordToggleIcon>
             

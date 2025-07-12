@@ -53,7 +53,7 @@ const ChangePassword: React.FC = () => {
                 type={showPassword ? "text" : "password"}
                 placeholder="Enter current password"
               />
-              <PasswordToggleIcon onClick={togglePassword}>
+              <PasswordToggleIcon type="button" onClick={togglePassword}>
                 {showPassword ? <FiEyeOff /> : <FiEye />}
               </PasswordToggleIcon>
             </InputWrapper>
@@ -69,7 +69,7 @@ const ChangePassword: React.FC = () => {
                 type={showPassword ? "text" : "password"}
                 placeholder="Enter new password"
               />
-              <PasswordToggleIcon onClick={togglePassword}>
+              <PasswordToggleIcon type="button" onClick={togglePassword}>
                 {showPassword ? <FiEyeOff /> : <FiEye />}
               </PasswordToggleIcon>
             </InputWrapper>
@@ -85,7 +85,7 @@ const ChangePassword: React.FC = () => {
                 type={showPassword ? "text" : "password"}
                 placeholder="Repeat new password"
               />
-              <PasswordToggleIcon onClick={togglePassword}>
+              <PasswordToggleIcon type="button" onClick={togglePassword}>
                 {showPassword ? <FiEyeOff /> : <FiEye />}
               </PasswordToggleIcon>
             </InputWrapper>
