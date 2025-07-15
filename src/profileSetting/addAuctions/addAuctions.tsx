@@ -5,6 +5,7 @@ import {
   ButtonCancel,
   Header,
   HeaderText,
+  IconInput,
   Inner,
   Input,
   InputDescription,
@@ -18,6 +19,8 @@ import {
   SubmitButton,
   Wrapper,
 } from "./addAuctions.style";
+import { FaClock, FaEuroSign } from "react-icons/fa";
+
 
 const AddAuctions: React.FC = () => {
 
@@ -36,30 +39,39 @@ const AddAuctions: React.FC = () => {
         <Inputs>
         <InputGroup>
         <label htmlFor="title">Title</label>
-        <Input id="title" type="text" placeholder="Write item name here"></Input>
+        <Input id="title" type="text" placeholder="Write item name here..."></Input>
         </InputGroup>
         </Inputs>
         
         <Inputs>
         <InputGroup>
          <label htmlFor="description">Description</label>
-        <InputDescription id="description" type="text" placeholder="Write description here"></InputDescription>
+        <InputDescription id="description" type="text" placeholder="Write description here..."></InputDescription>
         </InputGroup>
         </Inputs>
         </Inner>
 
         <BottomInner>
+
         <InputLeft>
         <InputGroupBottom>
         <label htmlFor="startingPrice">Starting price</label>
         <Input id="startingPrice" type="text" placeholder="Price"></Input>
+        <IconInput>
+            <FaEuroSign></FaEuroSign>
+            </IconInput>
+        
+    
         </InputGroupBottom>
         </InputLeft>
 
-             <InputRight>
+        <InputRight>
         <InputGroupBottom>
         <label htmlFor="endDate">End date</label>
         <Input id="endDate" type="text" placeholder="dd.mm.yyyy"></Input>
+        <IconInput>
+            <FaClock></FaClock>
+            </IconInput>
         </InputGroupBottom>
         </InputRight>
         </BottomInner>
