@@ -80,7 +80,6 @@ export const Inner = styled.div`
 `;
 
 export const InputGroupTitle = styled.div`
-  /*deo sa tekstom i placeholderom*/
   display: flex;
   flex-direction: column;
   width: 501px;
@@ -88,7 +87,6 @@ export const InputGroupTitle = styled.div`
   gap: 8px;
 
   label {
-    /*naslovi: title, description i end date*/
     width: 501px;
     height: 24px;
     font-family: "Inter", sans-serif;
@@ -101,7 +99,6 @@ export const InputGroupTitle = styled.div`
 `;
 
 export const InputGroupDescription = styled.div`
-  /*deo sa tekstom i placeholderom*/
   display: flex;
   flex-direction: column;
   width: 501px;
@@ -121,8 +118,8 @@ export const InputGroupDescription = styled.div`
   }
 `;
 
+/*deo sa tekstom i placeholderom*/
 export const InputGroupEndDate = styled.div`
-  /*deo sa tekstom i placeholderom*/
   position: relative ;
   display: flex;
   flex-direction: column;
@@ -141,8 +138,8 @@ export const InputGroupEndDate = styled.div`
   }
 `;
 
+/*deo samo sa placeholderom*/
 export const InputTitle = styled.input`
-  /*deo samo sa placeholderom*/
   display: flex;
   flex-direction: row;
   width: 501px;
@@ -161,8 +158,8 @@ export const InputTitle = styled.input`
   color: #071015;
 `;
 
+/*deo samo sa placeholderom*/
 export const InputEndDate = styled.input`
-  /*deo samo sa placeholderom*/
   display: flex;
   flex-direction: row;
   width: 501px;
@@ -182,8 +179,8 @@ export const InputEndDate = styled.input`
   color: #071015;
 `;
 
+/*description placeholder*/
 export const TextArea = styled.textarea`
-  /*description placeholder*/
   width: 501px;
   height: 123px;
   border-radius: 16px;
@@ -205,7 +202,6 @@ export const BottomBar = styled.div`
   width: 501px;
   height: 40px;
   gap: 16px;
-
 `;
 
 export const DiscardButton = styled.div`
@@ -270,4 +266,41 @@ export const StyledClocksIcon = styled(FiClock)`
   width: 16px;
   height: 16px;
   color: #071015;
+`;
+
+/*STYLE FOR EDIT AUCTION WHITOUT IMAGE*/
+
+export const ButtonAddImg = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 114px;
+  height: 40px;
+  min-height: 40px;
+  border-radius: 16px;
+  padding: 8px 16px;
+  border: 1px solid #272d2d;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-style: medium;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #071015;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const NoPicture = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 501px;
+  height: 168px;
+  border-radius: 16px;
+  padding: 32px;
+  gap: 8px;
+  background-color: #f6f6f4;
 `;
