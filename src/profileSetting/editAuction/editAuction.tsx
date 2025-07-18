@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {
   BottomBar,
+  ClockIconWrapper,
   DiscardButton,
   EditButton,
   Header,
@@ -11,9 +12,13 @@ import {
   InputGroupTitle,
   InputTitle,
   Picture,
+  StyledClocksIcon,
+  StyledTrashIcon,
   TextArea,
+  TrashIconWrapper,
   Wrapper,
 } from "./editAuction.style";
+
 
 const EditAuction: React.FC = () => {
   const [isOverlayOpen, setIsOverlayOpen] = useState(true);
@@ -36,6 +41,9 @@ const EditAuction: React.FC = () => {
 
       <Picture>
         <img src="/images/editauction.jpg" alt="editauctions"></img>
+        <TrashIconWrapper>
+          <StyledTrashIcon />
+        </TrashIconWrapper>
       </Picture>
 
       <Inner>
@@ -59,6 +67,9 @@ const EditAuction: React.FC = () => {
         <InputGroupEndDate>
           <label htmlFor="endDate">End date</label>
           <InputEndDate id="endDate" type="text" placeholder="23.9.2023" />
+          <ClockIconWrapper>
+          <StyledClocksIcon />
+        </ClockIconWrapper>
         </InputGroupEndDate>
       </Inner>
 
