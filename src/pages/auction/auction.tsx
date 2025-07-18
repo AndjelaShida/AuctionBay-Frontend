@@ -64,7 +64,7 @@ const Auction: React.FC = () => {
           </LeftNavigation>
 
           <RightNavigation>
-            <CircleButton to="/create">
+            <CircleButton to="/addauctions">
               <svg
                 width="20"
                 height="20"

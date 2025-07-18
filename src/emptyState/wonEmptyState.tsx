@@ -49,7 +49,7 @@ const WonEmptyState: React.FC = () => {
           </LeftNavigation>
 
           <RightNavigation>
-            <CircleButton to="/create">
+            <CircleButton to="/addauction">
               <svg
                 width="20"
                 height="20"

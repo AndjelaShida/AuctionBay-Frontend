@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom"; 
-
+import { Link } from "react-router-dom";
 
 export const CardsGrid = styled.div`
   display: grid;
@@ -9,7 +8,7 @@ export const CardsGrid = styled.div`
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
-  background-color: #F6F6F4 ; 
+  background-color: #f6f6f4;
 
   @media (max-width: 1200px) {
     grid-template-columns: repeat(3, 1fr); // prilagodljivo za tablete
@@ -24,50 +23,49 @@ export const CardsGrid = styled.div`
   }
 `;
 
-
 export const NavButton2 = styled(Link)`
   padding: 14px 20px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   border-radius: 32px;
   border: none;
-  background-color:#F0F8FF;
+  background-color: #f0f8ff;
   color: #000;
   cursor: pointer;
   transition: background-color 0.3s ease;
- color: black;
+  color: black;
   display: flex;
   align-items: center;
   border-radius: 50px;
   gap: 10px;
 
   &:hover {
-      color:white ;
-    background-color:#202020 ;
+    color: white;
+    background-color: #202020;
   }
 `;
 
-
 export const Title = styled.h2`
-width: 1440px;
-height: 38px;
+  width: 1440px;
+  height: 38px;
   font-size: 40px;
   font-weight: 700;
   color: #000;
   margin: 0;
-  padding: 10px ;
+  padding: 10px;
   text-align: left;
+  background-color: #f6f6f4 ;
 
 `;
 
 export const TabBar = styled.div`
-flex-direction: column;
-display: flex ;
-align-items: center ;
-text-align: center;
-justify-content: center;
-gap: 32px;
-padding: 24px ;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 24px;
 `;
 export const ButtonGroup = styled.div`
   display: flex;
@@ -75,8 +73,6 @@ export const ButtonGroup = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 `;
-
-
 
 export const NavbarContent = styled.div`
   width: 100%;
@@ -87,7 +83,3 @@ export const NavbarContent = styled.div`
   justify-content: space-between;
   padding: 0 32px;
 `;
-
-
-
-
