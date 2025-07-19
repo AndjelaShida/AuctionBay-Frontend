@@ -122,6 +122,7 @@ const MyAuction: React.FC = () => {
               timeLeft={card.timeLeft}
               title={card.title}
               price={card.price}
+              showAuctions={card.tag === "in progress"}
             />
           ))}
         </CardsGrid>

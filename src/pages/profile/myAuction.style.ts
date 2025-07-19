@@ -12,11 +12,11 @@ export const CardsGrid = styled.div`
   background-color: #f6f6f4;
 
   @media (max-width: 1200px) {
-    grid-template-columns: repeat(3, 1fr); // prilagodljivo za tablete
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr); // mobilni
+    grid-template-columns: repeat(2, 1fr); 
   }
 
   @media (max-width: 480px) {
@@ -36,10 +36,11 @@ export const Content = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 1440px;
+  width: 100vw;
   height: 1024px;
   gap: 16px;
   background-color: #f6f6f4;
+ 
 `;
 export const Navbar = styled.div`
   display: flex;
@@ -48,6 +49,7 @@ export const Navbar = styled.div`
   justify-content: space-between;
   padding: 20px 32px;
   background-color: #f6f6f4;
+
 `;
 
 export const LeftNavigation = styled.div`
@@ -90,6 +92,7 @@ export const NavigationTab = styled.div`
   padding: 4px;
   gap: 8px;
   background-color: #ffffff;
+
 `;
 
 export const NavButton = styled(NavLink)`
@@ -119,6 +122,7 @@ export const RightNavigation = styled.div`
   gap: 8px;
   border-radius: 32px;
   background-color: #ffffff;
+   
 `;
 
 export const TitleBar = styled.div`
@@ -128,6 +132,7 @@ export const TitleBar = styled.div`
   padding: 32px 32px;
   gap: 8px;
   background-color: #f6f6f4;
+  
 
   font-family: "Inter", sans-serif;
   font-weight: 700;
