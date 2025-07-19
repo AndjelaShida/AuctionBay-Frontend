@@ -7,19 +7,13 @@ import { devices } from "../styles/media";
 
 //WRAPPER
 export const Wrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 1440px;
+  height: 1024px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #F6F6F4 
-
-    @media ${devices.mobile} {
-    padding: 0px;
-    overflow: hidden;
-  
-  
-  }
+  background-color: #f6f6f4 ;
+ 
 `;
 
 //NAVBAR
@@ -28,7 +22,6 @@ export const LeftNavigation = styled.div`
   display: flex;
   align-items: center;
   gap: 32px;
-
 `;
 
 export const RightNavigation = styled.div`
@@ -41,8 +34,8 @@ export const RightNavigation = styled.div`
   border-radius: 32px;
   background-color: #ffffff;
 
-    @media ${devices.mobile} {
-  background-color:#F6F6F4 ;
+  @media ${devices.mobile} {
+    background-color: #f6f6f4;
   }
 `;
 
@@ -74,10 +67,10 @@ export const ProfileImage = styled(NavLink)`
 `;
 
 export const Navbar = styled.div`
-  width: 100%;
+  width: 1440px;
   background-color: #f6f6f4;
   display: flex;
-  justify-content: center; /* centriramo unutrašnji sadržaj */
+  justify-content: center;
 `;
 
 export const NavbarContent = styled.div`
@@ -89,7 +82,7 @@ export const NavbarContent = styled.div`
   justify-content: space-between;
   padding: 0 32px;
 
-    @media ${devices.mobile} {
+  @media ${devices.mobile} {
     padding: 0 16px;
     height: auto;
     flex-direction: column;
@@ -98,10 +91,10 @@ export const NavbarContent = styled.div`
 `;
 
 export const IconButton = styled(Link)`
-width: 64;
-  height: 64;
+width: 32px;
+  height: 32px;
   border-radius: 50%;    
-  objectFit: "cover"  
+  objectFit: "cover"  ;
   background-color: #F4FF47; 
   display: flex;
   justify-content: center;
@@ -140,12 +133,12 @@ export const NavButton = styled(NavLink)`
     background-color: #202020;
   }
 
-   &.active {
+  &.active {
     background-color: #202020;
     color: white;
-    }
+  }
 
-      @media ${devices.mobile} {
+  @media ${devices.mobile} {
     padding: 10px 14px;
     font-size: 14px;
   }
@@ -157,5 +150,4 @@ export const Title = styled.div`
   font-size: 32px;
   color: #000000;
   padding: 0 32px;
-
 `;

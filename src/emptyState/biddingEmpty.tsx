@@ -15,7 +15,7 @@ import {
   ButtonGroup,
   NavButton2,
   TabBar,
-   Title
+   TitleBar
 } from "../pages/profile/myAuction.style";
 import {
   Content,
@@ -72,7 +72,9 @@ const BiddingEmpty: React.FC = () => {
         </NavbarContent>
       </Navbar>
 
-      <Title>Hello Jamal Reces! </Title>
+      <TitleBar>
+               Hello Jamal Reces!
+         </TitleBar>
       <Content>
         <TabBar>
           <ButtonGroup>

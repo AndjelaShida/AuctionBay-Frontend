@@ -1,32 +1,28 @@
-import {
-  CircleButton,
-  IconButton,
-  LeftNavigation,
-  Navbar,
-  NavbarContent,
-  NavButton,
-  NavigationTab,
-  ProfileImage,
-  RightNavigation,
-  Wrapper,
-} from "../../Base/Base.style";
+import { CircleButton, IconButton, ProfileImage } from "../../Base/Base.style";
 import AuctionCard from "../../cards/auctionCard";
 import {
   auctionCardWinning,
   auctionCardOutbid,
-} from "../../cards/auctionCardData"; 
+} from "../../cards/auctionCardData";
 
 import { HomeIcon, UserIcon } from "../../icons/homeIcon";
-import {
 
+import {
   ButtonGroup,
   CardsGrid,
+  Content,
+  LeftNavigation,
+  Navbar,
+  NavButton,
   NavButton2,
+  NavigationTab,
+  RightNavigation,
   TabBar,
-  Title,
-} from "./bidding.style";
+  TitleBar,
+  Wrapper,
+} from "./myAuction.style";
 
-const MyAuction: React.FC = () => {
+const Bidding: React.FC = () => {
   // Ovde biramo 2 winning i 3 outbid kartice
   const firstRowCards = [
     { ...auctionCardWinning[0], key: "win-1" },
@@ -39,58 +35,58 @@ const MyAuction: React.FC = () => {
   return (
     <Wrapper>
       <Navbar>
-        <NavbarContent>
-          <LeftNavigation>
-            <IconButton to="#">
-              <img src="images/Left navigation.png" alt="left navigation" />
-            </IconButton>
+        <LeftNavigation>
+          <IconButton to="#">
+            <img src="images/Left navigation.png" alt="left navigation" />
+          </IconButton>
 
-            <NavigationTab>
-              <NavButton to="/auction">
-                <HomeIcon />
-                Auction
-              </NavButton>
+          <NavigationTab>
+            <NavButton to="/auctions">
+              <HomeIcon />
+              Auction
+            </NavButton>
 
-              <NavButton to="/profile">
-                <UserIcon />
-                Profil
-              </NavButton>
-            </NavigationTab>
-          </LeftNavigation>
+            <NavButton to="/profile">
+              <UserIcon />
+              Profil
+            </NavButton>
+          </NavigationTab>
+        </LeftNavigation>
 
-          <RightNavigation>
-            <CircleButton to="/create">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="white"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="12" y1="5" x2="12" y2="19" />
-                <line x1="5" y1="12" x2="19" y2="12" />
-              </svg>
-            </CircleButton>
+        <RightNavigation>
+          <CircleButton to="/create">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </CircleButton>
 
-            <ProfileImage to="/profile">
-              <img src="/images/profile.png" alt="Profile"></img>
-            </ProfileImage>
-          </RightNavigation>
-        </NavbarContent>
+          <ProfileImage to="/profile">
+            <img src="/images/profile.png" alt="Profile"></img>
+          </ProfileImage>
+        </RightNavigation>
       </Navbar>
 
-      <Title>Hello Jamal Reces! </Title>
+      <TitleBar>Hello Jamal Reces!</TitleBar>
 
       <TabBar>
         <ButtonGroup>
           <NavButton2 to="/myauction">My auction</NavButton2>
           <NavButton2 to="/bidding">Bidding</NavButton2>
-          <NavButton2 to="/Won ">Won</NavButton2>
+          <NavButton2 to="/won">Won</NavButton2>
         </ButtonGroup>
+      </TabBar>
 
+      <Content>
         {/* 2 winning 3 outbid kartice */}
         <CardsGrid>
           {firstRowCards.map((card) => (
@@ -105,9 +101,9 @@ const MyAuction: React.FC = () => {
             />
           ))}
         </CardsGrid>
-      </TabBar>
+      </Content>
     </Wrapper>
   );
 };
 
-export default MyAuction;
+export default Bidding;

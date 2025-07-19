@@ -3,16 +3,22 @@ import AuctionCard from "../../cards/auctionCard";
 import {
   CircleButton,
   IconButton,
+  ProfileImage,
+} from "../../Base/Base.style";
+import {
+  ButtonGroup,
+  CardsGrid,
+  Content,
   LeftNavigation,
   Navbar,
-  NavbarContent,
   NavButton,
+  NavButton2,
   NavigationTab,
-  ProfileImage,
   RightNavigation,
+  TabBar,
+  TitleBar,
   Wrapper,
-} from "../../Base/Base.style";
-import { ButtonGroup, CardsGrid, NavButton2, TabBar, Title } from "./myAuction.style";
+} from "./myAuction.style";
 
 const MyAuction: React.FC = () => {
   // 5 "in progress" kartica
@@ -26,7 +32,7 @@ const MyAuction: React.FC = () => {
     price: "65 €",
   }));
 
-  // 13 "done" kartica (1 za prvi red, 6 za drugi, 6 za treći)
+  // 13 "done" kartica (1 za prvi red, 6 za drugi, 6 za treći
   const doneCards = Array.from({ length: 13 }).map((_, index) => ({
     key: `done-${index}`,
     image: "/images/chair1.jpg",
@@ -49,7 +55,7 @@ const MyAuction: React.FC = () => {
   return (
     <Wrapper>
       <Navbar>
-        <NavbarContent>
+        
           <LeftNavigation>
             <IconButton to="#">
               <img src="images/Left navigation.png" alt="left navigation" />
@@ -89,17 +95,21 @@ const MyAuction: React.FC = () => {
               <img src="/images/profile.png" alt="Profile"></img>
             </ProfileImage>
           </RightNavigation>
-        </NavbarContent>
+  
       </Navbar>
 
-      <Title>Hello Jamal Reces! </Title>
+<TitleBar>
+      Hello Jamal Reces!
+</TitleBar>
 
+<Content>
       <TabBar>
         <ButtonGroup>
           <NavButton2 to="/myauction">My auction</NavButton2>
           <NavButton2 to="/bidding">Bidding</NavButton2>
-          <NavButton2 to="/Won ">Won</NavButton2>
+          <NavButton2 to="/won">Won</NavButton2>
         </ButtonGroup>
+        </TabBar>
 
         {/* Prvi red: 5 in progress + 1 done */}
         <CardsGrid>
@@ -145,7 +155,7 @@ const MyAuction: React.FC = () => {
             />
           ))}
         </CardsGrid>
-      </TabBar>
+    </Content>
     </Wrapper>
   );
 };
