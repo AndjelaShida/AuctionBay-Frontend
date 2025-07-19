@@ -48,7 +48,7 @@ const Won: React.FC = () => {
         </LeftNavigation>
 
         <RightNavigation>
-          <CircleButton to="/create">
+          <CircleButton to="/addauction">
             <svg
               width="20"
               height="20"
@@ -64,7 +64,7 @@ const Won: React.FC = () => {
             </svg>
           </CircleButton>
 
-          <ProfileImage to="/profile">
+          <ProfileImage to="/profilepopup">
             <img src="/images/profile.png" alt="Profile"></img>
           </ProfileImage>
         </RightNavigation>
