@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 533px;
-  height: 647px;
   border-radius: 16px;
   padding: 16px;
   gap: 16px;
@@ -36,7 +35,7 @@ export const Picture = styled.div`
   height: 168px;
   border-radius: 16px;
   gap: 8px;
-  padding: 16px;
+
   background-color: #f6f6f4;
 
   img {
@@ -70,13 +69,15 @@ export const StyledTrashIcon = styled(FaTrash)`
   height: 16px;
 `;
 
-export const Inner = styled.div`
   /*CEO srednji ceo*/
+export const Inner = styled.div`
+
   display: flex;
   flex-direction: column;
   width: 501px;
-  height: 331px;
+  height: 347px;
   gap: 16px;
+
 `;
 
 export const InputGroupTitle = styled.div`
@@ -202,6 +203,7 @@ export const BottomBar = styled.div`
   width: 501px;
   height: 40px;
   gap: 16px;
+
 `;
 
 export const DiscardButton = styled.div`
@@ -298,7 +300,6 @@ export const NoPicture = styled.div`
   justify-content: center;
   align-items: center;
   width: 501px;
-  height: 168px;
   border-radius: 16px;
   padding: 32px;
   gap: 8px;
