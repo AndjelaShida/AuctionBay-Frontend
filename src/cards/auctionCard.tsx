@@ -14,6 +14,8 @@ import {
 } from "./auctionCard.style";
 import { FiClock, FiEdit } from "react-icons/fi";
 import { FiTrash } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
+
 
 interface Props {
   image: string;
@@ -36,6 +38,12 @@ const AuctionCard: React.FC<Props> = ({
   showAuctions = false,
 }) => {
   const tagLower = tag.toLowerCase();
+
+const navigate = useNavigate();
+
+  const handleEditClick = () => {
+    navigate('/editauction');
+  }
 
   return (
     <Card tag={tagLower}>
@@ -64,9 +72,9 @@ const AuctionCard: React.FC<Props> = ({
       {showAuctions && tagLower === "in progress" && (
         <Actions>
           <DeleteButton>
-            <FiTrash size={16} />
+            <FiTrash size={16}  />
           </DeleteButton>
-          <EditButton>
+          <EditButton onClick={handleEditClick}>
             <FiEdit size={16} />
             Edit
           </EditButton>
