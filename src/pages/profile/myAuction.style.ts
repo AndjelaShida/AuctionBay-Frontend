@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 export const CardsGrid = styled.div`
@@ -16,7 +15,7 @@ export const CardsGrid = styled.div`
   }
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (max-width: 480px) {
@@ -40,7 +39,6 @@ export const Wrapper = styled.div`
   height: 1024px;
   gap: 16px;
   background-color: #f6f6f4;
- 
 `;
 export const Navbar = styled.div`
   display: flex;
@@ -49,7 +47,6 @@ export const Navbar = styled.div`
   justify-content: space-between;
   padding: 20px 32px;
   background-color: #f6f6f4;
-
 `;
 
 export const LeftNavigation = styled.div`
@@ -58,7 +55,7 @@ export const LeftNavigation = styled.div`
   gap: 32px;
 `;
 
-export const NavButton2 = styled(Link)`
+export const NavButton2 = styled(NavLink)`
   width: 126px;
   display: flex;
   flex-direction: row;
@@ -82,6 +79,11 @@ export const NavButton2 = styled(Link)`
     color: white;
     background-color: #272d2d;
   }
+
+  &.active {
+    background-color: #272d2d;
+    color: white;
+  }
 `;
 
 export const NavigationTab = styled.div`
@@ -92,7 +94,6 @@ export const NavigationTab = styled.div`
   padding: 4px;
   gap: 8px;
   background-color: #ffffff;
-
 `;
 
 export const NavButton = styled(NavLink)`
@@ -122,7 +123,6 @@ export const RightNavigation = styled.div`
   gap: 8px;
   border-radius: 32px;
   background-color: #ffffff;
-   
 `;
 
 export const TitleBar = styled.div`
@@ -132,7 +132,6 @@ export const TitleBar = styled.div`
   padding: 32px 32px;
   gap: 8px;
   background-color: #f6f6f4;
-  
 
   font-family: "Inter", sans-serif;
   font-weight: 700;

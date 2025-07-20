@@ -1,7 +1,35 @@
 import { FiClock } from "react-icons/fi";
-import { CircleButton, IconButton, LeftNavigation, Navbar, NavbarContent, NavButton, NavigationTab, ProfileImage, RightNavigation, Wrapper } from "../Base/Base.style";
+import {
+  CircleButton,
+  IconButton,
+  LeftNavigation,
+  Navbar,
+  NavbarContent,
+  NavButton,
+  NavigationTab,
+  ProfileImage,
+  RightNavigation,
+  Wrapper,
+} from "../Base/Base.style";
 import { HomeIcon, UserIcon } from "../icons/homeIcon";
-import { ActionBar, BiddingHistory, BidText, Button, Content, DetalisCard, ImageContainer, Inner, InputBidPrice, MetaCard, RightSide, Tag, TextDescription, Time, Title, Title2 } from "../pages/auction/auction.style";
+import {
+  ActionBar,
+  BiddingHistory,
+  BidText,
+  ButtonPrice,
+  Content,
+  DetalisCard,
+  ImageContainer,
+  Inner,
+  MetaCard,
+  NavButton2,
+  RightSide,
+  Tag,
+  TextDescription,
+  Time,
+  Title,
+  Title2,
+} from "../pages/auction/auction.style";
 import { EmptyState, TextCaption, TextTitle } from "./auctionEmptyState.style";
 
 const AuctionEmptyState: React.FC = () => {
@@ -85,24 +113,20 @@ const AuctionEmptyState: React.FC = () => {
 
               <ActionBar>
                 <BidText> Bid:</BidText>
-                <InputBidPrice>60</InputBidPrice>
-                <Button>Place bid</Button>
+                <ButtonPrice>40</ButtonPrice>
+                <NavButton2 to="/auctionaddedbid">Place bid</NavButton2>
               </ActionBar>
             </DetalisCard>
 
             <BiddingHistory>
               <Title2>Bidding History(0)</Title2>
 
-              <EmptyState>  
-                <TextTitle >
-                    No bids yet!
-                </TextTitle>
-                <TextCaption >
-                    Place your bid to have a chance to get this item.
+              <EmptyState>
+                <TextTitle>No bids yet!</TextTitle>
+                <TextCaption>
+                  Place your bid to have a chance to get this item.
                 </TextCaption>
               </EmptyState>
-
-              
             </BiddingHistory>
           </RightSide>
         </Inner>

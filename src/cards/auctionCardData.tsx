@@ -38,7 +38,7 @@ export const auctionCardOutbid = [
     title: "Old chair",
     price: "65 €",
     tag: "Winning",
-    tagColor: "#32CD32",
+    tagColor: "#ADFF90",
     },
   ]
 

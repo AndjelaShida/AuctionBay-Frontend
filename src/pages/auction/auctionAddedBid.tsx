@@ -17,15 +17,14 @@ import {
   Avatar,
   BiddingHistory,
   BidText,
-  Button,
+  ButtonPrice,
   Content,
   DetalisCard,
   ImageContainer,
   Inner,
-  InputBidPrice,
   MetaCard,
   Name,
-  Price,
+  NavButton2,
   RightSide,
   RightSideData,
   Table,
@@ -119,8 +118,8 @@ const AuctionAddedBid: React.FC = () => {
 
               <ActionBar>
                 <BidText> Bid:</BidText>
-                <InputBidPrice>40</InputBidPrice>
-                <Button>Place bid</Button>
+                <ButtonPrice>40</ButtonPrice>
+                <NavButton2 to="/auctionaddedbid">Place bid</NavButton2>
               </ActionBar>
             </DetalisCard>
 
@@ -134,7 +133,7 @@ const AuctionAddedBid: React.FC = () => {
 
                   <RightSideData>
                     <TextDate>22:31 30.9.2023</TextDate>
-                    <Price>40€</Price>
+                    <ButtonPrice>40€</ButtonPrice>
                   </RightSideData>
                 </TableRow>
 
@@ -144,7 +143,7 @@ const AuctionAddedBid: React.FC = () => {
 
                   <RightSideData>
                     <TextDate>14:31 22.6.2023</TextDate>
-                    <Price>32€</Price>
+                    <ButtonPrice>32€</ButtonPrice>
                   </RightSideData>
                 </TableRow>
 
@@ -154,7 +153,7 @@ const AuctionAddedBid: React.FC = () => {
 
                   <RightSideData>
                     <TextDate>14:31 22.6.2023</TextDate>
-                    <Price>29€</Price>
+                    <ButtonPrice>29€</ButtonPrice>
                   </RightSideData>
                 </TableRow>
               </Table>

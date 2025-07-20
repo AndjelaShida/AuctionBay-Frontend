@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components"; // ``;
 
 export const Content = styled.div`
@@ -5,8 +6,9 @@ export const Content = styled.div`
   flex-direction: column;
   background-color: #f6f6f4;
   gap: 8px;
-  width: 100%;
+  width: 1440px;
   align-items: center;
+  padding: 32px 32px ;
 `;
 
 export const Inner = styled.div`
@@ -14,6 +16,7 @@ export const Inner = styled.div`
   gap: 16px;
   width: 1376px;
   height: 888px;
+ 
 `;
 
 export const ImageContainer = styled.div`
@@ -22,18 +25,26 @@ export const ImageContainer = styled.div`
   width: 680px;
   max-height: 888px;
   border-radius: 16px;
-  overflow: hideen;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
+
+  img {
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
-export const RightSide = styled.div`
+export const RightSide = styled.div` OK
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: 680px;
   height: 888px;
   radius: 16px;
+  
 `;
 export const DetalisCard = styled.div`
   display: flex;
@@ -49,11 +60,11 @@ export const BiddingHistory = styled.div`
   display: flex;
   gap: 16px;
   width: 680px;
-  height: 589px;
   border-radius: 16px;
   padding: 16px;
   background-color: #ffffff;
   flex-direction: column;
+ 
 `;
 
 export const MetaCard = styled.div`
@@ -119,72 +130,92 @@ export const ActionBar = styled.div`
 export const BidText = styled.div`
   width: 29px;
   height: 24px;
+  display: flex;
+  align-items: center;
   font-family: Inter, sans-serif;
-  font-weight: 300px;
+  font-weight: 300;
   font-size: 16px;
+  font-style: light;
+  line-height: 24px;
+  color: #000000;
 `;
 
-export const Button = styled.div`
-  width: 103px;
-  height: 40px;
-  min-height: 40px;
+export const NavButton2 = styled(NavLink)`
+  width: 71px;
+  height: 24px;
   border-radius: 16px;
   padding: 8px 16px 8px 16px;
   gap: 8px;
   background-color: #f4ff47;
   cursor: pointer;
+  transition: all 300ms ease-out;
+  display: flex;
+  align-items: center;
+
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  font-style: medium;
+  line-height: 24px;
+  color: #071015;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0py 4px 20px rgba(0, 0, 0, 0.1);
+  }
 `;
 
 export const Title2 = styled.div`
   width: 205px;
   height: 28px;
   font-family: Inter, sans-serif;
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 23px;
+  font-style: bold;
+  line-height: 120%;
   color: #000000;
 `;
 
 export const Table = styled.div`
-  width: 648px;
-  height: 96px;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 16px;
 `;
 export const Name = styled.div`
-  width: 648px;
-  height: 48px;
-  border-bottom: 1px;
-  padding: 8px 8px 32px;
-  gap: 32px;
-  background-color: #edf4f2;
+  width: 339px;
+  height: 24px;
+  font-family: Inter, sans-serif;
+  font-weight: 300;
+  font-style: light;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
 `;
 
 export const TextDate = styled.div`
   width: 120px;
   height: 24px;
   font-family: Inter, sans-serif;
-  font-weight: 300px;
+  font-weight: 300;
   font-size: 16px;
+  font-style: light;
+  line-height: 24px;
   color: #000000;
-`;
-export const Price = styled.div`
-  width: 77px;
-  height: 32px;
-  border-radius: 6px;
-  paddingg: 6px 16px 6px 16px;
-  gap: 4px;
-  background-color: #f4ff47;
-  text-align: center;
+  display: flex;
+ 
 `;
 
-export const TableRow = styled.div`
-  display: flex;
-  justify-content: space-between;
+export const TableRow = styled.div` OK
+   display: flex;
+  justify-content: space-between; 
   align-items: center;
-  background-color: #edf4f2;
+  width: 100%;
   padding: 8px 16px;
-  border-radius: 8px;
+  border: 1px solid #EDF4F2;
+
+ 
 `;
 
 export const RightSideData = styled.div`
@@ -199,20 +230,61 @@ export const ProfilImg = styled.div`
   border-radius: 50%;
 `;
 
-export const Avatar = styled.img`
-  width: 32;
+export const Avatar = styled.img` OK
+  width: 32px;
   height: 32px;
   border-radius: 50%;
-  obejct-fit: cover;
-  overflow: hidden;
+
 `;
-export const InputBidPrice = styled.div`
-  width:83px;
-  height:40px;
-  min-height:40px;
-  gap:8px;
+
+export const Price = styled.div` OK
+  width: 77px;
+  height: 32px;
+  display: inline-block;
   border-radius: 16px;
-  border: 1px ;
-  padding: 8px 16px 8px 16px;
-  background-color: #DDE9E6 ;
+  padding: 6px 16px;
+  background-color: #F4FF47 ;
+
+   font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  font-style: semi-bold;
+  line-height: 120%;
+  color: #272D2D;
+
 `;
+export const ButtonPrice = styled.button` OK
+  width: 83px;
+  height: 40PX;
+  gap: 8px;
+  border-radius: 16px;
+  border: 1px solid #DDE9E6 ;
+  padding: 8x 16px;
+  background-color: #FFFFFF ;
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  font-style: semi-bold;
+  line-height: 120%;
+  color: #071015;
+`;
+
+export const LeftCell = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
+`;
+
+export const RightCell = styled.div`
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 16px;
+`;
+
+

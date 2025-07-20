@@ -1,35 +1,25 @@
 //PAGE FOR ONE AUCTION
 
 import { FiClock } from "react-icons/fi";
-import {
-  CircleButton,
-  IconButton,
-  LeftNavigation,
-  Navbar,
-  NavbarContent,
-  NavButton,
-  NavigationTab,
-  ProfileImage,
-  RightNavigation,
-  Wrapper,
-} from "../../Base/Base.style";
+import { CircleButton, IconButton, ProfileImage } from "../../Base/Base.style";
 import { HomeIcon, UserIcon } from "../../icons/homeIcon";
 import {
   ActionBar,
   Avatar,
   BiddingHistory,
   BidText,
-  Button,
+  ButtonPrice,
   Content,
   DetalisCard,
   ImageContainer,
   Inner,
-  InputBidPrice,
+  LeftCell,
   MetaCard,
   Name,
+  NavButton2,
   Price,
+  RightCell,
   RightSide,
-  RightSideData,
   Table,
   TableRow,
   Tag,
@@ -39,67 +29,64 @@ import {
   Title,
   Title2,
 } from "./auction.style";
+import {
+  LeftNavigation,
+  Navbar,
+  NavButton,
+  NavigationTab,
+  RightNavigation,
+  Wrapper,
+} from "../profile/myAuction.style";
 
 const Auction: React.FC = () => {
   return (
     <Wrapper>
       <Navbar>
-        <NavbarContent>
-          <LeftNavigation>
-            <IconButton to="#">
-              <img src="images/Left navigation.png" alt="left navigation" />
-            </IconButton>
+        <LeftNavigation>
+          <IconButton to="#">
+            <img src="images/Left navigation.png" alt="left navigation" />
+          </IconButton>
 
-            <NavigationTab>
-              <NavButton to="/auction">
-                <HomeIcon />
-                Auction
-              </NavButton>
+          <NavigationTab>
+            <NavButton to="/auctions">
+              <HomeIcon />
+              Auction
+            </NavButton>
 
-              <NavButton to="/profile">
-                <UserIcon />
-                Profil
-              </NavButton>
-            </NavigationTab>
-          </LeftNavigation>
+            <NavButton to="/profile">
+              <UserIcon />
+              Profil
+            </NavButton>
+          </NavigationTab>
+        </LeftNavigation>
 
-          <RightNavigation>
-            <CircleButton to="/addauctions">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="white"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="12" y1="5" x2="12" y2="19" />
-                <line x1="5" y1="12" x2="19" y2="12" />
-              </svg>
-            </CircleButton>
+        <RightNavigation>
+          <CircleButton to="/addauction">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </CircleButton>
 
-            <ProfileImage to="/profile">
-              <img src="/images/profile.png" alt="Profile"></img>
-            </ProfileImage>
-          </RightNavigation>
-        </NavbarContent>
+          <ProfileImage to="/profilepopup">
+            <img src="/images/profile.png" alt="Profile"></img>
+          </ProfileImage>
+        </RightNavigation>
       </Navbar>
 
       <Content>
         <Inner>
           <ImageContainer>
-            <img
-              src="/images/chair1.jpg"
-              alt="chair"
-              style={{
-                borderRadius: "16px",
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            ></img>
+            <img src="/images/chair1.jpg" alt="chair"></img>
           </ImageContainer>
 
           <RightSide>
@@ -121,8 +108,8 @@ const Auction: React.FC = () => {
 
               <ActionBar>
                 <BidText> Bid:</BidText>
-                <InputBidPrice>40</InputBidPrice>
-                <Button>Place bid</Button>
+                <ButtonPrice>40</ButtonPrice>
+                <NavButton2 to="/auctionaddedbid">Place bid</NavButton2>
               </ActionBar>
             </DetalisCard>
 
@@ -130,25 +117,28 @@ const Auction: React.FC = () => {
               <Title2>Bidding History(2)</Title2>
 
               <Table>
-            
                 <TableRow>
-                  <Avatar src="/images/profile2.jpg" alt="profilepic"></Avatar>
-                  <Name>Joanes Boyl</Name>
+                  <LeftCell>
+                    <Avatar src="/images/profile2.jpg" alt="profilepic" />
+                    <Name>Joanes Boyl</Name>
+                  </LeftCell>
 
-                  <RightSideData>
+                  <RightCell>
                     <TextDate>14:31 22.6.2023</TextDate>
                     <Price>32€</Price>
-                  </RightSideData>
+                  </RightCell>
                 </TableRow>
 
                 <TableRow>
-                  <Avatar src="/images/profile3.jpg" alt="profilepic"></Avatar>
-                  <Name>Bigi Smols</Name>
+                  <LeftCell>
+                    <Avatar src="/images/profile3.jpg" alt="profilepic" />
+                    <Name>Bigi Smols</Name>
+                  </LeftCell>
 
-                  <RightSideData>
+                  <RightCell>
                     <TextDate>14:31 22.6.2023</TextDate>
                     <Price>29€</Price>
-                  </RightSideData>
+                  </RightCell>
                 </TableRow>
               </Table>
             </BiddingHistory>

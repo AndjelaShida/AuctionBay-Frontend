@@ -25,6 +25,7 @@ interface Props {
   title: string;
   price: string;
   showAuctions?: boolean;
+  highlightTime?: boolean;
 }
 
 const AuctionCard: React.FC<Props> = ({
@@ -36,6 +37,8 @@ const AuctionCard: React.FC<Props> = ({
   title,
   price,
   showAuctions = false,
+  highlightTime = false,
+  
 }) => {
   const tagLower = tag.toLowerCase();
 
@@ -50,7 +53,7 @@ const navigate = useNavigate();
       <CardContent>
         <Header>
           {tagLower !== "done" && timeLeft && (
-            <Time tag={tagLower}>
+            <Time tag={tagLower} highlightTime={highlightTime} >
               {timeLeft}
               <FiClock size={14} />
             </Time>
