@@ -37,7 +37,7 @@ export const ImageContainer = styled.div`
   }
 `;
 
-export const RightSide = styled.div` OK
+export const RightSide = styled.div` 
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -207,7 +207,7 @@ export const TextDate = styled.div`
  
 `;
 
-export const TableRow = styled.div` OK
+export const TableRow = styled.div` 
    display: flex;
   justify-content: space-between; 
   align-items: center;
@@ -230,17 +230,19 @@ export const ProfilImg = styled.div`
   border-radius: 50%;
 `;
 
-export const Avatar = styled.img` OK
+export const Avatar = styled.img` 
   width: 32px;
   height: 32px;
   border-radius: 50%;
 
 `;
 
-export const Price = styled.div` OK
+export const Price = styled.div` 
   width: 77px;
   height: 32px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 16px;
   padding: 6px 16px;
   background-color: #F4FF47 ;
@@ -253,7 +255,7 @@ export const Price = styled.div` OK
   color: #272D2D;
 
 `;
-export const ButtonPrice = styled.button` OK
+export const ButtonPrice = styled.div` 
   width: 83px;
   height: 40PX;
   gap: 8px;

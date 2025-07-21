@@ -4,7 +4,6 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 850px;
   gap: 16px;
   background-color: #f6f6f4;
   
@@ -33,7 +32,7 @@ export const TextTitle = styled.div`
   width: 350px;
   height: 31px;
   font-family: Inter, sans-serif;
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 26px;
   color: #071015;
   line-height: 120%;
@@ -44,7 +43,8 @@ export const TextCaption = styled.div`
   width: 226px;
   height: 96px;
   font-family: Inter, sans-serif;
-  font-weight: 300px;
+  font-weight: 300;
+  font-style: light;
   font-size: 16px;
   line-height: 24px;
   color: #74817f;

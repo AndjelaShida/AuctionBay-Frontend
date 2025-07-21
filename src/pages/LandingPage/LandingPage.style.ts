@@ -9,11 +9,7 @@ export const Content = styled.div`
   padding: 40px 20px;
   text-align: center;
 
-    @media ${devices.mobile} {
-    width: 100%;
-    padding: 24px 12px;
-   
-  }
+
 
 `;
 
