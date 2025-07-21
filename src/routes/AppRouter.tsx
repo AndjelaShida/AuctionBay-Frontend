@@ -22,6 +22,7 @@ import ChangeProfilPicture from "../profileSetting/changeProfilPicture";
 import AddAuctions from "../profileSetting/addAuctions/addAuctions";
 import EditAuction from "../profileSetting/editAuction/editAuction";
 import EditAuctionNoImg from "../profileSetting/editAuction/editAuctionNoImg";
+import ProfilePopUp from "../profileSetting/profilepopup";
 
 
 
@@ -49,6 +50,7 @@ const AppRouter: React.FC = () => {
         <Route path="/addauction" element={<AddAuctions />} />
          <Route path="/editauction" element={<EditAuction />} />
          <Route path="/editauctionnoimg" element={<EditAuctionNoImg />} />
+        <Route path="/profilepopup" element={<ProfilePopUp />} />
 
       </Routes>
     </BrowserRouter>
