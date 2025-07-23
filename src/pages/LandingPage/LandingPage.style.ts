@@ -9,8 +9,6 @@ export const Content = styled.div`
   padding: 40px 20px;
   text-align: center;
 
-
-
 `;
 
 export const Header = styled.header`

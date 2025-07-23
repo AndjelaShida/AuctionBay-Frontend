@@ -4,8 +4,7 @@ import styled from "styled-components"; // ``;
 export const MainWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  width: 1440px;
-  height: 1024px;
+  width: 100vw;
   background-color: #f6f6f4;
 `;
 

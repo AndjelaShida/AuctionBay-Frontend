@@ -7,7 +7,7 @@ import { devices } from "../styles/media";
 
 //WRAPPER
 export const Wrapper = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 1024px;
   display: flex;
   flex-direction: column;
