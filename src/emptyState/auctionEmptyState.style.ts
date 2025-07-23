@@ -1,37 +1,61 @@
 import styled from "styled-components";
 
-export const EmptyState = styled.div`
-  width: 648px;
-  height: 513px;
-  gap: 25px; 
-  display:flex;
-  align-items: center;
-  justify-content: center ;
- flex-direction: column;
-  
- 
+export const Title3 = styled.div  `
+width: 104px;
+font-family: Inter, sans-serif;
+font-weight: 600;
+font-style: Semi Bold;
+font-size: 18px;
+leading-trim: NONE;
+line-height: 120%;
+letter-spacing: 0%;
+color: #071015 ;
+
+
+
 `;
 
-export const TextTitle = styled.div`
-  width: 104px;
-  height: 22px;
-  font-family: "Inter", sans-serif;
-  font-weight: 600px;
-  line-height: 120%;
-  font-size: 18px;
-  color:#071015 ;
- 
+export const TitleCaption = styled.div  `
+width: 648px;
+font-family: Inter, sans-serif;
+font-weight: 300;
+font-style: light;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 24px;
+letter-spacing: 0%;
+color: #74817F ;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center ;
+
+
 `;
 
-export const TextCaption = styled.div`
-  width: 648px;
-  height: 24px;
-  font-family: "Inter", sans-serif;
-  font-weight: 300px;
-  line-height: 24px;
-  font-size: 16px;
-  color: #74817F ;
-  display:flex;
-  justify-content: center ;
-  
+export const BiddingHistory = styled.div  `
+width: 680px;
+height: 589px;
+display: flex;
+flex-direction: column;
+border-radius: 16px;
+padding: 16px;
+gap: 16px;
+background-color: #FFFFFF ;
+
+
+`;
+
+export const EmptyState = styled.div  `
+width: 648px;
+height: 513px;
+display: flex;
+flex-direction: column;
+gap: 8px;
+align-items: center;
+justify-content: center ;
+
+
+
+
 `;
