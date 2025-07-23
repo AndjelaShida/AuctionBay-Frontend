@@ -10,10 +10,16 @@ import {
   AuthButtons,
   Auctions,
 } from "./LandingPage.style";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const LandingPage: React.FC = () => {
+
+  const navigate = useNavigate();
+
+  const handleRegister = () => {
+    navigate("registerpage");
+  }
   return (
     <Wrapper>
       <Content>
@@ -41,7 +47,7 @@ const LandingPage: React.FC = () => {
           or getting a deal on product you want!
         </Subtitle>
 
-        <StartButton>Start Bidding</StartButton>
+        <StartButton onClick={handleRegister}>Start Bidding</StartButton>
 
         <Auctions>
           <img src="./images/landingPic.png" alt="Landing Picture" />

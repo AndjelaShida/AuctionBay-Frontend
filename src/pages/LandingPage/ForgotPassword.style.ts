@@ -143,8 +143,7 @@ export const SubmitButton = styled.button`
   }
 `;
 export const BackToLogin = styled.div`
-    width: 97px;
-    height: 16px;
+  width: 97px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -153,8 +152,6 @@ export const BackToLogin = styled.div`
 `;
 
 export const MutedLink = styled(Link)`
-  width: 73px;
-  height: 16px;
   color: #74817f;
   gap: 4px;
   font-size: 12px;
@@ -165,12 +162,10 @@ export const MutedLink = styled(Link)`
 
   &::before {
     content: "←";
-    width:4.94px;
-    height: 8px;
     margin-top: 4px;
     margin-left: 5.33px;
     font-weight: 900;
-    color: #74817F ;
+    color: #74817f;
   }
 
   &:hover {
