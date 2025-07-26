@@ -23,18 +23,22 @@ export const Header = styled.header`
     @media ${devices.mobile} {
      height: 72px;
     padding: 12px 16px;
+  
   }
 `;
 
 export const AuthButtons = styled.div`
   display: flex;
-  algin-items: center;
+  align-items: center;
   gap: 16px;
 
     @media ${devices.mobile} {
-    top: 12px;
-    right: 16px;
-    z-index: 2 ;
+  gap: 8px;
+
+  button {
+  padding: 8px 12px;
+  font-size: 14px;
+  }
   }
 `;
 
@@ -61,18 +65,20 @@ export const IconButton = styled(Link)`
 `;
 
 export const H1 = styled.h1`
-  font-size: 'Inter', sans-serif ;
+  font-family: 'Inter', sans-serif ;
   font-weight: 700;
   font-size: 64px;
-  color: #071015 
+  color: #071015 ;
   width: 715px;
   height: 77px;
   margin: 0 auto 16px auto ;
 
-    @media ${devices.mobile} {
-    font-size: 32px;
-    width: 100%;
+  @media ${devices.mobile} {
+  font-size: 32px;
+  width: 100%;
+  padding: 0 8px ;
   }
+
 
 `;
 
@@ -162,6 +168,12 @@ export const Auctions = styled.div`
     border-width: 4px;
     padding: 0 8px;
     box-sizing: border-box;
+
+    img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    }
 
   }
 `;

@@ -13,6 +13,10 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #f6f6f4 ;
+  
+  @media ${devices.mobile} {
+  padding: 24px 16px;
+  }
  
 `;
 
