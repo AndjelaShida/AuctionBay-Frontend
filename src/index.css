@@ -67,4 +67,8 @@ button:focus-visible {
   }
 }
 
+* {
+  outline: 1px solid red; /* ili bilo koja boja */
+}
+
 

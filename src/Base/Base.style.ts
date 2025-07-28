@@ -6,14 +6,16 @@ import { devices } from "../styles/media";
 ``;
 
 //WRAPPER
-export const Wrapper = styled.div`
-  width: 100vw;
-  height: 1024px;
+export const Wrapper = styled.div`  OK
+  width: 100%;
+  mac-width: 1440px;
+  margin: 0 auto ;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #f6f6f4 ;
-  
+  padding: 0 24px;
+
   @media ${devices.mobile} {
   padding: 24px 16px;
   }
@@ -94,7 +96,7 @@ export const NavbarContent = styled.div`
   }
 `;
 
-export const IconButton = styled(Link)`
+export const IconButton = styled(Link)` OK
 width: 32px;
   height: 32px;
   border-radius: 50%;    

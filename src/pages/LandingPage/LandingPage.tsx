@@ -1,4 +1,4 @@
-import { IconButton, Wrapper } from "../../Base/Base.style";
+import {  Wrapper } from "../../Base/Base.style";
 import {
   Content,
   Button,
@@ -9,6 +9,7 @@ import {
   H1,
   AuthButtons,
   Auctions,
+  IconButton,
 } from "./LandingPage.style";
 import { Link, useNavigate } from "react-router-dom";
 
