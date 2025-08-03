@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { devices } from "../../styles/media";
 
 export const CardsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 16px;
   padding: 20px;
-  width: 1440px;
+  width: 100%;
   box-sizing: border-box;
-  background-color: #f6f6f4;
 
   @media (max-width: 1200px) {
     grid-template-columns: repeat(3, 1fr);
@@ -20,39 +20,70 @@ export const CardsGrid = styled.div`
 
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media ${devices.mobile} {
+    width: 100%;
   }
 `;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  width: 1440px;
-  height: 850px;
+  width: 100%;
   gap: 16px;
   background-color: #f6f6f4;
+
+  @media ${devices.mobile} {
+    width: 100%;
+    padding: 16px 16px;
+  }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 1024px;
+  width: 100%;
   gap: 16px;
   background-color: #f6f6f4;
+
+  @media ${devices.mobile} {
+    width: 360px;
+    height: 2316px;
+  }
 `;
 export const Navbar = styled.div`
   display: flex;
   flex-direction: row;
-  width: 1440px;
+  width: 100%;
   justify-content: space-between;
   padding: 20px 32px;
   background-color: #f6f6f4;
+  
+
+  @media ${devices.mobile} {
+    width: 480px;
+    height: 80px;
+    gap: 16px;
+  }
 `;
 
 export const LeftNavigation = styled.div`
   display: flex;
   flex-direction: row;
   gap: 32px;
+  width: 347px;
+  height: 64px;
+
+  @media ${devices.mobile} {
+    width: 152px;
+    height: 48px;
+    gap: 8px;
+  }
 `;
 
 export const NavButton2 = styled(NavLink)`
@@ -90,17 +121,25 @@ export const NavigationTab = styled.div`
   display: flex;
   flex-direction: row;
   width: 251px;
+  height: 64px;
   border-radius: 32px;
   padding: 4px;
   gap: 8px;
-  background-color: #ffffff;
+
+  @media ${devices.mobile} {
+    width: 96px;
+    height: 48px;
+    gap: 8px;
+    border-radius: 32px;
+    padding: 4px;
+  }
 `;
 
 export const NavButton = styled(NavLink)`
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 126px;
+  width: 1px26px;
   border-radius: 32px;
   padding: 8px 16px;
   gap: 4px;
@@ -110,6 +149,14 @@ export const NavButton = styled(NavLink)`
   &:hover {
     color: white;
     background-color: #202020;
+  }
+
+  @media ${devices.mobile} {
+    width: 96px;
+    height: 48px;
+    gap: 8px;
+    border-radius: 32px;
+    padding: 4px;
   }
 `;
 
@@ -123,15 +170,25 @@ export const RightNavigation = styled.div`
   gap: 8px;
   border-radius: 32px;
   background-color: #ffffff;
+
+  @media ${devices.mobile} {
+    width: 96px;
+    height: 48px;
+    gap: 8px;
+    border-radius: 32px;
+    padding: 4px;
+  }
 `;
 
 export const TitleBar = styled.div`
   display: flex;
   flex-direction: row;
-  width: 1440px;
+  width: 100%;
+  max-width: 1440px;
   padding: 32px 32px;
   gap: 8px;
   background-color: #f6f6f4;
+  
 
   font-family: "Inter", sans-serif;
   font-weight: 700;
@@ -140,6 +197,13 @@ export const TitleBar = styled.div`
   line-height: 120%;
   letter-spacing: 0%;
   color: #000000;
+
+  @media ${devices.mobile} {
+    width: 360px;
+    height: 38px;
+    padding: 16px 16xpx;
+    gap: 8px;
+  }
 `;
 
 export const TabBar = styled.div`
@@ -148,7 +212,15 @@ export const TabBar = styled.div`
   display: flex;
   justify-content: center;
   padding: 32px 32px;
+  
+
+  @media ${devices.mobile} {
+    width: 360px;
+    height: 48px;
+    padding: 16px 16px;
+  }
 `;
+
 export const ButtonGroup = styled.div`
   display: flex;
   flex-direction: row;
@@ -159,4 +231,5 @@ export const ButtonGroup = styled.div`
   border-radius: 16px;
   gap: 8px;
   background-color: #edf4f2;
+  
 `;

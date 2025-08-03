@@ -8,16 +8,17 @@ import { devices } from "../styles/media";
 //WRAPPER
 export const Wrapper = styled.div`  OK
   width: 100%;
-  mac-width: 1440px;
+  max-width: 1440px;
   margin: 0 auto ;
   display: flex;
-  flex-direction: column;
   align-items: center;
   background-color: #f6f6f4 ;
   padding: 0 24px;
 
   @media ${devices.mobile} {
   padding: 24px 16px;
+  gap:8px;
+  background-color: #F6F6F4 ;
   }
  
 `;
@@ -97,9 +98,9 @@ export const NavbarContent = styled.div`
 `;
 
 export const IconButton = styled(Link)` OK
-width: 32px;
-  height: 32px;
-  border-radius: 50%;    
+  width: 64px;
+  height: 64px;
+  border-radius: 100px;    
   objectFit: "cover"  ;
   background-color: #F4FF47; 
   display: flex;
@@ -111,6 +112,16 @@ width: 32px;
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+ 
+   
+
+    @media ${devices.mobile} {
+    width: 48px;
+    height: 48px;
+    border-radius: 100px;
+    gap: 16px;
+    background-color: #F4FF47 ;
+  }
 `;
 export const NavigationTab = styled.div`
   display: flex;

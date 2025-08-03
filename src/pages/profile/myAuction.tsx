@@ -72,6 +72,7 @@ const MyAuction: React.FC = () => {
                 Profil
               </NavButton>
             </NavigationTab>
+            
           </LeftNavigation>
 
           <RightNavigation>

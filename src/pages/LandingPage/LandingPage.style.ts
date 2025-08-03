@@ -9,9 +9,8 @@ export const Content = styled.div`
   background-color: #f6f6f4;
   box-sizing: border-box;
 
-  @media ${devices.mobile} {
-    padding: 32px 16px;
-    max-width: 360px;
+    @media ${devices.desktop} {
+    padding: 40px 20px;
   }
 `;
 
@@ -29,6 +28,8 @@ export const Header = styled.header`
     justify-content: space-between;
     padding: 20px 16px;
     flex-direction: row;
+    width: 360px;
+    display: flex;
      gap: 15px;
   }
 `;
@@ -72,10 +73,10 @@ export const H1 = styled.h1`
   height: 77px;
   margin: 0 auto 16px auto;
 
-  @media ${devices.mobile} {
+  @media ${devices.desktop} {
     font-size: 32px;
-    padding: 0 8px;
     width: 328px;
+    height: 76px;
   }
 `;
 
@@ -85,10 +86,12 @@ export const Subtitle = styled.div`
   font-size: 16px;
   margin-bottom: 24px;
 
-  @media ${devices.mobile} {
+  @media ${devices.desktop} {
     font-size: 16px;
-    padding: 0 8px;
+    width: 328px;
+    height: 72px;
   }
+
 `;
 
 export const StartButton = styled.button`
@@ -111,7 +114,7 @@ export const StartButton = styled.button`
 
   @media ${devices.mobile} {
     font-size: 14px;
-    width: 100%;
+    width: 132px;
   }
 `;
 
@@ -153,8 +156,12 @@ export const Auctions = styled.div`
     object-fit: cover;
   }
 
-  @media ${devices.mobile} {
-    border-width: 4px;
-    border-radius: 16px;
+  @media ${devices.desktop} {
+    width: 312px;
+    padding: 396px 24px 24px ;
+    border-radius: 24px;
+    border: 4px solid #272D2D ;
+
+
   }
 `;

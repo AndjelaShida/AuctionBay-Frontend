@@ -1,11 +1,19 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components"; // ``;
+import { devices } from "../../styles/media";
 
 export const LoginWrapper = styled.div`
   display: flex;
   flex-direction: row;
   width: 100vw;
+  max-width: 1440px;
   background-color: #f6f6f4;
+  
+ @media ${devices.mobile} {
+    flex-direction: column;
+    width: 360px;
+    height: auto;
+  }
 `;
 
 export const LoginLeft = styled.div`
@@ -16,11 +24,16 @@ export const LoginLeft = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  
 
   img {
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;
+  }
+
+  @media ${devices.mobile} {
+    display: none;
   }
 `;
 
@@ -34,7 +47,13 @@ export const LoginRight = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 8px;
-  padding: 8px;
+   @media ${devices.mobile} {
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    padding: 16px;
+    gap: 16px;
+  }
 `;
 
 export const RightContainer = styled.div`
@@ -48,33 +67,81 @@ export const RightContainer = styled.div`
   border-radius: 32px;
   padding: 64px 32px;
   background-color: #ffffff;
+   
+
+    @media ${devices.mobile} {
+    width: 100%;
+    gap: 4px;
+    padding: 4px;
+  }
+`;
+
+export const TitleContainer = styled.div`
+  width: 185px;
+  height: 276px;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media ${devices.mobile} {
+    width: 240px;
+    gap: 4px;
+  }
 `;
 
 export const TitleWelcome = styled.h2`
-  width: 240px;
+  width: 91px;
   height: 38px;
   font-size: 32px;
   font-weight: 700;
   color: #071015;
   line-height: 120%;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const TitlePlease = styled.div`
   width: 185px;
   height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Inter", sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
   color: #071015;
 `;
+
+export const Register = styled.div`
+  width: 384px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+    @media ${devices.mobile} {
+    width: 312px;
+    gap: 64px;
+  }
+  
+`;
+
 export const FormContainer = styled.div`
   width: 384px;
   height: 408px;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  
+
+    @media ${devices.mobile} {
+      width: 100%;
+      gap: 16px;
+    }
 `;
 
 export const Inputs = styled.div`
@@ -83,14 +150,9 @@ export const Inputs = styled.div`
   display: flex;
   gap: 16px;
 
-  &::placeholder {
-    color: #ffffff;
-    width: 184px;
-    height: 40px;
-    min-height: 40px;
-    border-radius: 16px;
-    border: 1px solid #dde9e6;
-    padding: 8px 16px 8px 16px;
+
+    @media ${devices.mobile} {
+    width: 100%;
     gap: 8px;
   }
 `;
@@ -103,6 +165,7 @@ flex: 1;
 display: flex;
 flex-direction: column;
 
+
   label {
     font-family: "Inter", sans-serif;
     font-size: 16px;
@@ -110,6 +173,12 @@ flex-direction: column;
     line-height: 24px ;
     color: #071015;
   }
+
+    @media ${devices.mobile} {
+      width: 100%;
+      gap: 4px;
+      font-size: 8px;
+    }
 `;
 
 export const Input = styled.input`
@@ -120,6 +189,7 @@ export const Input = styled.input`
   border-radius: 16px;
   border: 1px solid #dde9e6;
   background-color: #ffffff;
+  
 
   &:focus {
     border-color: #333;
@@ -131,6 +201,13 @@ export const Input = styled.input`
     font-size: 16px;
     font-weight: 300;
     line-height: ;
+  }
+
+      @media ${devices.mobile} {
+    width: 312px;
+    padding: 4px 8px;
+    gap: 4px;
+    font-size: 8px;
   }
 `;
 
@@ -152,6 +229,12 @@ export const PasswordWrapper = styled.div`
     cursor: pointer;
     font-size: 16px;
   }
+
+    @media ${devices.mobile} {
+    width: 100%;
+    gap: 4px;
+   
+  }
 `;
 
 export const SubmitButton = styled.button`
@@ -167,6 +250,11 @@ export const SubmitButton = styled.button`
 
   &:hover {
     background-color: #dbdb18;
+  }
+
+      @media ${devices.mobile} {
+    width: 312px;
+  padding: 4px 8px;
   }
 `;
 
@@ -189,10 +277,9 @@ export const ForgotPasswordWrapper = styled.div`
   height: 16px;
   gap: 4px;
   display: flex;
- 
 `;
 
-export const MutedLink = styled(Link)` 
+export const MutedLink = styled(Link)`
   width: 100px;
   height: 16px;
   color: #74817f;

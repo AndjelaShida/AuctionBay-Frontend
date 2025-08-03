@@ -1,11 +1,21 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components"; // ``;
+import { devices } from "../../styles/media";
 
 export const MainWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100vw;
+  width: 100%;
   background-color: #f6f6f4;
+
+  @media ${devices.mobile} {
+  display:flex;
+    flex-direction: column;
+    width: 360px;
+    height: auto;
+    gap: 8px;
+    background-color: #f6f6f4;
+  }
 `;
 
 export const LeftWrapper = styled.div`
@@ -22,6 +32,10 @@ export const LeftWrapper = styled.div`
     max-width: 100%;
     object-fit: contain;
   }
+
+  @media ${devices.mobile} {
+    display: none;
+  }
 `;
 
 export const RightWrapper = styled.div`
@@ -35,6 +49,10 @@ export const RightWrapper = styled.div`
   flex-direction: column;
   gap: 8px;
   padding: 8px;
+
+  @media ${devices.mobile} {
+    width: 100%;
+  }
 `;
 
 export const RightContainer = styled.div`
@@ -48,6 +66,28 @@ export const RightContainer = styled.div`
   border-radius: 32px;
   padding: 64px 32px;
   background-color: #ffffff;
+ 
+  
+
+  @media ${devices.mobile} {
+    width: 100%;
+  }
+`;
+
+export const TitleContainer = styled.div`
+  width: 185px;
+  height: 276px;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+
+  @media ${devices.mobile} {
+    width: 240px;
+    gap: 4px;
+  }
 `;
 
 export const TitleForgot = styled.h2`
@@ -72,9 +112,10 @@ export const Subtitle = styled.div`
 export const Input = styled.input`
   padding: 12px 24px;
   border-radius: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #DDE9E6;
   font-size: 16px;
-  width: 100%;
+  width: 384px;
+     box-sizing: border-box;
 
   &:focus {
     border-color: #333;
@@ -84,6 +125,10 @@ export const Input = styled.input`
   &::placeholder {
     color: #999;
   }
+
+  @media ${devices.mobile} {
+    width: 312px;
+  }
 `;
 export const FormContainer = styled.div`
   width: 384px;
@@ -91,30 +136,17 @@ export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 32px;
-`;
-export const Inputs = styled.div`
-  width: 384px;
-  height: 72px;
-  display: flex;
-  gap: 16px;
 
-  &::placeholder {
-    color: #ffffff;
-    width: 384px;
-    height: 40px;
-    min-height: 40px;
-    border-radius: 16px;
-    border: 1px solid #dde9e6;
-    padding: 8px 16px;
-    gap: 8px;
+  @media ${devices.mobile} {
+    width: 312px;
+    gap: 16px;
   }
 `;
 
 export const InputGroup = styled.div`
-width 184px;
+width 384px;
 height: 72px;
-gap: 8px;
-flex: 1;
+gap: 16px;
 display: flex;
 flex-direction: column;
 
@@ -125,6 +157,7 @@ flex-direction: column;
     line-height: 24px ;
     color: #071015;
   }
+
 `;
 
 export const SubmitButton = styled.button`
@@ -140,6 +173,11 @@ export const SubmitButton = styled.button`
 
   &:hover {
     background-color: #dbdb18;
+  }
+
+  @media ${devices.mobile} {
+    width: 312px;
+    padding: 8px 16px;
   }
 `;
 export const BackToLogin = styled.div`
@@ -174,8 +212,8 @@ export const MutedLink = styled(Link)`
 `;
 
 export const IconButton = styled(Link)`
- width: 64;
-  height: 64;
+ width: 64px;
+  height: 64px;
   border-radius: 50%;    
   objectFit: "cover"  
   background-color: #F4FF47; 

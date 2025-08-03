@@ -11,98 +11,110 @@ import {
   SubmitButton,
   MutedLink,
   IconButton,
-  RightContainer,
   TitleHello,
   TitlePlease,
   Inputs,
   InputSmall,
+  Container,
+  RightSide,
+  Login,
+  TitleContainer,
+  StyledLabel,
+  PasswordToggleIcon,
 } from "./Register.style";
-import { PasswordToggleIcon } from "../../profileSetting/changePassword.style";
 import { FiEye, FiEyeOff } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 const RegisterPage: React.FC = () => {
-
   const [showPassword, setShowPassword] = useState(false);
-  const togglePassword = () => {
-    setShowPassword((prev) => !prev);
+  const togglePassword = () => setShowPassword(prev => !prev);
+
+  const navigate = useNavigate();
+
+  const handleAuctions = () => {
+    navigate("/myauctions");
   };
 
   return (
     <RegisterWrapper>
-      
       <RegisterLeft>
         <img src="/images/registerLeft.png" alt="register illustration" />
       </RegisterLeft>
 
       <RegisterRight>
-        <RightContainer>
-          
-        <IconButton to="#">
-          <img src="images/Left navigation.png" alt="left navigation" />
-        </IconButton>
 
-        <TitleHello>Hello!</TitleHello>
+        <RightSide>
 
-        <TitlePlease>Please enter your details</TitlePlease>
+          <Container>
 
-        <FormContainer>
-          <Inputs>
+            <IconButton to="#">
+              <img src="images/Left navigation.png" alt="left navigation" />
+            </IconButton>
 
-            <InputGroup>
-              <label htmlFor="name">Name</label>
-              <InputSmall id="name" type="text" placeholder="Name" />
-            </InputGroup>
+            <Login>
 
-            <InputGroup>
-              <label htmlFor="surname">Surname</label>
-              <InputSmall id="surname" type="text" placeholder="Surname" />
-            </InputGroup>
+              <TitleContainer>
+                <TitleHello>Hello!</TitleHello>
+                <TitlePlease>Please enter your details</TitlePlease>
+              </TitleContainer>
 
-          </Inputs>
+              <FormContainer>
+                <Inputs>
+                  <InputGroup>
+                    <label htmlFor="name">Name</label>
+                    <InputSmall id="name" type="text" placeholder="Name" />
+                  </InputGroup>
 
-          <label htmlFor="email">E-mail</label>
-          <Input id="email" type="email" placeholder="email@example.com" />
+                  <InputGroup>
+                    <label htmlFor="surname">Surname</label>
+                    <InputSmall id="surname" type="text" placeholder="Surname" />
+                  </InputGroup>
+                </Inputs>
 
-          <label htmlFor="password">Password</label>
-          <PasswordWrapper>
-            <Input
-              id="password"
-              type={showPassword ? "text" : "password"}
-              placeholder="Password"
-            />
-           <PasswordToggleIcon type="button" onClick={togglePassword}>
-            {showPassword ? <FiEyeOff /> : <FiEye /> }
-            </PasswordToggleIcon>
-          </PasswordWrapper>
+                <StyledLabel  htmlFor="email">E-mail</StyledLabel >
+                <Input id="email" type="email" placeholder="email@example.com" />
 
-          <label htmlFor="resetPassword">Reset Password</label>
-          <PasswordWrapper>
-            <Input
-              id="resetPassword"
-              type={showPassword ? "text" : "password"}
-              placeholder="Reset password"
-            />
-              <PasswordToggleIcon type="button" onClick={togglePassword}>
-            {showPassword ? <FiEyeOff /> : <FiEye /> }
-            </PasswordToggleIcon>
-          </PasswordWrapper>
+                <StyledLabel  htmlFor="password">Password</StyledLabel >
+                <PasswordWrapper>
+                  <Input
+                    id="password"
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Password"
+                  />
+                  <PasswordToggleIcon type="button" onClick={togglePassword}>
+                    {showPassword ? <FiEyeOff /> : <FiEye />}
+                  </PasswordToggleIcon>
+                </PasswordWrapper>
 
+                <StyledLabel  htmlFor="resetPassword">Reset Password</StyledLabel >
+                <PasswordWrapper>
+                  <Input
+                    id="resetPassword"
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Reset password"
+                  />
+                  <PasswordToggleIcon type="button" onClick={togglePassword}>
+                    {showPassword ? <FiEyeOff /> : <FiEye />}
+                  </PasswordToggleIcon>
+                </PasswordWrapper>
 
-          <SubmitButton type="submit">
-            Sign up
-            </SubmitButton>
+                <SubmitButton type="button" onClick={handleAuctions}>
+                  Sign up
+                </SubmitButton>
 
-          <Subtitle>
-            Already have an account?
-            <MutedLink to="/loginpage">Log in</MutedLink>
-          </Subtitle>
+                <Subtitle>
+                  Already have an account?{" "}
+                  <MutedLink to="/loginpage">Log in</MutedLink>
+                </Subtitle>
 
-        </FormContainer>
-        </RightContainer>
+              </FormContainer>
+            </Login>
+          </Container>
+        </RightSide>
       </RegisterRight>
-      
     </RegisterWrapper>
   );
 };
 
 export default RegisterPage;
+
