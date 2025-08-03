@@ -2,7 +2,7 @@
 
 import { CircleButton, IconButton, ProfileImage } from "../../Base/Base.style";
 import AuctionCard from "../../cards/auctionCard";
-import { auctionCardItems } from "../../cards/auctionCardData"; 
+import { auctionCardItems } from "../../cards/auctionCardData";
 import { HomeIcon, UserIcon } from "../../icons/homeIcon";
 import {
   CardsGrid,
@@ -62,33 +62,33 @@ const Auctions: React.FC = () => {
 
       <TitleBar>Auctions</TitleBar>
 
-   <CardsGrid>
-  {auctionCardItems.map((item, index) => {
-    const tagLower = item.tag.toLowerCase();
+      <CardsGrid>
+        {auctionCardItems.map((item, index) => {
+          const tagLower = item.tag.toLowerCase();
 
-    // Vadi broj iz timeLeft 
-    const numericTime = parseInt(item.timeLeft.replace(/\D/g, ""));
+          // Vadi broj iz timeLeft
+          const numericTime = parseInt(item.timeLeft.replace(/\D/g, ""));
 
-    const isHours = item.timeLeft.toLowerCase().includes("h");
+          const isHours = item.timeLeft.toLowerCase().includes("h");
 
-    // highlight samo ako je in progress i vreme je <=24h 
-    const highlightTime =
-      tagLower === "in progress" && isHours && numericTime <= 24;
+          // highlight samo ako je in progress i vreme je <=24h
+          const highlightTime =
+            tagLower === "in progress" && isHours && numericTime <= 24;
 
-    return (
-      <AuctionCard
-        key={index}
-        image={item.image}
-        timeLeft={item.timeLeft}
-        title={item.title}
-        price={item.price}
-        tag={item.tag}
-        tagColor={item.tagColor}
-        highlightTime={highlightTime}
-      />
-    );
-  })}
-</CardsGrid>
+          return (
+            <AuctionCard
+              key={index}
+              image={item.image}
+              timeLeft={item.timeLeft}
+              title={item.title}
+              price={item.price}
+              tag={item.tag}
+              tagColor={item.tagColor}
+              highlightTime={highlightTime}
+            />
+          );
+        })}
+      </CardsGrid>
     </Wrapper>
   );
 };

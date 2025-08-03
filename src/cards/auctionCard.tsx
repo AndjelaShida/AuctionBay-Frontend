@@ -26,6 +26,7 @@ interface Props {
   price: string;
   showAuctions?: boolean;
   highlightTime?: boolean;
+  
 }
 
 const AuctionCard: React.FC<Props> = ({
@@ -38,6 +39,7 @@ const AuctionCard: React.FC<Props> = ({
   price,
   showAuctions = false,
   highlightTime = false,
+ 
   
 }) => {
   const tagLower = tag.toLowerCase();
