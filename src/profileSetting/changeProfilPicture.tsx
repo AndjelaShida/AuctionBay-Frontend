@@ -4,12 +4,9 @@ import {
   Button,
   ButtonCancel,
   ButtonSave,
-  CancelText,
   Header,
   Inner,
   ProfilImage,
-  SaveText,
-  TextChange,
   Wrapper,
 } from "./changeProfilPicture.style";
 
@@ -36,7 +33,7 @@ const ChangeProfilPicture: React.FC<Props> = ({ onClick, disabled}) => {
   return (
     <Wrapper>
       <Header>
-        <TextChange>Change profile picture</TextChange>
+        <span>Change profile picture</span>
       </Header>
 
       <Inner>
@@ -51,11 +48,11 @@ const ChangeProfilPicture: React.FC<Props> = ({ onClick, disabled}) => {
 
           <BottomBar>
               <ButtonCancel onClick={handleCancel}>
-                <CancelText>Cancel</CancelText>
+                <span>Cancel</span>
               </ButtonCancel>
       
               <ButtonSave onClick={handleSave}>
-                <SaveText>Save change</SaveText>
+                <span>Save change</span>
               </ButtonSave>
             </BottomBar>
     </Wrapper>

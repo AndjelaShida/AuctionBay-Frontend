@@ -1,5 +1,6 @@
 
 import styled from "styled-components";
+import { devices } from "../styles/media";
 
 export const ProfileWrapper = styled.div    `
 display: flex;
@@ -11,6 +12,7 @@ border-radius: 16px;
 padding: 16px;
 gap: 17px;
 background-color: #FFFFFF ;
+
 box-shadow: 0px 0px 0px 0px #0000001A;
 
 box-shadow: 0px 4px 8px 0px #0000001A;
@@ -22,6 +24,12 @@ box-shadow: 0px 34px 21px 0px #0000000D;
 box-shadow: 0px 61px 24px 0px #00000003;
 
 box-shadow: 0px 96px 27px 0px #00000000;  
+
+   @media ${devices.mobile} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 
@@ -36,7 +44,6 @@ gap: 8px;
 
 font-family: "Inter", sans-serif;
 font-weight: 500;
-font-style: Medium;
 font-size: 16px;
 leading-trim: NONE;
 line-height: 24px;
@@ -56,7 +63,6 @@ gap: 8px;
 
 font-family: "Inter", sans-serif;
 font-weight: 500;
-font-style: Medium;
 font-size: 16px;
 leading-trim: NONE;
 line-height: 24px;

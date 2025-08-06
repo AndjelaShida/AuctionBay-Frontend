@@ -299,7 +299,6 @@ export const StyledLabel = styled.label`
   color: #071015;
   font-weight: 300;
   font-size: 16px;
-  font-style: light;
   line-height: 24px;
 `;
 

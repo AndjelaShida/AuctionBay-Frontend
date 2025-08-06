@@ -1,10 +1,10 @@
 import styled from "styled-components";
+import { devices } from "../styles/media";
 
 export const Title3 = styled.div  `
 width: 104px;
 font-family: Inter, sans-serif;
 font-weight: 600;
-font-style: Semi Bold;
 font-size: 18px;
 leading-trim: NONE;
 line-height: 120%;
@@ -19,7 +19,6 @@ export const TitleCaption = styled.div  `
 width: 648px;
 font-family: Inter, sans-serif;
 font-weight: 300;
-font-style: light;
 font-size: 16px;
 leading-trim: NONE;
 line-height: 24px;
@@ -55,6 +54,14 @@ gap: 8px;
 align-items: center;
 justify-content: center ;
 
+@media ${devices.mobile} {
+width:328px;
+height: 214px;
+border-radius: 16px;
+padding: 16px;
+gap: 16px;
+background-color: #FFFFFF ;
+}
 
 
 

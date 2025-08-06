@@ -7,6 +7,7 @@ import {
   EditButton,
   Header,
   Inner,
+  InputDescription,
   InputEndDate,
   InputGroupDescription,
   InputGroupEndDate,
@@ -14,7 +15,6 @@ import {
   InputTitle,
   NoPicture,
   StyledClocksIcon,
-  TextArea,
   Wrapper,
 } from "./editAuction.style";
 
@@ -53,10 +53,9 @@ const EditAuctionNoImg: React.FC = () => {
             placeholder="Rode vintage microphone MH55"
           ></InputTitle>
         </InputGroupTitle>
-
-        <InputGroupDescription>
+  <InputGroupDescription>
           <label htmlFor="description">Description</label>
-          <TextArea
+          <InputDescription
             id="description"
             placeholder="Used only for one production... comes in original box, very nice and vintage microphone with all the new features."
           />

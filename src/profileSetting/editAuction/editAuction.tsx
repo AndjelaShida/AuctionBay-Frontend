@@ -6,6 +6,7 @@ import {
   EditButton,
   Header,
   Inner,
+  InputDescription,
   InputEndDate,
   InputGroupDescription,
   InputGroupEndDate,
@@ -14,11 +15,9 @@ import {
   Picture,
   StyledClocksIcon,
   StyledTrashIcon,
-  TextArea,
   TrashIconWrapper,
   Wrapper,
 } from "./editAuction.style";
-
 
 const EditAuction: React.FC = () => {
   const [isOverlayOpen, setIsOverlayOpen] = useState(true);
@@ -50,7 +49,7 @@ const EditAuction: React.FC = () => {
         <InputGroupTitle>
           <label htmlFor="title">Title</label>
           <InputTitle
-            id="title" 
+            id="title"
             type="text"
             placeholder="Rode vintage microphone MH55"
           ></InputTitle>
@@ -58,7 +57,7 @@ const EditAuction: React.FC = () => {
 
         <InputGroupDescription>
           <label htmlFor="description">Description</label>
-          <TextArea
+          <InputDescription
             id="description"
             placeholder="Used only for one production... comes in original box, very nice and vintage microphone with all the new features."
           />
@@ -66,17 +65,25 @@ const EditAuction: React.FC = () => {
 
         <InputGroupEndDate>
           <label htmlFor="endDate">End date</label>
-          <InputEndDate id="endDate" type="text" placeholder="23.9.2023" />
+          <InputEndDate 
+          id="endDate"
+           type="text"
+            placeholder="23.9.2023" />
+
           <ClockIconWrapper>
-          <StyledClocksIcon />
-        </ClockIconWrapper>
+            <StyledClocksIcon />
+          </ClockIconWrapper>
         </InputGroupEndDate>
       </Inner>
 
       <BottomBar>
-        <DiscardButton onClick={handleCancel}>Discard change</DiscardButton>
+        <DiscardButton onClick={handleCancel}>
+          <span> Discard change</span>
+        </DiscardButton>
 
-        <EditButton onClick={handleSave}>Edit auction</EditButton>
+        <EditButton onClick={handleSave}>
+          <span> Edit auction</span>{" "}
+        </EditButton>
       </BottomBar>
     </Wrapper>
   );

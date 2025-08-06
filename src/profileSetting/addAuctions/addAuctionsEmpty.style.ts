@@ -54,14 +54,6 @@ export const Picture = styled.div`
   gap: 8px;
   background-color: #f6f6f4;
 
-  img {
-  width: 501px;
-  height: 168px;
-  border-radius: 16px;
-  padding: 16px;
-  gap: 8px;
-  }
-
   @media ${devices.mobile} {
     width: 296px;
     gap: 16px;
@@ -105,6 +97,7 @@ export const Inner = styled.div`
 `;
 
 export const Inputs = styled.div`
+  /*deo bez placeholdera*/
   display: flex;
   flex-direction: column;
   width: 501px;
@@ -124,6 +117,7 @@ export const Inputs = styled.div`
 `;
 
 export const InputGroup = styled.div`
+  /*ceo deo sa titlom*/
   width: 501px;
   height: 331px;
   gap: 16px;
@@ -136,6 +130,7 @@ export const InputGroup = styled.div`
 `;
 
 export const Input = styled.input`
+  /* okvir oko placeholdera*/
   display: flex;
   flex-direction: column;
   width: 242.5px;

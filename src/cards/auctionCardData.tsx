@@ -3,7 +3,7 @@
 export const auctionCardOutbid = [
     {
     image: "/images/chair1.jpg",
-    timeLeft: "24",
+    timeLeft: "24h",
     title: "Old chair",
     price: "65 €",
     tag: "Outbid",
@@ -27,7 +27,7 @@ export const auctionCardOutbid = [
     title: "Old chair",
     price: "65 €",
     tag: "Done",
-    tagColor: "	#686868",
+    tagColor: "	#272D2D",
     },
   ]
 

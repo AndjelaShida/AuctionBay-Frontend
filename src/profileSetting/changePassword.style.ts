@@ -1,107 +1,131 @@
 import styled from "styled-components";
+import { devices } from "../styles/media";
 
-export const Wrapper = styled.div  `
-display: flex;
-flex-direction: column;
-width: 533px;
-height: 414px;
-border-radius: 16px;
-padding: 16px;
-gap: 32px;
-background-color: #FFFFFF ;
-
- position: absolute;
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 533px;
+  height: 414px;
+  border-radius: 16px;
+  padding: 16px;
+  gap: 32px;
+  background-color: #ffffff;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
+  @media ${devices.mobile} {
+    width: 328px;
+    border-radius: 16px;
+    padding: 16px;
+    gap: 32px;
+    background-color: #ffffff;
+  }
 `;
 
 export const Header = styled.div`
-display: flex;
-flex-direction: column;
-width: 501px;
-height: 28px;
-gap: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 501px;
+  height: 28px;
+  gap: 16px;
+
+  span {
+   width: 501px;
+  height: 28px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 120%;
+  color: #000000;
+  }
+
+  @media ${devices.mobile} {
+    width: 296px;
+    gap: 16px;
+  }
 `;
 
-
-export const Title = styled.div`
-width: 501px;
-height: 28px;
- font-family: "Inter", sans-serif;
- font-weight: 700;
- font-style: bold;
- font-size: 23px;
- line-height: 120% ;
- color:#000000 ;
-`;
 
 export const FormContainer = styled.div`
-width: 501px;
-height: 250px;
-gap: 17px;
-display: flex;
-flex-direction: column;
+  width: 501px;
+  height: 250px;
+  gap: 17px;
+  display: flex;
+  flex-direction: column;
+
+  @media ${devices.mobile} {
+    width: 296px;
+    gap: 17px;
+  }
 `;
 
 export const Inputs = styled.div`
-width: 501px;
-height: 72px;
-gap: 8px;
-display: flex;
-flex-direction: column;
+  width: 501px;
+  height: 72px;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
 
-
+  @media ${devices.mobile} {
+    width: 296px;
+    gap: 8px;
+  }
 `;
 
 export const InputGroup = styled.div`
-width: 184px;
-height: 72px;
-gap: 8px;
-flex: 1;
-display: flex;
-flex-direction: column;
-
+  width: 184px;
+  height: 72px;
+  gap: 8px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+   
   label {
     font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 300;
-    line-height: 24px ;
+    line-height: 24px;
     color: #071015;
-  }`;
+  }
+`;
 
-  export const Input = styled.input`
-width: 242px;
-height: 40px;
-min-height: 40px;
-gap: 8px;
-border-radius: 16px;
-border: 1px solid #DDE9E6 ;
-padding: 8px 16px;
+export const Input = styled.input`
+  width: 501px;
+  height: 40px;
+  min-height: 40px;
+  gap: 8px;
+  border-radius: 16px;
+  border: 1px solid #dde9e6;
+  padding: 8px 16px;
+
 `;
 
 export const InputWrapper = styled.div`
   position: relative;
   width: fit-content;
+
 `;
 
 export const PasswordToggleIcon = styled.button`
+  width: 16px;
+  height: 20px;
+  padding: 4px 8px;
   position: absolute;
-  right: 12px;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
   background: none;
   border: none;
   cursor: pointer;
-  color: #999;
-  font-size: 18px;
+  color: #74817f;
+  font-size: 14px;
 
   &:hover {
     color: #333;
   }
 `;
-
 
 export const BottomBar = styled.div`
 width 501px;
@@ -110,8 +134,7 @@ gap: 16px;
 display: flex;
 flex-direction: row;
 justify-content: flex-end;
-` ;
-
+`;
 
 export const ButtonCancel = styled.button`
 width 85px;
@@ -122,9 +145,8 @@ gap: 8px;
 display: flex;
 flex-direction: column;
 background-color: #EDF4F2 ;
-` ;
 
-export const CancelText = styled.div`
+span {
 width 53px;
 height: 24px;
  font-family: "Inter", sans-serif;
@@ -132,9 +154,18 @@ height: 24px;
  font-size: 16px;
  line-height: 24px;
  color: #071015 ;
-` ;
+}
 
-export const ButtonSave = styled.div`
+ @media ${devices.mobile} {
+ width: 85px;
+ gap: 16px;
+ border-radius: 16px;
+ padding: 8px 16px;
+ background-color: #EDF4F2 ;
+ }
+`;
+
+export const ButtonSave = styled.button`
 width 139px;
 height: 40px;
 min-height: 40px;
@@ -142,10 +173,7 @@ border-radius: 16px;
 padding: 8px 16px;
 background-color: #F4FF47 ;
 
-` ;
-
-
-export const SaveText = styled.div`
+span {
 width 107px;
 height: 24px;
  font-family: "Inter", sans-serif;
@@ -154,5 +182,14 @@ height: 24px;
  line-height: 24px;
  color: #071015 ;
  text-align: center ;
+}
 
-` ;
+@media ${devices.mobile} {
+width: 139px;
+gap: 16px;
+border-radius: 16px;
+padding: 8px 16px;
+background-color: #F4FF47 ;
+}
+
+`;

@@ -3,7 +3,6 @@ import {
   BottomBar,
   ButtonCancel,
   ButtonSave,
-  CancelText,
   FormContainer,
   Header,
   Input,
@@ -12,8 +11,6 @@ import {
   MutedLink,
   MutedLink2,
   NameAndSurnameContainer,
-  SaveText,
-  Title,
   Wrapper,
 } from "./profileSettings.style";
 
@@ -21,12 +18,12 @@ const ProfileSettings: React.FC = () => {
   const [isOverlayOpen, setIsOverlayOpen] = useState(true);
 
   const handleSave = () => {
-    setIsOverlayOpen(false); // Ova linija zatvara "overlay"
+    setIsOverlayOpen(false);
     console.log("Change saved");
   };
 
   const handleCancel = () => {
-    setIsOverlayOpen(false); // Zatvaranje na Cancel
+    setIsOverlayOpen(false);
     console.log("Changes discarded");
   };
 
@@ -35,7 +32,7 @@ const ProfileSettings: React.FC = () => {
   return (
     <Wrapper>
       <Header>
-        <Title>Profile settings</Title>
+        Profile settings
       </Header>
 
       <FormContainer>
@@ -72,11 +69,11 @@ const ProfileSettings: React.FC = () => {
 
       <BottomBar>
         <ButtonCancel onClick={handleCancel}>
-          <CancelText>Cancel</CancelText>
+          <span>Cancel</span>
         </ButtonCancel>
 
         <ButtonSave onClick={handleSave}>
-          <SaveText>Save change</SaveText>
+          <span>Save change</span>
         </ButtonSave>
       </BottomBar>
     </Wrapper>

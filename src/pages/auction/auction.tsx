@@ -28,6 +28,7 @@ import {
   Time,
   Title,
   Title2,
+  Wrapper,
 } from "./auction.style";
 import {
   LeftNavigation,
@@ -35,7 +36,6 @@ import {
   NavButton,
   NavigationTab,
   RightNavigation,
-  Wrapper,
 } from "../profile/myAuction.style";
 
 const Auction: React.FC = () => {

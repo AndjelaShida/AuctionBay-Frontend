@@ -12,10 +12,8 @@ import {
   Time,
   Title,
 } from "./auctionCard.style";
-import { FiClock, FiEdit } from "react-icons/fi";
-import { FiTrash } from "react-icons/fi";
+import { FiClock, FiEdit, FiTrash } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
-
 
 interface Props {
   image: string;
@@ -26,11 +24,9 @@ interface Props {
   price: string;
   showAuctions?: boolean;
   highlightTime?: boolean;
-  
 }
 
 const AuctionCard: React.FC<Props> = ({
-  //6 u prvom redu, 5 u drugom
   image,
   timeLeft,
   tag,
@@ -39,30 +35,27 @@ const AuctionCard: React.FC<Props> = ({
   price,
   showAuctions = false,
   highlightTime = false,
- 
-  
 }) => {
   const tagLower = tag.toLowerCase();
-
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleEditClick = () => {
-    navigate('/editauction');
-  }
+    navigate("/editauction");
+  };
 
   return (
-    <Card tag={tagLower}>
+    <Card $tag={tagLower}>
       <CardContent>
         <Header>
           {tagLower !== "done" && timeLeft && (
-            <Time tag={tagLower} highlightTime={highlightTime} >
+            <Time $tag={tagLower} $highlightTime={highlightTime}>
               {timeLeft}
               <FiClock size={14} />
             </Time>
           )}
         </Header>
 
-        <Tag tag={tagLower} tagColor={tagColor}>
+        <Tag $tag={tagLower} $tagColor={tagColor}>
           {tag}
         </Tag>
         <Title>{title}</Title>
@@ -73,11 +66,10 @@ const navigate = useNavigate();
         <AuctionImage src={image} alt={title} />
       </ImageContainer>
 
-      {/* Prikazivanje akcija samo za "in progress" */}
       {showAuctions && tagLower === "in progress" && (
         <Actions>
           <DeleteButton>
-            <FiTrash size={16}  />
+            <FiTrash size={16} />
           </DeleteButton>
           <EditButton onClick={handleEditClick}>
             <FiEdit size={16} />

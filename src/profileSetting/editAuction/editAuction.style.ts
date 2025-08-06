@@ -1,6 +1,7 @@
 import { FaTrash } from "react-icons/fa";
 import { FiClock } from "react-icons/fi";
 import { styled } from "styled-components";
+import { devices } from "../../styles/media";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -10,6 +11,11 @@ export const Wrapper = styled.div`
   padding: 16px;
   gap: 16px;
   background-color: #ffffff;
+
+  @media ${devices.mobile} {
+    width: 296px;
+ 
+  }
 `;
 
 export const Header = styled.div`
@@ -18,13 +24,19 @@ export const Header = styled.div`
   width: 501px;
   height: 28px;
   gap: 16px;
+  background-color: #ffffff;
+
 
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-style: bold;
   font-size: 23px;
   line-height: 120%;
   color: #000000;
+
+  @media ${devices.mobile} {
+    width: 296px;
+    gap: 8px;
+  }
 `;
 
 export const Picture = styled.div`
@@ -35,7 +47,6 @@ export const Picture = styled.div`
   height: 168px;
   border-radius: 16px;
   gap: 8px;
-
   background-color: #f6f6f4;
 
   img {
@@ -43,6 +54,16 @@ export const Picture = styled.div`
     height: 168px;
     border-radius: 16px;
     object-fit: cover;
+  }
+
+  @media ${devices.mobile} {
+    width: 296px;
+    height: 168px;
+
+    img {
+      width: 296px;
+      height: 168px;
+    }
   }
 `;
 
@@ -61,6 +82,12 @@ export const TrashIconWrapper = styled.div`
   padding: 8px 16px;
   background-color: #272d2d;
   cursor: pointer;
+
+  @media ${devices.mobile} {
+    width: 48px;
+    height: 40px;
+ 
+  }
 `;
 
 export const StyledTrashIcon = styled(FaTrash)`
@@ -69,15 +96,18 @@ export const StyledTrashIcon = styled(FaTrash)`
   height: 16px;
 `;
 
-  /*CEO srednji ceo*/
+/*CEO srednji ceo*/
 export const Inner = styled.div`
-
   display: flex;
   flex-direction: column;
   width: 501px;
   height: 347px;
   gap: 16px;
 
+  @media ${devices.mobile} {
+    width: 296px;
+
+  }
 `;
 
 export const InputGroupTitle = styled.div`
@@ -92,10 +122,15 @@ export const InputGroupTitle = styled.div`
     height: 24px;
     font-family: "Inter", sans-serif;
     font-weight: 300;
-    font-style: light;
     font-size: 16px;
     line-height: 24px;
     color: #071015;
+  }
+
+  @media ${devices.mobile} {
+    width: 296px;
+    height: 72px;
+    gap: 8px;
   }
 `;
 
@@ -105,41 +140,45 @@ export const InputGroupDescription = styled.div`
   width: 501px;
   height: 155px;
   gap: 8px;
+  color: red;
 
   label {
-    /*naslovi: title, description i end date*/
     width: 501px;
     height: 24px;
     font-family: "Inter", sans-serif;
     font-weight: 300;
-    font-style: light;
     font-size: 16px;
     line-height: 24px;
     color: #071015;
   }
+
+  @media ${devices.mobile} {
+    width: 296px;
+    height: 155px;
+    gap: 8px;
+  }
 `;
 
-/*deo sa tekstom i placeholderom*/
-export const InputGroupEndDate = styled.div`
-  position: relative ;
-  display: flex;
-  flex-direction: column;
+export const InputDescription = styled.textarea`
   width: 501px;
-  height: 72px;
-  gap: 8px;
+  height: 123px;
+  border-radius: 16px;
+  padding: 8px 16px;
 
- 
-    height: 24px;
+  &::placeholder {
     font-family: "Inter", sans-serif;
-    font-weight: 300;
-    font-style: light;
+    color: #071015;
+    font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: #071015;
+  }
+
+  @media ${devices.mobile} {
+    width: 296px;
+    height: 123px;
   }
 `;
 
-/*deo samo sa placeholderom*/
 export const InputTitle = styled.input`
   display: flex;
   flex-direction: row;
@@ -151,49 +190,73 @@ export const InputTitle = styled.input`
   padding: 8px 16px;
   background-color: #ffffff;
 
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-style: medium;
-  font-size: 16px;
-  line-height: 24px;
-  color: #071015;
+  &::placeholder {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #071015;
+  }
+  @media ${devices.mobile} {
+    width: 264px;
+    height: 24px;
+  }
 `;
 
-/*deo samo sa placeholderom*/
+export const InputGroupEndDate = styled.div`
+  position: relative ;
+  display: flex;
+  flex-direction: column;
+  width: 501px;
+  height: 72px;
+  gap: 8px;
+
+label {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #071015;
+}
+
+    @media ${devices.mobile} {
+    width: 296px;
+    height: 72px;
+    gap: 16px;
+  }
+  }
+`;
+
 export const InputEndDate = styled.input`
   display: flex;
   flex-direction: row;
   width: 501px;
   height: 40px;
-  min-height: 40px;
   gap: 8px;
   border-radius: 16px;
   border: 1px solid #dde9e6;
   padding: 8px 16px;
   background-color: #ffffff;
 
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-style: medium;
-  font-size: 16px;
-  line-height: 24px;
-  color: #071015;
-`;
+  @media ${devices.mobile} {
+    width: 296px;
+    height: 40px;
+    padding: 8px 16px;
+  }
 
-/*description placeholder*/
-export const TextArea = styled.textarea`
-  width: 501px;
-  height: 123px;
-  border-radius: 16px;
-  border: 1px solid #dde9e6;
-  padding: 8px 16px;
-  background-color: #ffffff;
+  &::placeholder {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #071015;
 
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  resize: none;
+    @media ${devices.mobile} {
+      width: 296px;
+      height: 40px;
+      padding: 8px 16px;
+    }
+  }
 `;
 
 export const BottomBar = styled.div`
@@ -204,9 +267,14 @@ export const BottomBar = styled.div`
   height: 40px;
   gap: 16px;
 
+  @media ${devices.mobile} {
+    width: 296px;
+    height: 40px;
+    gap: 16px;
+  }
 `;
 
-export const DiscardButton = styled.div`
+export const DiscardButton = styled.button`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -218,18 +286,19 @@ export const DiscardButton = styled.div`
   padding: 8px 16px;
   background-color: #edf4f2;
 
-  width: 128px;
-  height: 24px;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-style: medium;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0%;
-  color: #071015;
+  span {
+    width: 128px;
+    height: 24px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #071015;
+  }
 `;
 
-export const EditButton = styled.div`
+export const EditButton = styled.button`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -240,16 +309,18 @@ export const EditButton = styled.div`
   border-radius: 16px;
   padding: 8px 16px;
   background-color: #272d2d;
-
-  width: 91px;
-  height: 24px;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-style: medium;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0%;
   color: #ffffff;
+
+  span {
+    width: 91px;
+    height: 24px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #ffffff;
+  }
 `;
 
 export const ClockIconWrapper = styled.div`
@@ -262,6 +333,12 @@ export const ClockIconWrapper = styled.div`
   height: 16px;
   gap: 8px;
   padding: 4px;
+
+  @media ${devices.mobile} {
+    width: 16px;
+    height: 20px;
+    padding: 4px 8px;
+  }
 `;
 
 export const StyledClocksIcon = styled(FiClock)`
@@ -272,7 +349,7 @@ export const StyledClocksIcon = styled(FiClock)`
 
 /*STYLE FOR EDIT AUCTION WHITOUT IMAGE*/
 
-export const ButtonAddImg = styled.div`
+export const ButtonAddImg = styled.button`
   display: flex;
   flex-direction: row;
   width: 114px;
@@ -284,7 +361,6 @@ export const ButtonAddImg = styled.div`
 
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-style: medium;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0%;
@@ -304,4 +380,12 @@ export const NoPicture = styled.div`
   padding: 32px;
   gap: 8px;
   background-color: #f6f6f4;
+
+  @media ${devices.mobile} {
+    width: 296px;
+    height: 168px;
+    padding: 32px;
+    gap: 8px;
+    border-radius: 16px;
+  }
 `;

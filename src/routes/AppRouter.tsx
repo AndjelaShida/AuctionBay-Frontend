@@ -18,12 +18,13 @@ import WonEmptyState from "../emptyState/wonEmptyState";
 import ProfileSettings from "../profileSetting/profileSettings";
 import ChangePassword from "../profileSetting/changePassword";
 import ChangeProfilPicture from "../profileSetting/changeProfilPicture";
-import AddAuctions from "../profileSetting/addAuctions/addAuctions";
 import EditAuction from "../profileSetting/editAuction/editAuction";
 import EditAuctionNoImg from "../profileSetting/editAuction/editAuctionNoImg";
 import ProfilePopUp from "../profileSetting/profilepopup";
 import AuctionsEmptyState from "../emptyState/auctionsEmptyState";
 import AuctionEmptyState from "../emptyState/auctionEmptyState";
+import AddAuctionsEmpty from "../profileSetting/addAuctions/addAuctionsEmpty";
+import AddAuctions from "../profileSetting/addAuctions/addAuctions";
 
 
 
@@ -49,6 +50,7 @@ const AppRouter: React.FC = () => {
         <Route path="/profilesetting" element={<ProfileSettings />} />
         <Route path="/changepassword" element={<ChangePassword />} />
         <Route path="/changeprofilpicture" element={<ChangeProfilPicture label={""} />} />
+        <Route path="/addauctionempty" element={<AddAuctionsEmpty />} />
         <Route path="/addauction" element={<AddAuctions />} />
          <Route path="/editauction" element={<EditAuction />} />
          <Route path="/editauctionnoimg" element={<EditAuctionNoImg />} />

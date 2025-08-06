@@ -100,7 +100,6 @@ export const NavButton2 = styled(NavLink)`
 
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-style: medium;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0%;
@@ -192,7 +191,6 @@ export const TitleBar = styled.div`
 
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-style: bold;
   font-size: 32px;
   line-height: 120%;
   letter-spacing: 0%;

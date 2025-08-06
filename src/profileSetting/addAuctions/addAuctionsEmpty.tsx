@@ -14,14 +14,14 @@ import {
   InputRight,
   Inputs,
   Picture,
-
+  PictureButton,
   SubmitButton,
   Wrapper,
-} from "./addAuctions.style";
+} from "./addAuctionsEmpty.style";
 import { FaClock, FaEuroSign } from "react-icons/fa";
 
 
-const AddAuctions: React.FC = () => {
+const AddAuctionsEmpty: React.FC = () => {
 
     const navigate = useNavigate();
   return (
@@ -31,7 +31,7 @@ const AddAuctions: React.FC = () => {
       </Header>
 
       <Picture>
-        <img src="/images/editauction.jpg" alt="editauctions"></img>
+        <PictureButton>Add Image</PictureButton>
       </Picture>
 
       <Inner>
@@ -91,4 +91,4 @@ const AddAuctions: React.FC = () => {
     </Wrapper>
   );
 };
-export default AddAuctions;
+export default AddAuctionsEmpty;

@@ -3,7 +3,6 @@ import {
   BottomBar,
   ButtonCancel,
   ButtonSave,
-  CancelText,
   FormContainer,
   Header,
   Input,
@@ -11,8 +10,6 @@ import {
   Inputs,
   InputWrapper,
   PasswordToggleIcon,
-  SaveText,
-  Title,
   Wrapper,
 } from "./changePassword.style";
 import { FiEye, FiEyeOff } from "react-icons/fi";
@@ -40,7 +37,7 @@ const ChangePassword: React.FC = () => {
   return (
     <Wrapper>
       <Header>
-        <Title>Change password</Title>
+        <span>Change password</span>
       </Header>
 
       <FormContainer>
@@ -95,11 +92,11 @@ const ChangePassword: React.FC = () => {
 
       <BottomBar>
         <ButtonCancel onClick={handleCancel}>
-          <CancelText>Cancel</CancelText>
+          <span>Cancel</span>
         </ButtonCancel>
 
         <ButtonSave onClick={handleSave}>
-          <SaveText>Save change</SaveText>
+          <span>Save change</span>
         </ButtonSave>
       </BottomBar>
     </Wrapper>

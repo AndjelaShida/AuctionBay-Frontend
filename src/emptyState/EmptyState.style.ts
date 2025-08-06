@@ -44,7 +44,6 @@ export const TextCaption = styled.div`
   height: 96px;
   font-family: Inter, sans-serif;
   font-weight: 300;
-  font-style: light;
   font-size: 16px;
   line-height: 24px;
   color: #74817f;
