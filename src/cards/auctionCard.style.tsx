@@ -145,7 +145,7 @@ export const Actions = styled.div`
   }
 `;
 
-export const DeleteButton = styled.div`
+export const DeleteButton = styled.button`
   width: 48px;
   border: 1px solid #272D2D;
   border-radius: 16px;

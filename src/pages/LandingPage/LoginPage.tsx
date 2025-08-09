@@ -26,14 +26,46 @@ import { FiEye, FiEyeOff } from "react-icons/fi";
 
 const LoginPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  const navigate = useNavigate();
+
   const togglePassword = () => {
     setShowPassword((prev) => !prev);
   };
-  const navigate = useNavigate();
 
-  const handleLogin = () => {
-    navigate("/myAuction");
+  const handleLogin = async () => {
+    if(!email || !password) {
+      setErrorMessage("Please enter both email and password");
+      return;
+    }
+    setErrorMessage(null); 
+    try {
+      const response = await fetch("http://localhost:5000/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          login: email,    
+          password: password,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        setErrorMessage(errorData.message || "Unknown error");
+        return;
+      }
+
+      const data = await response.json();
+      localStorage.setItem("token", data.access_token);
+      navigate("/myAuction");
+    } catch (error) {
+      setErrorMessage("Network error, try again later");
+    }
   };
+
   return (
     <LoginWrapper>
       <LoginLeft>
@@ -56,7 +88,13 @@ const LoginPage: React.FC = () => {
               <Inputs>
                 <InputGroup>
                   <label htmlFor="email">E-mail</label>
-                  <Input id="email" type="text" placeholder="E-mail"></Input>
+                  <Input
+                    id="email"
+                    type="text"
+                    placeholder="E-mail"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
                 </InputGroup>
               </Inputs>
 
@@ -68,6 +106,8 @@ const LoginPage: React.FC = () => {
                       id="password"
                       type={showPassword ? "text" : "password"}
                       placeholder="Password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                     />
                     <PasswordToggleIcon type="button" onClick={togglePassword}>
                       {showPassword ? <FiEyeOff /> : <FiEye />}
@@ -75,6 +115,10 @@ const LoginPage: React.FC = () => {
                   </PasswordWrapper>
                 </InputGroup>
               </Inputs>
+
+              {errorMessage && (
+                <p style={{ color: "red", marginTop: "10px" }}>{errorMessage}</p>
+              )}
 
               <ForgotPasswordWrapper>
                 <MutedLink to="/forgotpasswordpage">Forgot password?</MutedLink>
@@ -93,4 +137,5 @@ const LoginPage: React.FC = () => {
     </LoginWrapper>
   );
 };
+
 export default LoginPage;

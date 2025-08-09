@@ -92,6 +92,7 @@ const Bidding: React.FC = () => {
           {firstRowCards.map((card) => (
             <AuctionCard
               key={card.key}
+              auctionId={card.id}
               image={card.image}
               tag={card.tag}
               tagColor={card.tagColor}

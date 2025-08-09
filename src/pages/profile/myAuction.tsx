@@ -23,6 +23,7 @@ import {
 const MyAuction: React.FC = () => {
   // 5 "in progress" kartica
   const inProgressCards = Array.from({ length: 5 }).map((_, index) => ({
+    id: index + 1,
     key: `in-progress-${index}`,
     image: "/images/chair1.jpg",
     tag: "in progress",
@@ -34,6 +35,7 @@ const MyAuction: React.FC = () => {
 
   // 13 "done" kartica (1 za prvi red, 6 za drugi, 6 za treći
   const doneCards = Array.from({ length: 13 }).map((_, index) => ({
+    id: index + 6,
     key: `done-${index}`,
     image: "/images/chair1.jpg",
     tag: "done",
@@ -117,6 +119,7 @@ const MyAuction: React.FC = () => {
           {firstRowCards.map((card) => (
             <AuctionCard
               key={card.key}
+              auctionId={card.id}
               image={card.image}
               tag={card.tag}
               tagColor={card.tagColor}
@@ -133,6 +136,7 @@ const MyAuction: React.FC = () => {
           {secondRowCards.map((card) => (
             <AuctionCard
               key={card.key}
+              auctionId={card.id}
               image={card.image}
               tag={card.tag}
               tagColor={card.tagColor}
@@ -148,6 +152,7 @@ const MyAuction: React.FC = () => {
           {thirdRowCards.map((card) => (
             <AuctionCard
               key={card.key}
+              auctionId={card.id}
               image={card.image}
               tag={card.tag}
               tagColor={card.tagColor}

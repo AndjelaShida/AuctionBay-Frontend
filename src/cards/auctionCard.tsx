@@ -1,3 +1,5 @@
+import { useState } from "react";
+import axios from "axios"; 
 import {
   Actions,
   AuctionImage,
@@ -16,6 +18,7 @@ import { FiClock, FiEdit, FiTrash } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
 interface Props {
+  auctionId: number;
   image: string;
   tag: string;
   tagColor: string;
@@ -27,6 +30,7 @@ interface Props {
 }
 
 const AuctionCard: React.FC<Props> = ({
+  auctionId,
   image,
   timeLeft,
   tag,
@@ -38,9 +42,31 @@ const AuctionCard: React.FC<Props> = ({
 }) => {
   const tagLower = tag.toLowerCase();
   const navigate = useNavigate();
+  const [isDeleting, setIsDeleting] = useState(false);
 
   const handleEditClick = () => {
     navigate("/editauction");
+  };
+
+  const handleDeleteClick = async () => {
+    if (!window.confirm("Are you sure you want to delete this auction?")) return;
+
+    try {
+      setIsDeleting(true);
+
+      await axios.delete(`/auction/${auctionId}`, {
+        headers: {  
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
+
+      alert("Auction deleted successfully");
+      
+    } catch (error: any) {
+      alert(error.response?.data?.message || "Failed to delete auction");
+    } finally {
+      setIsDeleting(false);
+    }
   };
 
   return (
@@ -68,7 +94,7 @@ const AuctionCard: React.FC<Props> = ({
 
       {showAuctions && tagLower === "in progress" && (
         <Actions>
-          <DeleteButton>
+          <DeleteButton onClick={handleDeleteClick} disabled={isDeleting}>
             <FiTrash size={16} />
           </DeleteButton>
           <EditButton onClick={handleEditClick}>

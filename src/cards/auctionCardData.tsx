@@ -2,6 +2,7 @@
 
 export const auctionCardOutbid = [
     {
+        id: 1,
     image: "/images/chair1.jpg",
     timeLeft: "24h",
     title: "Old chair",
@@ -12,6 +13,7 @@ export const auctionCardOutbid = [
   ]
   export const auctionCardInprogress = [
      {
+        id:2,
     image: "/images/chair1.jpg",
     timeLeft: "30h",
     title: "Old chair",
@@ -22,6 +24,7 @@ export const auctionCardOutbid = [
   ]
     export const auctionCardDone = [
         {
+                id:3,
     image: "/images/chair1.jpg",
     timeLeft: "",
     title: "Old chair",
@@ -33,6 +36,7 @@ export const auctionCardOutbid = [
 
       export const auctionCardWinning = [
        {
+        id:4,
     image: "/images/chair1.jpg",
     timeLeft: "24h",
     title: "Old chair",
@@ -44,6 +48,7 @@ export const auctionCardOutbid = [
 
   export const auctionCardItems = [
     {
+        id:5,
   image: "/images/rubicCuber.png",
     timeLeft: "24h",
     title: "Rubic cube",
