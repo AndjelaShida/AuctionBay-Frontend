@@ -159,6 +159,7 @@ export const DeleteButton = styled.button`
   &:hover {
     background-color: #1d1d1d;
     color: white;
+    
   }
 
   @media ${devices.mobile} {

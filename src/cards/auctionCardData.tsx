@@ -1,206 +1,217 @@
 //niz sa podacima za svaku karticu
 
 export const auctionCardOutbid = [
-    {
-        id: 1,
+  {
+    id: 1,
     image: "/images/chair1.jpg",
     timeLeft: "24h",
     title: "Old chair",
     price: "65 €",
     tag: "Outbid",
     tagColor: "#FFAA98",
-    },
-  ]
-  export const auctionCardInprogress = [
-     {
-        id:2,
+  },
+];
+export const auctionCardInprogress = [
+  {
+    id: 2,
     image: "/images/chair1.jpg",
     timeLeft: "30h",
     title: "Old chair",
     price: "65 €",
     tag: "In progress",
     tagColor: "	#FFFF8F",
-    },
-  ]
-    export const auctionCardDone = [
-        {
-                id:3,
+  },
+];
+export const auctionCardDone = [
+  {
+    id: 3,
     image: "/images/chair1.jpg",
     timeLeft: "",
     title: "Old chair",
     price: "65 €",
     tag: "Done",
     tagColor: "	#272D2D",
-    },
-  ]
+  },
+];
 
-      export const auctionCardWinning = [
-       {
-        id:4,
+export const auctionCardWinning = [
+  {
+    id: 4,
     image: "/images/chair1.jpg",
     timeLeft: "24h",
     title: "Old chair",
     price: "65 €",
     tag: "Winning",
     tagColor: "#ADFF90",
-    },
-  ]
+  },
+];
 
-  export const auctionCardItems = [
-    {
-        id:5,
-  image: "/images/rubicCuber.png",
+export const auctionCardItems = [
+  {
+    id: 5,
+    image: "/images/rubicCuber.png",
     timeLeft: "24h",
     title: "Rubic cube",
     price: "8 €",
     tag: "In progress",
     tagColor: "#F9FF90",
-    },
+  },
 
-        {
-  image: "/images/olivieSofa.jpg",
+  {
+        id: 6,
+    image: "/images/olivieSofa.jpg",
     timeLeft: "24h",
     title: "Rubic cube",
     price: "720 €",
     tag: "In progress",
     tagColor: "#F9FF90",
-    },
-    {
+  },
+  {
+        id: 7,
     image: "/images/macbook.jpg",
     timeLeft: "24h",
     title: "Macbook Pro 15 2015",
     price: "200 €",
     tag: "In progress",
     tagColor: "#F9FF90",
-    },
+  },
 
-       {
+  {
+        id: 8,
     image: "/images/ipad.jpg",
     timeLeft: "24h",
     title: "iPad pro 13inch",
     price: "500 €",
     tag: "In progress",
     tagColor: "#F9FF90",
-    },
+  },
 
-          {
+  {
+        id: 9,
     image: "/images/mouse.jpg",
     timeLeft: "24h",
     title: "Magic mouse",
     price: "40 €",
     tag: "In progress",
     tagColor: "#F9FF90",
-    },
+  },
 
-    
-          {
+  {
+        id: 10,
     image: "/images/chair1.jpg",
     timeLeft: "2 days",
     title: "Old wooden chair",
     price: "40 €",
     tag: "Winning",
     tagColor: "#ADFF90",
-    },
-            {
+  },
+  {
+        id: 11,
     image: "/images/iphone11.jpg",
     timeLeft: "2 days",
     title: "Iphone 11",
     price: "160 €",
     tag: "In progress",
     tagColor: "#F9FF90",
-    },
-            {
+  },
+  {
+        id: 12,
     image: "/images/dji.jpg",
     timeLeft: "2 days",
     title: "Dji Mavic",
     price: "253 €",
     tag: "In progress",
     tagColor: "#F9FF90",
-    },
-            {
+  },
+  {
+        id: 13,
     image: "/images/earphones.jpg",
     timeLeft: "2 days",
     title: "Earphones",
     price: "77 €",
     tag: "In progress",
     tagColor: "#F9FF90",
-    },
-            {
+  },
+  {
+        id: 14,
     image: "/images/macbook27.jpg",
     timeLeft: "3 days",
     title: "iMac 27inch 2019 combo",
     price: "600 €",
     tag: "In progress",
     tagColor: "#F9FF90",
-    },
-            {
+  },
+  {
+        id: 15,
     image: "/images/polaroid.jpg",
     timeLeft: "3 days",
     title: "Polaroid  - for parts ",
     price: "22 €",
     tag: " In progress",
     tagColor: "#F9FF90",
-    },
-            {
+  },
+  {
+        id: 16,
     image: "/images/googlenest.jpg",
     timeLeft: "3 days",
     title: "Google Nest Red edition",
     price: "32 €",
     tag: "In progress",
     tagColor: "#F9FF90",
-    },
+  },
 
-             {
+  {
+        id: 17,
     image: "/images/redmote.jpg",
     timeLeft: "3 days",
     title: "Redmote recorder",
     price: "532 €",
     tag: "In progress",
     tagColor: "#F9FF90",
-    },
-             {
+  },
+  {
+        id: 18,
     image: "/images/cameracase.jpg",
     timeLeft: "4 days",
     title: "Camera case iPhone 13",
     price: "102 €",
     tag: "In progress",
     tagColor: "#F9FF90",
-    },
-             {
+  },
+  {
+        id: 19,
     image: "/images/jbl.jpg",
     timeLeft: "4 days",
     title: "JBL xm32",
     price: "34 €",
     tag: "In progress",
     tagColor: "#F9FF90",
-    },
-                {
+  },
+  {
+        id: 20,
     image: "/images/logtech.jpg",
     timeLeft: "4 days",
     title: "Logtech g wireless",
     price: "55 €",
     tag: "In progress",
     tagColor: "#F9FF90",
-    },
-                {
+  },
+  {
+        id: 21,
     image: "/images/sony.jpg",
     timeLeft: "6 days",
     title: "Sony 50inch TV",
     price: "162 €",
     tag: "In progress",
     tagColor: "#F9FF90",
-    },
-                {
+  },
+  {
+        id: 22,
     image: "/images/imac.jpg",
     timeLeft: "6 days",
     title: "iMac 24inch 2014",
     price: "149 €",
     tag: "In progress",
     tagColor: "#F9FF90",
-    },
-
-  ]
- 
-
-
-
+  },
+];

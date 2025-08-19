@@ -21,6 +21,7 @@ const Won: React.FC = () => {
   const doneCards = Array.from({ length: 11 }).map((_, index) => ({
     ...auctionCardDone[0],
     key: `done-${index}`,
+    id: auctionCardDone[0].id + index,
   }));
 
   const firstRow = doneCards.slice(0, 6);
@@ -85,6 +86,7 @@ const Won: React.FC = () => {
           {firstRow.map((card) => (
             <AuctionCard
               key={card.key}
+                 auctionId={card.id}
               image={card.image}
               tag={card.tag}
               tagColor={card.tagColor}
@@ -99,6 +101,7 @@ const Won: React.FC = () => {
           {secondRow.map((card) => (
             <AuctionCard
               key={card.key}
+              auctionId={card.id}
               image={card.image}
               tag={card.tag}
               tagColor={card.tagColor}

@@ -15,7 +15,21 @@ import {
   Wrapper,
 } from "../profile/myAuction.style";
 
+  export interface AuctionCardData {
+  id: number;
+  image: string;
+  timeLeft: string;
+  title: string;
+  price: string;
+  tag: string;
+  tagColor: string;
+  highlightTime?: boolean;
+  key?: string | number;
+}
+
 const Auctions: React.FC = () => {
+
+
   return (
     <Wrapper>
       <Navbar>
@@ -78,6 +92,7 @@ const Auctions: React.FC = () => {
           return (
             <AuctionCard
               key={index}
+               auctionId={item.id}
               image={item.image}
               timeLeft={item.timeLeft}
               title={item.title}

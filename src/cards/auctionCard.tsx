@@ -18,7 +18,7 @@ import { FiClock, FiEdit, FiTrash } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
 interface Props {
-  auctionId: number;
+  auctionId?: number;
   image: string;
   tag: string;
   tagColor: string;
